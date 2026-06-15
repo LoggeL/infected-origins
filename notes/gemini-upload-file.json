@@ -1,0 +1,15 @@
+{
+  "file": {
+    "name": "files/q4bpferra5zn",
+    "displayName": "infected_short_film.mp4",
+    "mimeType": "video/mp4",
+    "sizeBytes": "66546687",
+    "createTime": "2026-06-06T23:19:20.037972Z",
+    "updateTime": "2026-06-06T23:19:20.037972Z",
+    "expirationTime": "2026-06-08T23:19:19.460814868Z",
+    "sha256Hash": "NmRhZTg0YjZkYzU2MWRhMWIzYWU3ODBiZTg1OGVmZmI2ZjhhYjkwMzQ4Yjg4NTNkZjA5NGQ1ZTQxODVhNTg2Nw==",
+    "uri": "https://generativelanguage.googleapis.com/v1beta/files/q4bpferra5zn",
+    "state": "PROCESSING",
+    "source": "UPLOADED"
+  }
+}

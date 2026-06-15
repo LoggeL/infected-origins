@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INFECTED ORIGINS — Drehbuch-Breakdown</title>
+<style>
+:root {
+  --bg: #0a0a0c;
+  --panel: #131318;
+  --text: #d4d4d8;
+  --muted: #71717a;
+  --accent: #22c55e;
+  --accent-dim: #14532d;
+  --danger: #dc2626;
+  --border: #27272a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+h1 {
+  font-size: 2.4em;
+  letter-spacing: 0.15em;
+  font-weight: 300;
+  color: var(--accent);
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+}
+h1 .sub {
+  display: block;
+  font-size: 0.4em;
+  color: var(--muted);
+  letter-spacing: 0.3em;
+  margin-top: 0.5em;
+}
+h2 {
+  font-size: 1.4em;
+  color: var(--text);
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.1em;
+  color: var(--accent);
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+  font-weight: 400;
+}
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; margin-bottom: 1em; }
+li { margin-bottom: 0.4em; }
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-dim);
+  transition: border-color 0.2s;
+}
+a:hover { border-color: var(--accent); }
+.character-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  border-radius: 0 4px 4px 0;
+}
+.character-card .name {
+  font-size: 1.2em;
+  color: var(--accent);
+  font-weight: 600;
+}
+.character-card .role {
+  color: var(--muted);
+  font-size: 0.9em;
+  margin-bottom: 0.6em;
+}
+.act-nav {
+  display: flex;
+  gap: 12px;
+  margin: 2em 0;
+  flex-wrap: wrap;
+}
+.act-nav a {
+  display: block;
+  padding: 16px 28px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.1em;
+  transition: all 0.2s;
+}
+.act-nav a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.act-nav a .num {
+  display: block;
+  font-size: 0.7em;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+}
+.tone-box {
+  background: linear-gradient(135deg, #0a0a0c 0%, #0f1a0f 100%);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 4px;
+  margin: 1.5em 0;
+}
+.theme-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin: 4px 4px 4px 0;
+  font-family: monospace;
+}
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 3em 0;
+}
+.footer {
+  color: var(--muted);
+  font-size: 0.85em;
+  margin-top: 4em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border);
+}
+</style>
+</head>
+<body>
+
+<h1>INFECTED ORIGINS<span class="sub">Prequel zu „INFECTED" — Drehbuch-Breakdown v2</span></h1>
+
+<div class="tone-box">
+<p style="margin-bottom:0.5em; color:var(--muted); font-size:0.85em; letter-spacing:0.1em;">TONALITÄT</p>
+<p>Kein B-Movie. Kein übersetztes English. Ein düsterer Familienthriller, der langsam kippt. Die Horror kommt nicht aus dem Serum — sie kommt aus Entscheidungen, die Menschen treffen, weil sie nicht loslassen können.</p>
+<div style="margin-top:1em;">
+<span class="theme-pill">Familientragödie</span>
+<span class="theme-pill">Wissenschaftsthriller</span>
+<span class="theme-pill">Body Horror</span>
+<span class="theme-pill">Psychologischer Fall</span>
+<span class="theme-pill">Generationale Korruption</span>
+</div>
+</div>
+
+<div class="act-nav">
+<a href="akt1.html"><span class="num">AKT I — Szenen 1–5</span>Der gute Grund</a>
+<a href="akt2.html"><span class="num">AKT II — Szenen 6–11</span>Die Heilung wird zum Projekt</a>
+<a href="akt3.html"><span class="num">AKT III — Szenen 12–18</span>Die Tochter wird zum Nachfolger</a>
+</div>
+
+<h2>Figuren</h2>
+
+<div class="character-card">
+<div class="name">Richard Voss</div>
+<div class="role">Arzt · Anfang 50 · Der Vater</div>
+<p>Liebevoll, brillant, erschöpft. Seine Frau ist sterbenskrank, und er forscht an einer Heilung — zuerst im Hobbykeller, dann für GenetiX. Sein Fall ist kein plötzliches Bösewerden, sondern eine schleichende moralische Erosion: jede Kompromiss-NOTIZ wird zur letzten, bis er nicht mehr zurück kann. Er dosiert sich selbst mit dem Compound. Die schwarzen Adern an seinem Körper sind das äußerliche Zeichen für das, was innerlich schon längst passiert ist.</p>
+</div>
+
+<div class="character-card">
+<div class="name">Eva Voss</div>
+<div class="role">Richards Frau · Anfang 50 · Die Mutter</div>
+<p>Moralisch die stärkste Figur. Sie will leben, aber nicht um jeden Preis. Sie erkennt Richards Wandel früher als Nora, warnt ihre Tochter, und stirbt — nicht an der Krankheit, sondern an dem Compound, das Richard ihr gibt. Ihr Tod ist der Drehpunkt des ganzen Films. Was sie Nora über Lilith erzählt hat (aus Noras Kindheit) wird am Ende zum Namen, den Nora annimmt.</p>
+</div>
+
+<div class="character-card">
+<div class="name">Nora Voss → Lilith</div>
+<div class="role">Tochter · 22 · Die Hauptfigur</div>
+<p>Intelligent, loyal, emotionally invested. Sie hilft Richard zuerst wirklich. Nach Evas Tod findet sie die Wahrheit: Richards Compound hat Eva getötet, und er hat eine Entführung genehmigt. Sie konfrontiert ihn — er stirbt an den Folgen seines eigenen Serums. GenetiX rekrutiert sie. Sie spielt mit, kühlt aus, übernimmt. Am Ende entscheidet sie: Containment bleibt geschlossen. Sie wird zu Lilith.</p>
+</div>
+
+<div class="character-card">
+<div class="name">Kessler</div>
+<div class="role">GenetiX-Verhandler · 60</div>
+<p>Wirkt wie ein Onkel. Warme Stimme, grauer Mantel, liest Akten wie ein Professor. Ist ein Händler. Er gibt Richard genau das, was er braucht — nicht mit Gewalt, sondern mit Empathie. „Die haben Sie gedemütigt, weil Sie ihnen voraus sind." Er ist der subtilste Antagonist des Films, weil er nie laut wird.</p>
+</div>
+
+<div class="character-card">
+<div class="name">Vorstand</div>
+<div class="role">GenetiX-Entscheider · 3–4 Personen</div>
+<p>Anzüge, Gier, Kontrolle. Sie wollen das Compound als Produkt. Sie unterschätzen Nora vollkommen. Sie sterben im versiegelten Präsentationsraum, weil Nora das Containment nicht öffnet.</p>
+</div>
+
+<div class="divider"></div>
+
+<h2>Drei-Akt-Struktur</h2>
+
+<h3>Akt I — Der gute Grund</h3>
+<p>Eine Familie. Eine kranke Mutter. Ein Vater, der im Keller forscht. Eine Tochter, die hilft. Alles beginnt aus Liebe. Dann kommt die wissenschaftliche Demütigung. Dann kommt Kessler. <strong>Der Akt endet, wenn Richard unterschreibt.</strong></p>
+
+<h3>Akt II — Die Heilung wird zum Projekt</h3>
+<p>GenetiX gibt Richard alles: Labor, Tempo, Freiheit. Die Forschung funktioniert — und kippt. Das Compound verhält sich nicht mehr wie Heilung, sondern wie ein Virus. Richard dosiert Eva, dosiert sich selbst. Er genehmigt eine Entführung. Eva stirbt. <strong>Der Akt endet mit Nora, die ihre tote Mutter findet und auf dem Flurboden sitzt.</strong></p>
+
+<h3>Akt III — Die Tochter wird zum Nachfolger</h3>
+<p>Nora findet die Wahrheit. Konfrontiert Richard. Er stirbt. GenetiX rekrutiert sie. Sie spielt mit, arbeitet kälter und präziser als ihr Vater. Versammelt den Vorstand. Lässt sie sterben. Nimmt den Namen Lilith an. <strong>Der Film endet mit Franks Akte und dem weißen Van.</strong></p>
+
+<div class="divider"></div>
+
+<h2>Kernmotiv: Der Spiegel</h2>
+<p>Die zentrale Tragödie ist ein Spiegel:</p>
+<ul>
+<li><strong>Richard nach Evas Tod:</strong> „Wenn ich jetzt aufhöre, war alles umsonst."</li>
+<li><strong>Nora nach Richards Tod:</strong> „Wenn ich jetzt aufhöre, war alles umsonst."</li>
+</ul>
+<p>Beide benutzen denselben Satz, dieselbe Logik. Der Sohn der Selbslüge wird zur Mutter der nächsten. Das ist der Film.</p>
+
+<h2>Sprache als Indikator</h2>
+<ul>
+<li><strong>Nora Akt I:</strong> „Papa, das ist ein Mensch."</li>
+<li><strong>Nora Akt II:</strong> „Was hast du dir selbst angetan?"</li>
+<li><strong>Lilith Akt III:</strong> „Containment vor alles. Keine Zeugen."</li>
+</ul>
+
+<div class="footer">
+<p>INFECTED ORIGINS — Drehbuch v2 · 15. Juni 2026<br>
+Basierend auf dem Kurzfilm „INFECTED" von Logge</p>
+</div>
+
+</body>
+</html>
