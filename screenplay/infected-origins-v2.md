@@ -15,6 +15,53 @@
 
 ---
 
+## PROLOG
+
+---
+
+**0. INT. KELLER — NACHT (FRÜH)**
+
+*Closeup: Kassette. Die Spulen drehen sich. Ein Tongerät surrt. Analog, warm, verstaubt.*
+
+*RICHARD sitzt allein am Schreibtisch. Zigarette in der einen Hand, das Mikrofon des Kassettenrekorders in der anderen. Hinter ihm: das Labor im Halbdunkel. Noch Hobbykeller. Noch kein GenetiX.*
+
+*Er zieht. Bläst den Rauch zur Seite. Drückt auf AUFNEHMEN.*
+
+**RICHARD**
+Tagebuch, Eintrag... ich hab aufgehört zu zählen.
+
+*Er hustet. Nicht wie Eva — trocken, Raucherhusten.*
+
+**RICHARD**
+Eva hat heute weniger Schmerzen. Das erste Mal seit Wochen, dass sie ohne Tabletten eingeschlafen ist. Ich weiß nicht, ob das gut ist oder... oder ob ihr Körper einfach aufgibt.
+
+*Beat. Er zieht an der Zigarette.*
+
+**RICHARD**
+Die Werte aus Reihe 14 sind... vielversprechend. Wenn ich die Degradation unter 0,6 halte, könnte die Zellintegration stabil genug sein für einen Vivo-Test. Aber das ist... das ist noch Wochen weg. Monate vielleicht.
+
+*Er starrt auf die Zigarette.*
+
+**RICHARD**
+Nora hat heute einen Fehler gefunden. In meinen eigenen Berechnungen. Sie ist... sie ist besser als ich es je war.
+
+*Beat.*
+
+**RICHARD**
+Ich glaube, Eva weiß, dass ich nachts hier unten bin. Sie sagt nichts. Aber sie weiß es.
+
+*Er löscht die Zigarette. Nimmt die Kassette raus. Beschriftet sie: „Eintrag 47 — Reihe 14".*
+
+**RICHARD**
+*(leise, ins Leere)*
+Ich bringe das hin.
+
+*Die Spulen stoppen.*
+
+*SCHNITT auf Schwarz. Titel: INFECTED ORIGINS.*
+
+---
+
 ## I
 
 ---
