@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INFECTED ORIGINS — Drehbuch v3</title>
+<style>
+  :root{
+    --bg:#0a0b0d;
+    --bg-soft:#101216;
+    --panel:#0d0f13;
+    --ink:#d7d3c8;
+    --ink-dim:#9a958a;
+    --ink-faint:#6f6a60;
+    --accent:#7fa6a0;
+    --accent-warm:#b88a5a;
+    --rule:#23262c;
+    --slug:#8fb6af;
+    --danger:#9c5d52;
+    --max:65ch;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 70% -10%, #14171c 0%, rgba(20,23,28,0) 60%),
+      linear-gradient(180deg,#0a0b0d 0%, #08090b 100%);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family: "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  /* Layout */
+  .layout{
+    display:grid;
+    grid-template-columns: 280px minmax(0,1fr);
+    align-items:start;
+  }
+
+  /* Sidebar */
+  .sidebar{
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+    border-right:1px solid var(--rule);
+    background:linear-gradient(180deg,#0c0e12 0%, #0a0b0d 100%);
+    padding:1.6rem 1.1rem 3rem;
+  }
+  .sidebar h2{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.62rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0 0 1rem;
+    padding-left:.4rem;
+  }
+  .sidebar nav a{
+    display:block;
+    color:var(--ink-dim);
+    text-decoration:none;
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.72rem;
+    letter-spacing:.02em;
+    padding:.32rem .5rem;
+    border-left:2px solid transparent;
+    border-radius:2px;
+    transition:color .18s, border-color .18s, background .18s;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .sidebar nav a:hover{color:var(--ink);background:rgba(127,166,160,.06);}
+  .sidebar nav a.act{
+    margin-top:1rem;
+    color:var(--accent-warm);
+    letter-spacing:.22em;
+    font-size:.66rem;
+    text-transform:uppercase;
+    border-left-color:transparent;
+    padding-bottom:.15rem;
+  }
+  .sidebar nav a.active{
+    color:var(--accent);
+    border-left-color:var(--accent);
+    background:rgba(127,166,160,.08);
+  }
+
+  /* Main column */
+  main{
+    padding:0 clamp(1.2rem,5vw,4rem);
+  }
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:4rem 0 7rem;
+  }
+
+  /* Title block */
+  .titleblock{
+    text-align:center;
+    padding:5rem 0 3rem;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:3.5rem;
+  }
+  .titleblock h1{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-weight:600;
+    font-size:clamp(2.1rem,6vw,3.4rem);
+    letter-spacing:.16em;
+    margin:0;
+    color:#e7e3d8;
+    text-shadow:0 0 30px rgba(127,166,160,.12);
+  }
+  .titleblock .sub{
+    margin-top:1.4rem;
+    color:var(--ink-dim);
+    font-style:italic;
+    font-size:1.02rem;
+  }
+  .titleblock .ver{
+    margin-top:.3rem;
+    color:var(--ink-faint);
+    font-style:italic;
+    font-size:.92rem;
+    letter-spacing:.02em;
+  }
+
+  /* Figuren */
+  .figuren{
+    margin:0 0 1rem;
+  }
+  .figuren h2,
+  .section-h2{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.78rem;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 1.6rem;
+  }
+  .figuren ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .figuren li{
+    padding:.7rem 0;
+    border-bottom:1px solid var(--rule);
+    color:var(--ink-dim);
+  }
+  .figuren li:last-child{border-bottom:none;}
+  .figuren .name{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.8rem;
+    letter-spacing:.12em;
+    color:var(--ink);
+    margin-right:.2em;
+  }
+
+  /* Act divider */
+  .act{
+    text-align:center;
+    margin:5.5rem 0 3.5rem;
+    padding:2.5rem 0;
+    position:relative;
+  }
+  .act::before,.act::after{
+    content:"";
+    display:block;
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--rule),transparent);
+    margin:1.5rem auto;
+    width:70%;
+  }
+  .act .label{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.6rem;
+    letter-spacing:.4em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    display:block;
+    margin-bottom:.8rem;
+  }
+  .act .num{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:clamp(2.6rem,9vw,4.6rem);
+    font-weight:600;
+    letter-spacing:.1em;
+    color:#cfcabe;
+    line-height:1;
+    text-shadow:0 0 40px rgba(184,138,90,.14);
+  }
+
+  /* Scene */
+  .scene{
+    margin:3.2rem 0;
+    scroll-margin-top:1.5rem;
+  }
+  .slug{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.82rem;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--slug);
+    background:linear-gradient(90deg,rgba(127,166,160,.08),transparent);
+    border-left:3px solid var(--accent);
+    padding:.7rem .9rem;
+    margin:0 0 1.6rem;
+    line-height:1.5;
+  }
+
+  /* Stage directions */
+  .dir{
+    color:var(--ink-dim);
+    margin:1.1rem 0;
+  }
+  .dir.em{
+    font-style:italic;
+    color:var(--ink-faint);
+  }
+
+  /* Dialogue */
+  .cue{
+    text-align:center;
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.82rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#cdd6c9;
+    margin:1.8rem 0 .15rem;
+  }
+  .paren{
+    text-align:center;
+    font-style:italic;
+    color:var(--ink-faint);
+    font-size:.92rem;
+    margin:0 0 .15rem;
+  }
+  .line{
+    margin:0 auto .2rem;
+    max-width:46ch;
+    padding:0 1.5rem;
+    text-align:center;
+    color:var(--ink);
+  }
+  .vo{
+    color:var(--accent);
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.62rem;
+    letter-spacing:.1em;
+    vertical-align:middle;
+  }
+
+  /* Final title card */
+  .titlecard{
+    text-align:center;
+    margin:5rem 0;
+    padding:3.5rem 0;
+  }
+  .titlecard .cut{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.7rem;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:2rem;
+  }
+  .titlecard .card{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:clamp(1.4rem,4vw,2rem);
+    letter-spacing:.2em;
+    color:#e7e3d8;
+    text-shadow:0 0 30px rgba(127,166,160,.15);
+  }
+  .ende{
+    text-align:center;
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    letter-spacing:.4em;
+    color:var(--ink-faint);
+    font-size:.9rem;
+    margin:2.5rem 0;
+  }
+
+  /* Notes section */
+  .notes{
+    margin-top:5rem;
+    padding-top:3rem;
+    border-top:2px solid var(--rule);
+  }
+  .notes::before{
+    content:"";
+    display:block;
+    width:60px;
+    height:3px;
+    background:var(--accent-warm);
+    margin:0 auto 2.5rem;
+    opacity:.5;
+  }
+  .notes h2{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:1.05rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent-warm);
+    margin:0 0 1.8rem;
+  }
+  .notes h3{
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.86rem;
+    letter-spacing:.06em;
+    color:var(--slug);
+    margin:2.6rem 0 .9rem;
+  }
+  .notes p{color:var(--ink-dim);margin:.9rem 0;}
+  .notes ul,.notes ol{color:var(--ink-dim);padding-left:1.3rem;}
+  .notes li{margin:.6rem 0;}
+  .notes strong{color:var(--ink);font-weight:600;}
+  .notes em{color:var(--ink-faint);}
+
+  hr.div{
+    border:none;
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--rule),transparent);
+    margin:2.4rem 0;
+  }
+
+  /* Mobile toggle */
+  .navtoggle{
+    display:none;
+    position:fixed;
+    top:1rem;
+    left:1rem;
+    z-index:50;
+    background:var(--panel);
+    color:var(--ink);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    padding:.55rem .8rem;
+    font-family:"SF Mono",ui-monospace,"Cascadia Mono","Consolas",monospace;
+    font-size:.7rem;
+    letter-spacing:.1em;
+    cursor:pointer;
+  }
+  .scrim{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    z-index:40;
+  }
+
+  @media (max-width:880px){
+    body{font-size:17px;}
+    .layout{grid-template-columns:1fr;}
+    .navtoggle{display:block;}
+    .sidebar{
+      position:fixed;
+      top:0;left:0;
+      width:78%;
+      max-width:300px;
+      height:100vh;
+      z-index:45;
+      transform:translateX(-100%);
+      transition:transform .25s ease;
+      padding-top:3.6rem;
+    }
+    .sidebar.open{transform:translateX(0);box-shadow:0 0 40px rgba(0,0,0,.6);}
+    .scrim.show{display:block;}
+    main{padding:0 1.1rem;}
+    .wrap{padding:4.5rem 0 5rem;}
+    .titleblock{padding-top:3rem;}
+    .line{max-width:none;padding:0 .5rem;}
+  }
+</style>
+</head>
+<body>
+
+<button class="navtoggle" id="navToggle" aria-label="Szenen-Navigation">☰ Szenen</button>
+<div class="scrim" id="scrim"></div>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <h2>Szenen</h2>
+    <nav id="scenenav">
+      <a class="act" href="#prolog">Prolog</a>
+      <a href="#s0">0 · Keller — Nacht (früh)</a>
+      <a class="act" href="#akt-i">Akt I</a>
+      <a href="#s1">1 · Haus Voss — Küche</a>
+      <a href="#s2">2 · Keller</a>
+      <a href="#s3">3 · Schlafzimmer</a>
+      <a href="#s4">4 · Universität</a>
+      <a href="#s5">5 · Café</a>
+      <a class="act" href="#akt-ii">Akt II</a>
+      <a href="#s6">6 · GenetiX-Labor (Montage)</a>
+      <a href="#s7">7 · GenetiX-Labor — Nacht</a>
+      <a href="#s8">8 · Haus / GenetiX (Montage)</a>
+      <a href="#s9">9 · GenetiX-Labor — Nacht</a>
+      <a href="#s10">10 · Schlafzimmer — Nacht</a>
+      <a href="#s11">11 · Flur — Morgen</a>
+      <a class="act" href="#akt-iii">Akt III</a>
+      <a href="#s12">12 · Küche — Tag</a>
+      <a href="#s13">13 · GenetiX-Labor — Nacht</a>
+      <a href="#s13a">13A · GenetiX-Labor (später)</a>
+      <a href="#s14">14 · GenetiX — Büro</a>
+      <a href="#s15">15 · GenetiX-Labor (Montage)</a>
+      <a href="#s16">16 · Präsentationsraum</a>
+      <a href="#s17">17 · GenetiX-Labor — Nacht</a>
+      <a href="#s18">18 · Gänge / Garage (Montage)</a>
+      <a class="act" href="#notes">Anmerkungen v3</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="wrap">
+
+      <header class="titleblock" id="top">
+        <h1>INFECTED ORIGINS</h1>
+        <div class="sub">Prequel zu „INFECTED“</div>
+        <div class="ver">Drehbuch v3 — 24. Juni 2026</div>
+      </header>
+
+      <!-- FIGUREN -->
+      <section class="figuren">
+        <h2>Figuren</h2>
+        <ul>
+          <li><span class="name">RICHARD</span> — Arzt. Anfang 50. Liebender Vater, verbesserungsbedürftiger Ehemann. Wird durch Verzweiflung und Stolz zum Antagonisten.</li>
+          <li><span class="name">EVA</span> — seine Frau. Anfang 50. Sterbenskrank. Moralisch die klarste Person im Film. Mitwisserin ihres eigenen Endes.</li>
+          <li><span class="name">NORA</span> — Tochter, 22. Hilft im Labor. Wird später zu Lilith.</li>
+          <li><span class="name">KESSLER</span> — GenetiX. 60. Wirkt wie ein Onkel. Ist ein Händler. Und ein Mann, der weiß, dass er ersetzbar ist.</li>
+          <li><span class="name">VORSTAND</span> — drei Leute in Anzügen. Sie verwalten. Sie rechnen. Sie wollen es nehmen.</li>
+        </ul>
+      </section>
+
+      <!-- PROLOG -->
+      <div class="act" id="prolog">
+        <span class="label">Prolog</span>
+      </div>
+
+      <section class="scene" id="s0">
+        <p class="slug">0. INT. KELLER — NACHT (FRÜH)</p>
+        <p class="dir em">Closeup: Kassette. Die Spulen drehen sich. Ein Tongerät surrt. Analog, warm, verstaubt.</p>
+        <p class="dir em">RICHARD sitzt allein am Schreibtisch. Zigarette in der einen Hand, das Mikrofon des Kassettenrekorders in der anderen. Hinter ihm: das Labor im Halbdunkel. Noch Hobbykeller. Noch kein GenetiX.</p>
+        <p class="dir em">Er zieht. Bläst den Rauch zur Seite. Drückt auf AUFNEHMEN.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Tagebuch, Eintrag... ich hab aufgehört zu zählen.</p>
+
+        <p class="dir em">Er hustet. Nicht wie Eva — trocken, Raucherhusten.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Eva hat heute weniger Schmerzen. Das erste Mal seit Wochen, dass sie ohne Tabletten eingeschlafen ist. Ich weiß nicht, ob das gut ist oder... oder ob ihr Körper einfach aufgibt.</p>
+
+        <p class="dir em">Beat. Er zieht an der Zigarette.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Die Werte aus Reihe 14 sind... vielversprechend. Wenn ich die Degradation unter 0,6 halte, könnte die Zellintegration stabil genug sein für einen Vivo-Test. Aber das ist... das ist noch Wochen weg. Monate vielleicht.</p>
+
+        <p class="dir em">Er starrt auf die Zigarette.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Nora hat heute einen Fehler gefunden. In meinen eigenen Berechnungen. Sie ist... sie ist besser als ich es je war.</p>
+
+        <p class="dir em">Beat.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Ich glaube, Eva weiß, dass ich nachts hier unten bin. Sie sagt nichts. Aber sie weiß es.</p>
+
+        <p class="dir em">Er löscht die Zigarette. Nimmt die Kassette raus. Beschriftet sie: „Eintrag 47 — Reihe 14“. Daneben, im Karton, ein Stapel: Eintrag 12, 28, 33... Eine Chronik.</p>
+
+        <p class="cue">Richard</p>
+        <p class="paren">(leise, ins Leere)</p>
+        <p class="line">Ich bringe das hin.</p>
+
+        <p class="dir em">Die Spulen stoppen.</p>
+        <p class="dir em">SCHNITT auf Schwarz. Titel: INFECTED ORIGINS.</p>
+      </section>
+
+      <!-- AKT I -->
+      <div class="act" id="akt-i">
+        <span class="label">Erster Akt</span>
+        <span class="num">I</span>
+      </div>
+
+      <section class="scene" id="s1">
+        <p class="slug">1. INT. HAUS VOSS — KÜCHE — NACHT</p>
+        <p class="dir">Kleinbürgerlich, aber warm. Alte Heizung, Holztablett mit Tassen, Kühlschrankbrummen. Ein Zuhause, keine Kulisse.</p>
+        <p class="dir">EVA am Tisch. Dünner Hauschurz. Ein Buch auf dem Schoß, aber sie schaut zum Fenster. Atmet flach. Ihre Hand zittert, wenn sie die Seite umblättert. Ihre Brille liegt auf dem Buch, sie braucht sie nicht mehr.</p>
+        <p class="dir">NORA kommt rein mit einer Tüte. Jacke, Rucksack, nasses Haar.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Du solltest schlafen.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Ich schlafe die ganze Zeit. Ich will wach sein, wenn ihr wach seid.</p>
+
+        <p class="dir">Nora räumt ein. Stellt sich irgendwann hinter Eva, legt die Hand auf ihre Schulter. Eva deckt sie mit der ihren ab.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Wo ist er?</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Keller.</p>
+
+        <p class="dir">Beat.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Hat er heute...</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Nein.</p>
+
+        <p class="dir">Eva nickt. Das sagt alles.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Weißt du, was ich heute gedacht habe? Als ich aufgewacht bin und die Sonne...</p>
+
+        <p class="dir">Sie bricht ab. Hustet. Nicht dramatisch — verschleimt, nass, echtes Husten.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Ich dachte: Das ist ein guter Tag zum Leben.</p>
+
+        <p class="dir">Nora zieht sie an sich. Eva lässt es geschehen. Eine Weile sitzen sie so.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Hab ich dir mal erzählt, woher dein zweiter Name kommt?</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Hundertmal.</p>
+
+        <p class="cue">Eva</p>
+        <p class="paren">(ein kleines Lächeln)</p>
+        <p class="line">Lilith. Sie war die Erste. Die Allererste. Und sie hat gesagt: Ich bin nicht weniger als du.</p>
+
+        <p class="dir">Nora lächelt, halb genervt, halb gerührt. Die Geschichte eines Kindes.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Sag ihm, er soll essen. Nicht für mich. Für sich.</p>
+      </section>
+
+      <section class="scene" id="s2">
+        <p class="slug">2. INT. KELLER — NACHT</p>
+        <p class="dir">Kein Labor. Ein Hobbykeller, der einer Besessenheit gewichen ist. Mikroskop, Laptop, handbeschriftete Etiketten. Eine alte Couch, auf der eine Decke liegt — Richard schläft hier manchmal.</p>
+        <p class="dir">RICHARD vor dem Bildschirm. Die Augen gerötet. Eine Kaffeetasse, auf der „Papas Weltbeste Tochter“ steht — von Nora gemalt, Kinderhand. Der Kaffee dampft noch.</p>
+        <p class="dir">NORA kommt mit einem Teller. Stellt ihn hin. Setzt sich.</p>
+        <p class="dir">Sie schweigen eine Weile. Nora sieht auf den Bildschirm.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Reihe 14 ist falsch.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Was?</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Der Degradationsfaktor. Du hast 0,8. Die Probe war vorgelagert. Das muss 0,6.</p>
+
+        <p class="dir">Richard rechnet. Schließt die Augen.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Scheiße.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Passiert.</p>
+
+        <p class="dir">Er korrigiert. Die Kurve auf dem Bildschirm verändert sich — springt nach oben.</p>
+        <p class="dir">Stille. Beide starren auf den Bildschirm.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Das könnte...</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Ja.</p>
+
+        <p class="dir">Er sieht sie an. Zum ersten Mal in dieser Szene: ein Lächeln. Erschöpft, echt.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Du hättest studieren sollen.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Mache ich doch. Bei dir.</p>
+
+        <p class="dir">Er isst. Nora lehnt sich zurück, sieht auf die Kaffeetasse. Nimmt sie. Wärmt die Hände daran.</p>
+      </section>
+
+      <section class="scene" id="s3">
+        <p class="slug">3. INT. HAUS VOSS — SCHLAFZIMMER — SPÄTER</p>
+        <p class="dir">EVA im Bett. RICHARD neben ihr, noch angezogen. Er hält ihre Hand.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Ich war heute bei der Kommission.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Und?</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Sie sagen, ich sei zu nah dran. Emotional zu beteiligt.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Bist du nicht?</p>
+
+        <p class="cue">Richard</p>
+        <p class="paren">(nach einer Pause)</p>
+        <p class="line">Ja. Aber das macht meine Forschung nicht falsch.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Nein. Aber vielleicht macht es dich blind.</p>
+
+        <p class="dir">Beat. Er streicht ihr über den Kopf.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Ich bin so nah, Eva. Die stabilisierte Form...</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Richard.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">...wenn ich die Zellintegration hinbekomme—</p>
+
+        <p class="cue">Eva</p>
+        <p class="paren">(eindringlich)</p>
+        <p class="line">Richard.</p>
+
+        <p class="dir">Er hält inne.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Ich will, dass du das machst. Ich will, dass du mich rettest. Aber ich will nicht, dass du dabei du selbst vergisst.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Was heißt das?</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Es heißt: Ich habe Angst. Nicht vor dem Sterben. Vor dem, was aus dir wird, wenn du es nicht zulassen kannst.</p>
+
+        <p class="dir">Er antwortet nicht. Draußen regnet es.</p>
+      </section>
+
+      <section class="scene" id="s4">
+        <p class="slug">4. INT. UNIVERSITÄT — KONFERENZRAUM — TAG</p>
+        <p class="dir">Hell, steril, Neon. Ein Whiteboard mit chemischen Formeln. RICHARD steht davor. Fünf LEUTE im Halbkreis.</p>
+        <p class="dir">Wir hören nur Bruchstücke:</p>
+
+        <p class="cue">Prüferin</p>
+        <p class="line">— der Sprung von In-vitro zu In-vivo ist in diesem Stadium nicht verantwortbar —</p>
+
+        <p class="cue">Prüfer</p>
+        <p class="line">— Sie forschen an Ihrer eigenen Frau, Herr Voss. Das ist keine Doppelblindstudie, das ist ein Gebet —</p>
+
+        <p class="dir">RICHARD sagt nichts. Seine Hände hinter dem Rücken.</p>
+
+        <p class="cue">Prüferin</p>
+        <p class="line">Der Antrag wird abgelehnt.</p>
+
+        <p class="dir">SCHNITT: Flur. Richard lehnt mit der Stirn an der Wand. Handy-Vibration: E-Mail. „Ihr Förderungsantrag wurde mit sofortiger Wirkung eingestellt.“</p>
+      </section>
+
+      <section class="scene" id="s5">
+        <p class="slug">5. INT. CAFÉ — TAG</p>
+        <p class="dir">Klein, ruhig, hell. RICHARD sitzt KESSLER gegenüber. Kessler trägt einen dunklen Mantel, liest eine Akte. Er sieht aus wie ein Professor im Ruhestand.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Das hier ist Ihr ursprüngliches Paper. Vor den Kürzungen.</p>
+
+        <p class="dir">Richard sagt nichts.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Es war besser. Bevor die Kommission es zerlegt hat.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Woher haben Sie das?</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Ich lese viel. Mein Name ist Kessler. Ich finanziere Forschung, die anderen zu riskant ist.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Ich brauche keinen —</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Die Kommission gibt Ihnen Protokolle. Ich gebe Ihnen Zeit.</p>
+
+        <p class="dir">Beat.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="paren">(leiser)</p>
+        <p class="line">Und Zeit ist das, was Ihre Frau nicht hat.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Fassen Sie meine Frau nicht an.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Ich fasse sie nicht an. Ich spreche die Wahrheit aus. Die haben Sie nicht widerlegt, Voss. Die haben Sie abserviert, weil Sie unbequem sind.</p>
+
+        <p class="dir">Stille.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Was wollen Sie?</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Ergebnisse. Nur Ergebnisse.</p>
+
+        <p class="dir">Kessler legt eine Karte auf den Tisch. Steht auf. Geht.</p>
+        <p class="dir">Richard bleibt sitzen. Er nimmt die Karte nicht. Er sieht aus dem Fenster. Lange.</p>
+        <p class="dir">Dann: Er holt sein Handy raus. Öffnet ein Foto — Eva, jünger, lachend, am Meer. Er sieht es an.</p>
+        <p class="dir">Er nimmt die Karte. Steht auf. Geht zur Tür, nach draußen, das Handy schon am Ohr.</p>
+      </section>
+
+      <!-- AKT II -->
+      <div class="act" id="akt-ii">
+        <span class="label">Zweiter Akt</span>
+        <span class="num">II</span>
+      </div>
+
+      <section class="scene" id="s6">
+        <p class="slug">6. INT. GENETIX-LABOR — TAGE (MONTAGE)</p>
+        <p class="dir">Musik: etwas Pulsierendes, aber nicht bedrohlich. Noch nicht. Die Bilder leben von NÄHE — Hände, Gesichter, Köpfe, die sich berühren.</p>
+        <p class="dir">Schnitte:</p>
+        <p class="dir em">— Richard im weißen Kittel. Seine Hände arbeiten schneller, sicherer als im Keller.</p>
+        <p class="dir em">— Nora am Laptop. Sie sortiert Proben, korrigiert Werte. Sie lächelt.</p>
+        <p class="dir em">— Eva zu Hause. Sprachnachricht aufs Handy: „Die Werte sind besser. Ich habe heute weniger Schmerzen.“</p>
+        <p class="dir em">— Richard und Nora am Mikroskop, Kopf an Kopf. Er deutet, sie nickt.</p>
+        <p class="dir em">— Kessler hinter Richard. Er liest über seine Schulter, nickt, geht.</p>
+        <p class="dir">Das Licht in diesen Bildern ist hell, fast klinisch — aber es fühlt sich an wie Erlösung. Wie der Anfang von etwas Gutem.</p>
+      </section>
+
+      <section class="scene" id="s7">
+        <p class="slug">7. INT. GENETIX-LABOR — NACHT</p>
+        <p class="dir">Das Labor leer bis auf Richard und Kessler. Das Licht hier schon kühler als am Tag — eine einzelne Lampe über dem Arbeitsplatz, der Rest in Schatten. Auf dem Monitor: Zellen unter dem Mikroskop. Grüne Partikel. Und: schwarze Fäden, die sich durch die Struktur ziehen.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Tierstudien?</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Noch nicht.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Dann jetzt.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Das Protokoll sieht vor —</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Das Protokoll ist ein Vorschlag. Jede Woche Verzögerung ist eine Woche, in der —</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Sie haben gesagt, ich habe die Kontrolle.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="paren">(lächelnd)</p>
+        <p class="line">Und haben Sie die? Wirklich?</p>
+
+        <p class="dir">Beat. Richard sieht auf den Monitor. Schwarze Fäden pulsieren.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Eine Ausnahme. Einmal.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Einmal.</p>
+
+        <p class="dir">Kessler geht. Richard bleibt allein. Auf dem Tisch: eine Spritze, grünlich gefüllt. Er nimmt sie. Dreht sie. Licht durch die Flüssigkeit.</p>
+        <p class="dir">Dann steckt er sie ein. Trägt sie nach Hause.</p>
+      </section>
+
+      <section class="scene" id="s8">
+        <p class="slug">8. INT. HAUS / GENETIX — MONTAGE</p>
+        <p class="dir">Zeitraffer des Wandels. Still, beobachtend:</p>
+        <p class="dir em">— Das Haus: Evas Medikamente auf dem Nachttisch. Niemand räumt sie weg.</p>
+        <p class="dir em">— Nora klopft an eine GenetiX-Labortür. „Papa?“ Keine Antwort. Die Tür ist abgeschlossen.</p>
+        <p class="dir em">— Richard im Labor allein. Seine Notizen: früher handgeschrieben, persönlich. Jetzt: ausgedruckt, nummeriert, passwortgeschützt.</p>
+        <p class="dir em">— Zuhause. Nachts. Richard am Bett von Eva. Eine Spritze, grünlich, in seiner Hand. Er hält sie. Er zögert. Eva schläft. Wir sehen nicht, ob er es tut. Wir sehen nur seine Hand und ihren Arm.</p>
+        <p class="dir em">— Richard im Auto vor dem Haus. Er sitzt dort fünf Sekunden zu lang, bevor er aussteigt.</p>
+        <p class="dir em">— Nora findet seinen alten Notizblock in der Küche. Sie blättert. Die letzten Seiten sind leer.</p>
+      </section>
+
+      <section class="scene" id="s9">
+        <p class="slug">9. INT. GENETIX-LABOR — NACHT</p>
+        <p class="dir">Die Beleuchtung hat sich weiter verändert. Kälter. Bläulicher.</p>
+        <p class="dir">Richard und Kessler vor einem Monitor. Richard sieht müde aus, anders als vorher — etwas in ihm hat schon nachgegeben.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Wie hat sie reagiert?</p>
+
+        <p class="cue">Richard</p>
+        <p class="paren">(tonlos)</p>
+        <p class="line">Die erste Dosis. Toxisch. Sie hätte fast... Ich musste runter. Verdünnen.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Aber sie lebt.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Sie lebt.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Dann haben wir eine Untergrenze. Und eine Patientin, die das Compound verträgt. Das ist mehr, als wir vor einem Monat hatten.</p>
+
+        <p class="dir">Richard schweigt. Auf dem Monitor: Evas Werte. Ein schmaler schwarzer Faden in der Zellprobe.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Aber sie ist zu schwach für die volle Stufe. Das wissen Sie.</p>
+
+        <p class="dir">Kessler legt eine Akte auf den Tisch. Ein Foto: ein junges Mädchen. Daneben: Marker-Werte.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Kompatibilität: 98,7 Prozent. Die beste Probe, die wir je hatten. Ein gesunder Organismus. Die echte Reaktion, ungetrübt von ihrer Krankheit.</p>
+
+        <p class="dir">Richard sieht das Foto. Er sieht lange.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Wie alt?</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Jung genug.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Und das soll Eva helfen?</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Wenn wir wissen, wie das Compound in einem stabilen Körper wirkt, können wir die Dosis für Ihre Frau exakt einstellen. Ohne diese Daten raten wir. Mit ihnen rechnen wir.</p>
+
+        <p class="dir em">Eine Lüge. Oder eine Halbwahrheit. Richard will ihr glauben.</p>
+
+        <p class="cue">Richard</p>
+        <p class="paren">(leise)</p>
+        <p class="line">Was muss ich tun?</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Unterschreiben. Mehr nicht.</p>
+
+        <p class="dir">Richard nimmt den Stift. Er zögert. Dann: Unterschrift.</p>
+        <p class="dir em">Kessler nimmt die Akte, nickt, geht. Richard bleibt mit dem leeren Formular zurück. Seine Hand zittert. Unter seinem Ärmel: ein schwarzer Faden über dem Handgelenk.</p>
+      </section>
+
+      <section class="scene" id="s10">
+        <p class="slug">10. INT. HAUS VOSS — SCHLAFZIMMER — NACHT</p>
+        <p class="dir">EVA liegt im Bett. Sehr schwach. Auf dem Nachttisch: eine Spritze, grünlich gefüllt. Richard sitzt neben ihr, Kittel noch an. Er hält ihre Hand. Unter dem Ärmel: der schwarze Faden über seinem Handgelenk.</p>
+
+        <p class="cue">Eva</p>
+        <p class="paren">(schwach)</p>
+        <p class="line">Du bist müde.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Nein.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Ich höre, wie du nachts aufstehst. Und nicht zurückkommst.</p>
+
+        <p class="dir">Er streichelt ihre Hand. Sein Blick geht zur gefüllten Spritze. Dann zu ihr.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Eva. Wenn ich... Es gibt eine höhere Stufe. Sie ist nicht erprobt. Ich weiß nicht, ob dein Körper—</p>
+
+        <p class="cue">Eva</p>
+        <p class="paren">(unterbricht ihn, ruhig)</p>
+        <p class="line">Richard.</p>
+
+        <p class="dir">Beat. Sie sieht ihn an. Sie weiß genau, was in der Spritze ist. Sie wusste es die ganze Zeit.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Mach es. Ich vertraue dir.</p>
+
+        <p class="dir">Ein langer Moment. Er sieht die gefüllte Spritze an. Dann ihre Hand. Er hält sie fester.</p>
+
+        <p class="cue">Eva</p>
+        <p class="paren">(fast unverständlich)</p>
+        <p class="line">Versprich mir was.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Alles.</p>
+
+        <p class="cue">Eva</p>
+        <p class="line">Dass du nicht...</p>
+
+        <p class="dir">Sie schließt die Augen. Ihr Atem wird flacher.</p>
+        <p class="dir em">Seine Hand bewegt sich aus dem Bild — zur Spritze. Wir bleiben auf ihrem Gesicht. Wir sehen nicht, was er tut.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Eva?</p>
+
+        <p class="dir">Keine Antwort. Der Monitor neben dem Bett: die Kurve flacht ab. Piept. Wird zu einem Ton.</p>
+        <p class="dir">RICHARD bleibt sitzen. Hält ihre Hand. Sein Gesicht: nichts. Völlig nichts.</p>
+        <p class="dir em">Dann, leise: der schwarze Faden an seinem Handgelenk pulsiert. Auf dem Nachttisch jetzt die Spritze — leer.</p>
+      </section>
+
+      <section class="scene" id="s11">
+        <p class="slug">11. INT. HAUS VOSS — FLUR — MORGEN</p>
+        <p class="dir">Morgenlicht im Flur, staubig, schräg. Das Kühlschrankbrummen aus der Küche, leise, unverändert — das einzige Geräusch im Haus.</p>
+        <p class="dir">NORA kommt durch die Haustür. Rucksack. Sie ruft:</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Mama?</p>
+
+        <p class="dir">Stille. Auf dem Flurtisch eine Kaffeetasse, halb voll, kalt. Nora geht im Vorbeigehen daran vorbei, legt die Hand drum — sucht Wärme, findet keine. Sie hält inne. Etwas an der Stille ist falsch.</p>
+        <p class="dir">Sie geht weiter. Schlafzimmer: Eva, still, kalt. Monitor: Linie. Auf dem Nachttisch eine leere Spritze, die sie nicht versteht. Noch nicht.</p>
+        <p class="dir">Nora bleibt in der Tür stehen. Sie geht nicht rein. Sie setzt sich auf den Flurboden, Rücken an die Wand. Knie an die Brust. Das Morgenlicht wandert über den Boden auf sie zu.</p>
+        <p class="dir">Lange. Das Brummen des Kühlschranks. Ihr Atem.</p>
+        <p class="dir">Dann, irgendwann: ein Ton aus dem Keller. Richard, der arbeitet.</p>
+      </section>
+
+      <!-- AKT III -->
+      <div class="act" id="akt-iii">
+        <span class="label">Dritter Akt</span>
+        <span class="num">III</span>
+      </div>
+
+      <section class="scene" id="s12">
+        <p class="slug">12. INT. HAUS VOSS — KÜCHE — TAG</p>
+        <p class="dir">Nora am Küchentisch. Vor ihr: Vaters alter Notizblock. Sie hat ihn gefunden und liest.</p>
+        <p class="dir">Wir sehen, was sie sieht: handschriftliche Notizen, die kälter werden. Persönliche Kommentare verschwinden. Zuerst: „Evas Werte besser — Hoffnung!“ Dann, durchgestrichen, neu: „Eva — erste Dosis: Toxizität. Verdünnt. Sie hält.“ Dann: „Subjekt — Marker 98,7 — Transport genehmigt.“ Dann: „Compound-VX Stufe 4 — Selbstversuch — schwarze Verfärbung, stabil.“</p>
+        <p class="dir">Und ein Formular. Unterschrieben: Dr. R. Voss. Ein Name darauf: ein Mädchen. Ein Datum.</p>
+        <p class="dir">Nora blättert zurück. Findet die letzte Seite zu Eva. Letzter Eintrag, hastig: „Dosiserhöhung Compound-VX. Reaktion: Toxizität. Status: Verstorben.“</p>
+        <p class="dir em">Die leere Spritze auf dem Nachttisch. Jetzt versteht sie sie. Nicht die Krankheit. Das Compound. Und Eva hat ja gesagt.</p>
+        <p class="dir">Nora legt den Notizblock hin. Ihr Gesicht: zuerst nichts. Dann etwas, das härter ist als Trauer.</p>
+      </section>
+
+      <section class="scene" id="s13">
+        <p class="slug">13. INT. GENETIX-LABOR — NACHT</p>
+        <p class="dir">Das Labor. Richard allein. Er sieht schlecht aus: hohl, zittrig, die schwarzen Fäden an seinem Handgelenk sind weiter gewandert. Er arbeitet mechanisch.</p>
+        <p class="dir">Die Tür geht auf. NORA steht drin. Sie hat den Notizblock dabei.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Sie ist nicht an dem Krebs gestorben.</p>
+
+        <p class="dir">Stille.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Sie war krank—</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Es steht in deiner Schrift. Toxizität. Das war nicht der Krebs. Das warst du.</p>
+
+        <p class="dir">Richard wendet sich ab.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Und das Mädchen. In deiner Akte. Du hast unterschrieben.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Ich hatte keine—</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Du hast unterschrieben.</p>
+
+        <p class="dir">Ein Echo von Kesslers Stift. Richard schließt die Augen.</p>
+        <p class="dir">Stille.</p>
+
+        <p class="cue">Richard</p>
+        <p class="paren">(leise, gebrochen)</p>
+        <p class="line">Wenn ich jetzt aufhöre... dann war alles umsonst.</p>
+
+        <p class="dir">Nora steht da. Etwas in ihr bricht — ein Atem, der einknickt, kurz, unwillkürlich. Ihre Hand am Türrahmen zittert und hört nicht auf zu zittern. Sie sieht es selbst. Dann presst sie die Hand zur Faust. Versiegelt es.</p>
+
+        <p class="cue">Nora</p>
+        <p class="paren">(leise, kontrolliert)</p>
+        <p class="line">Sie hat angefangen, dir etwas zu sagen. Am Ende. „Dass du nicht...“ Sie hat es nicht zu Ende gebracht. Ich schon. Nicht, wenn ihr dafür jemanden begraben müsst.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Eva ist tot.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Ja. Und du hast sie getötet.</p>
+
+        <p class="dir">Beat. Richard sackt zusammen. Nicht dramatisch — sein Körper gibt nach. Er fällt nicht. Er setzt sich hin. Auf den Laborboden.</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Ich kann nicht...</p>
+
+        <p class="dir">Er hustet. Schwarzer Faden pulsiert an seinem Hals.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Was hast du dir selbst angetan?</p>
+
+        <p class="cue">Richard</p>
+        <p class="paren">(fast unhörbar)</p>
+        <p class="line">Lass sie es nicht nehmen.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Was?</p>
+
+        <p class="cue">Richard</p>
+        <p class="line">Die Forschung. Lass sie es nicht nehmen.</p>
+
+        <p class="dir">Seine Augen schließen sich. Sein Körper lehnt an der Wand. Er atmet noch. Aber kaum.</p>
+        <p class="dir">Nora kniet neben ihm.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Papa.</p>
+
+        <p class="dir">Keine Antwort. Sie schüttelt ihn. Nichts. Sein Atem wird flacher.</p>
+        <p class="dir em">Richards Hand liegt offen. Der schwarze Faden hat aufgehört zu pulsieren.</p>
+        <p class="dir">Nora bleibt neben ihm knien. Ihre Hand, eben noch zur Faust, öffnet sich auf seiner Brust.</p>
+      </section>
+
+      <section class="scene" id="s13a">
+        <p class="slug">13A. INT. GENETIX-LABOR — NACHT (SPÄTER)</p>
+        <p class="dir">Dieselbe Nacht. Stunden später, vielleicht. Das Labor liegt still. Richards Körper, wo er war, abgedeckt mit seinem eigenen Kittel.</p>
+        <p class="dir">NORA allein. Sie steht am Arbeitstisch. Vor ihr: das Compound, in einem versiegelten Behälter, grünlich schimmernd. Daneben: der Notizblock. Die ganze Akte. Alles.</p>
+        <p class="dir">Sie hat ein Telefon in der Hand. Sie sieht es an. Drei Ziffern wären genug. Sie hält es lange.</p>
+        <p class="dir">Daneben, auf dem Tisch, ein Kanister Reinigungsalkohol und Streichhölzer aus der Werkbank. Sie sieht sie an. Sie könnte alles verbrennen. Den Notizblock. Die Proben. Das Mädchen-Foto. Sie könnte hier rausgehen und nie wiederkommen.</p>
+        <p class="dir">Auf der Werkbank, in einem alten Schuhkarton: die Kassetten. „Eintrag 47“. Daneben eine neuere, unbeschriftet außer einer Zahl. Sie nimmt sie. Legt sie in den alten Rekorder. Drückt PLAY.</p>
+
+        <p class="cue">Richard <span class="vo">(V.O., aus der Kassette, brüchig, krank)</span></p>
+        <p class="line">Tagebuch... Ich weiß nicht mehr, welcher Eintrag. Eva schläft. Ich habe ihr heute... ich habe es gemacht. Sie hat ja gesagt. Sie hat ja gesagt.</p>
+
+        <p class="dir">Stille auf dem Band. Atmen.</p>
+
+        <p class="cue">Richard <span class="vo">(V.O.)</span></p>
+        <p class="line">Wenn ich jetzt aufhöre, war alles umsonst. Sie. Ich. Das Mädchen. Alles umsonst. Also höre ich nicht auf. Ich kann nicht.</p>
+
+        <p class="dir">Das Band läuft leer weiter. Ein Surren. Nora drückt STOP.</p>
+        <p class="dir">Sie legt das Telefon hin. Sie wählt nicht.<br>Sie legt die Streichhölzer hin. Sie zündet nicht.</p>
+        <p class="dir">Sie schlägt den Notizblock auf. Nicht auf der letzten Seite — sie blättert zurück. Reihe 14. Die Degradationswerte. Sie liest. Ihr Finger fährt eine Spalte hinunter, hält an.</p>
+
+        <p class="cue">Nora</p>
+        <p class="paren">(halblaut, zu sich)</p>
+        <p class="line">Null Komma acht. Er hat es wieder bei null Komma acht gelassen.</p>
+
+        <p class="dir">Sie nimmt einen Stift. Streicht den Wert durch. Schreibt darüber: 0,6. Dieselbe Korrektur wie damals im Keller, vor einem Leben. Sie sieht den korrigierten Wert an.</p>
+        <p class="dir">Etwas in ihrem Gesicht verschiebt sich. Nicht Trauer. Das ist es nicht. Es ist das, was sie immer gesehen hat und er nicht: wo der Fehler liegt. Was er nicht zu Ende gebracht hat. Sie kann es.</p>
+        <p class="dir">Sie sieht den Behälter mit dem Compound an. Lange.</p>
+        <p class="dir">Dann nimmt sie eine leere Spritze. Zieht eine kleine, kleine Menge auf. Sie krempelt den Ärmel hoch. Ihre Hand — die eben noch zitterte — ist jetzt ruhig.</p>
+        <p class="dir">Sie sticht. Drückt. Wartet.</p>
+        <p class="dir">Unter ihrer Haut, am Unterarm, langsam: der erste schwarze Faden.</p>
+        <p class="dir">Sie sieht ihm beim Wachsen zu. Kein Schmerz im Gesicht. Etwas anderes. Sie nickt einmal, kaum sichtbar — als hätte sich eine Hypothese bestätigt.</p>
+        <p class="dir">Sie krempelt den Ärmel wieder runter.</p>
+      </section>
+
+      <section class="scene" id="s14">
+        <p class="slug">14. INT. GENETIX — BÜRO — TAG</p>
+        <p class="dir">Nora. Schwarz. Sie sitzt KESSLER gegenüber.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Es tut uns leid. Ihr Vater war ein außergewöhnlicher Mann.</p>
+
+        <p class="dir">Noras Blick fällt kurz auf Kesslers Hände, die ruhig auf der Akte liegen. Die Hände, die das Mädchen-Formular abgezeichnet haben. Sie hält den Blick eine Sekunde zu lang.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Er war ein Wissenschaftler.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Genau. Und er hat etwas hinterlassen, das nicht sterben darf. Die Formel, die Notizen—</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Ich kenne die Notizen.</p>
+
+        <p class="dir">Kurz — ein Riss in Kesslers Lächeln. Nur einen Moment. Dann ist er wieder der Onkel.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="paren">(lächelt)</p>
+        <p class="line">Das wissen wir.</p>
+
+        <p class="dir">Beat. Etwas Berechnung in seinen Augen: Die Ergebnisse zählen jetzt für sein eigenes Überleben. Der Vorstand sitzt ihm im Nacken. Er braucht sie.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Wir brauchen jemanden, der seine Arbeit fortsetzt. Jemanden, der sie versteht. Nicht nur die Formel — die Logik dahinter.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Und das bin ich.</p>
+
+        <p class="cue">Kessler</p>
+        <p class="line">Sie sind seine Tochter. Sie haben die Recherchen mit ihm gemacht. Ja, Sie sind es.</p>
+
+        <p class="dir">Nora sieht ihn an. Sie weiß, was er nicht weiß: dass sie die Beweise hat. Dass sie sich bereits dosiert hat. Dass er glaubt, er kontrolliere sie. Sie lässt ihn das glauben.</p>
+        <p class="dir">Ihr Gesicht wird leer, professionell, kalt. Eine Maske, die perfekt sitzt.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Was brauchen Sie?</p>
+      </section>
+
+      <section class="scene" id="s15">
+        <p class="slug">15. INT. GENETIX-LABOR — MONTAGE</p>
+        <p class="dir">Keine Musik. Nur Geräusche: Tastatur, Summen von Geräten, Schritte auf Linoleum. Anders als Montage 6 — hier lebt jedes Bild von DISTANZ. Nora allein im Bild. Reflexionen im Glas. Kalte Geometrie. Leerer Raum um sie herum.</p>
+        <p class="dir em">— Nora im Kittel. Sie arbeitet. Ihre Handschrift auf den Etiketten: sauberer als die ihres Vaters.</p>
+        <p class="dir em">— Sie spricht mit Wachen. Kurz, klar.</p>
+        <p class="dir em">— Eine Wache: „Frau Voss?“ — Nora, ohne aufzusehen: „Voss.“</p>
+        <p class="dir em">— Ihr Spiegelbild in der Glasscheibe einer Probenkammer, doppelt, weit weg.</p>
+        <p class="dir em">— Eine Probe unter dem Mikroskop: grüne Flüssigkeit, stabil. Die schwarzen Fäden erscheinen, aber langsamer, kontrollierter. Sie nickt.</p>
+        <p class="dir">Dann: ein Bild, das ins Bild kommt. Ihr Handy auf dem Tisch. Der Hintergrund: Eva und Nora. Lachend. Am Meer.</p>
+        <p class="dir">Nora sieht es. Ihr Gesicht — einen langen Moment hält die Kamera darauf. Hinter der Maske, kurz, das Mädchen aus der Küche.</p>
+        <p class="dir">Dann schaltet sie das Handy aus und legt es verkehrt herum auf den Tisch.</p>
+      </section>
+
+      <section class="scene" id="s16">
+        <p class="slug">16. INT. GENETIX — PRÄSENTATIONSRAUM — ABEND</p>
+        <p class="dir">Großer Raum. Glaswände, dunkles Holz. Drei VORSTÄNDLER am Tisch. Zwei WACHEN an der Tür. Ein Stuhl am Kopfende bleibt leer — ein Namensschild davor: KESSLER. Eine Notiz: „abwesend“.</p>
+        <p class="dir">NORA steht vorn. Beamer. Auf dem Schirm: „Compound-VX Gen 4 — Live-Demonstration.“</p>
+
+        <p class="cue">Vorstand 1</p>
+        <p class="line">Ihr Vater ist tot, Frau Voss. Und ehrlich gesagt: Das Projekt hat genug gekostet. Eine Patientin. Ein Forscher. Beide tot, beide auf unserer Bilanz.</p>
+
+        <p class="cue">Vorstand 2</p>
+        <p class="line">Wir haben bereits ein externes Labor angefragt. Sauberere Bücher. Wir übergeben das Projekt.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Sie übergeben gar nichts.</p>
+
+        <p class="cue">Vorstand 2</p>
+        <p class="line">Frau Voss—</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Weil es funktioniert.</p>
+
+        <p class="dir">Sie klickt. Daten. Testreihen. Stabilitätskurven.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Generation 1 bis 3 waren instabil. Schwarze Adern, Toxizität, Tod. Generation 4 ist stabilisiert. Die Integration dauert Stunden statt Minuten.</p>
+
+        <p class="cue">Vorstand 3</p>
+        <p class="paren">(abwinkend)</p>
+        <p class="line">Behauptungen. Ihr Vater hat auch viel behauptet.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Dann sehen Sie es selbst. Eine geschlossene Demonstration. Standard-Sicherheitsprotokoll. Niemand verlässt den Raum, bevor der Test abgeschlossen ist.</p>
+
+        <p class="dir">Sie sieht die Vorstände an. Sie haben gerade gesagt, sie nehmen es ihr weg. Sie haben Eva und Richard als Posten verbucht.</p>
+
+        <p class="cue">Nora</p>
+        <p class="line">Sind Sie einverstanden?</p>
+
+        <p class="dir">Die Vorstände nicken — ungeduldig, herablassend. Eine Wache schließt die Tür von innen.</p>
+        <p class="dir">Nora geht zum Terminal. Auf dem Schirm eine Auswahl: zwei Chargen. „Gen 4 — stabilisiert“ und „Gen 1 — Aerosol“. Ihr Finger wählt. Nicht die stabile.</p>
+        <p class="dir">Auf dem Schirm: „Live-Aerosol-Test. Versiegelter Raum.“</p>
+        <p class="dir">Sie aktiviert.</p>
+        <p class="dir">Feiner Nebel aus der Decke. Die Vorstände atmen ein. Einer hustet.</p>
+        <p class="dir">Dann: schwarze Adern auf dem Handrücken von VORSTAND 2. Er starrt darauf.</p>
+
+        <p class="cue">Vorstand 1</p>
+        <p class="line">Was ist—</p>
+
+        <p class="dir">Panik. Einer rennt zur Tür. Versiegelt.</p>
+
+        <p class="cue">Vorstand 3</p>
+        <p class="line">Sie — Sie wussten—</p>
+
+        <p class="dir">Nora steht still. Ruhig. Sie beugt sich zum Mikrofon.</p>
+
+        <p class="cue">Nora</p>
+        <p class="paren">(leise)</p>
+        <p class="line">Es funktioniert. Nur nicht für Sie.</p>
+
+        <p class="dir">Nora geht zum Notfall-Panel. Containment-Release. Sie könnte die Tür öffnen. Sie könnte das Gegenmittel-Protokoll starten.</p>
+        <p class="dir">Ihre Hand über dem Schalter.</p>
+        <p class="dir">BILD: Erinnerung. Eva im Bett, der Satz, den sie nie zu Ende brachte. „Dass du nicht...“ Und Noras eigene Stimme, die ihn schließt: nicht, wenn ihr dafür jemanden begraben müsst.</p>
+        <p class="dir">Nora hat schon jemanden begraben. Sich selbst, in der Nacht im Labor. Der Faden unter ihrem Ärmel. Der Preis ist bezahlt.</p>
+        <p class="dir">Ihre Hand zieht sich zurück.</p>
+
+        <p class="cue">Nora</p>
+        <p class="paren">(ins Mikrofon)</p>
+        <p class="line">Containment bleibt geschlossen.</p>
+
+        <p class="dir">Hinter dem Glas: Stimmen, die leiser werden. Krämpfe. Stille.</p>
+        <p class="dir">Nora dreht sich um. Sieht durch die Glasscheibe in den leeren Raum.</p>
+        <p class="dir">Sie geht.</p>
+      </section>
+
+      <section class="scene" id="s17">
+        <p class="slug">17. INT. GENETIX-LABOR — NACHT</p>
+        <p class="dir">Nora allein. Sie sitzt am Terminal. Sichert Daten. Umstrukturiert Zugriffsrechte. Ihr Name überall, wo vorher Kesslers Name stand.</p>
+        <p class="dir">Neben dem Terminal, in einem Ablagekorb: zwei Akten. Die obere — das Mädchen, 98,7 Prozent. Sie schlägt sie auf. Marker-Werte. Stabilisierte Gen-4-Daten. Das Mädchen war die Quelle. Das Verbrechen ihres Vaters ist der Grund, dass es funktioniert.</p>
+        <p class="dir">Sie legt die Akte zur Seite, zu einer zweiten, dünneren. Auf der zweiten ein neuer Name, frisch gedruckt.</p>
+        <p class="dir">Sie öffnet eine neue Datei. Projektleitung. Feld: Name.</p>
+        <p class="dir">Sie tippt nicht. Sie starrt auf das leere Feld.</p>
+        <p class="dir">An der Laborwand hängt nichts. Kein Gemälde, kein Poster. Aber wir hören, ganz leise, eine Erinnerung — Evas Stimme aus der Küche, aus der Kindheit:</p>
+
+        <p class="cue">Eva <span class="vo">(V.O., entfernt)</span></p>
+        <p class="line">Lilith ... sie war die Erste. Und sie hat gesagt: Ich bin nicht weniger als du.</p>
+
+        <p class="dir">Nora schließt die Datei, ohne etwas zu tippen. Den Namen trägt sie jetzt selbst. Niemand muss ihn lesen.</p>
+        <p class="dir">Sie steht auf. Geht durch das Labor. Das Licht hinter ihr geht aus. Reihe für Reihe.</p>
+      </section>
+
+      <section class="scene" id="s18">
+        <p class="slug">18. INT. GENETIX — GÄNGE / GARAGE — MONTAGE</p>
+        <p class="dir">Letzte Bilder. Keine Musik. Nur Geräusche: Schritte, Türen, Motoren.</p>
+        <p class="dir em">— Ein weißer Van wird beladen.</p>
+        <p class="dir em">— Zwei Aktenordner auf einem Tisch, nebeneinander. Der eine: das Mädchen, 98,7%, „abgeschlossen“. Der andere, neu: <strong>FRANK</strong>. Kompatibilität: 94,2%. „aktiv“.</p>
+        <p class="dir em">— Ein OP-Hemd an einem Haken.</p>
+        <p class="dir em">— Nora — jetzt Lilith — im weißen Kittel. Sie geht durch einen Gang, der aussieht wie das Labor aus INFECTED.</p>
+        <p class="dir em">— Auf einem Metalltablett: Spritzen. Grünes Serum.</p>
+
+        <p class="cue">Lilith <span class="vo">(V.O.)</span></p>
+        <p class="line">Mein Vater hat gesagt: Wenn ich aufhöre, war alles umsonst. Er hatte recht. Nur war er nicht bereit, dafür zu bezahlen.</p>
+
+        <p class="dir">Pause. Sie geht weiter. Im Vorbeigehen krempelt sich ihr Ärmel hoch — am Unterarm der schwarze Faden, fest, kontrolliert. Sie hat bezahlt.</p>
+
+        <p class="cue">Lilith <span class="vo">(V.O.)</span></p>
+        <p class="line">Ich bin bereit.</p>
+
+        <p class="dir">Sie öffnet eine Tür. Dahinter: ein Raum mit einem OP-Tisch.</p>
+
+        <p class="cue">Lilith <span class="vo">(V.O.)</span></p>
+        <p class="line">Bringen Sie ihn rein.</p>
+
+        <p class="dir">SCHNITT auf Schwarz.</p>
+      </section>
+
+      <!-- FINAL TITLE CARD -->
+      <div class="titlecard">
+        <div class="card">INFECTED ORIGINS</div>
+      </div>
+      <div class="ende">ENDE</div>
+
+      <!-- NOTES -->
+      <section class="notes" id="notes">
+        <h2>Anmerkungen zur v3</h2>
+
+        <h3>Das Kernproblem von v2 und wie v3 es löst</h3>
+        <p>In v2 war Noras Verwandlung von der trauernden Tochter (Szene 13) zur kalten Massenmörderin (Szene 16) zu krass — der eigentliche Kipppunkt fand vollständig im Leerraum zwischen den Szenen statt. Wir sahen sie trauern und wir sahen sie töten, aber wir sahen sie nie <em>entscheiden</em>. v3 baut den Bogen als drei dramatisierte Stationen neu: <strong>Trauer → Rationalisierung → Point of no return</strong> — ohne neuen Plot, nur durch Umverteilung und gezielte Beats.</p>
+
+        <h3>Was sich verändert hat</h3>
+        <ul>
+          <li><strong>NEUE Scharnierszene (13A).</strong> Der zentrale Fix. Nora allein mit dem Compound, noch unentschieden. Sie hat zwei echte Alternativen — das Telefon (Polizei), die Streichhölzer (alles verbrennen) — und lehnt beide ab. Sie hört Richards letzte Kassette ab (zahlt das Prolog-Tagebuch ein) und injiziert sich dann selbst eine kleine Dosis. Der erste schwarze Faden erscheint unter <em>ihrer</em> Haut. Die vererbte Besessenheit wird buchstäblich zur Ansteckung. Das ist der dramatisierte Übergang: eine aktive, kalte Wahl, kein passives Einwilligen.</li>
+          <li><strong>Evas Tod ist jetzt eindeutig.</strong> v2 widersprach sich (Szene 9 sagte „nicht Eva“, Szene 12 enthüllte, das Compound habe sie getötet). v3 legt sich fest: Richard ist bereits über diese Linie; Eva willigt halb-bewusst ein („Mach es. Ich vertraue dir.“ — Szene 10). Eine gepflanzte Spritze am Bett (Szene 8, 10, 11) bestätigt in Szene 12, was wir halb gesehen haben. Das macht aus verstecktem Mord eine geteilte tragische Wette und nimmt Eva aus dem reinen Sankt-Modus. Das Mädchen (98,7%) dient der Verfeinerung <em>nach</em> Evas erster schlechter Reaktion.</li>
+          <li><strong>Szene 16 klärt die Absicht.</strong> Der Widerspruch „stabiles Gen 4“ vs. „sofort tödliches Aerosol“ wird lesbare Villainy: Nora wählt sichtbar die waffenfähige Gen-1-Charge, und die Zeile „Es funktioniert. Nur nicht für Sie.“ macht den Pitch zum Köder. Der Vorstand droht zuerst, ihr das Projekt wegzunehmen und verbucht Eva und Richard als Posten — so verbinden sich die Opfer kausal mit Richards Vermächtnis „Lass sie es nicht nehmen“. Der Mord hat jetzt Reibung und Gewicht.</li>
+          <li><strong>Trauer bekommt einen Riss.</strong> Statt „keine Träne“ (Szene 13) ein unwillkürlicher Riss — ein Atem, der bricht, eine zitternde Hand —, den Nora dann bewusst versiegelt. Die spätere Kälte liest sich als gewählte Rüstung, nicht als geflippter Schalter. Szene 11 ist mit Sinnesdetail angereichert (Morgenlicht, Kühlschrankbrummen, die kalte Kaffeetasse), damit der Verlust trägt.</li>
+          <li><strong>Thesen-Dialog gekürzt.</strong> „Du hattest eine Wahl“ → „Du hast unterschrieben“ (Echo zu Kesslers Stift). Richards „umsonst“-Aufzählung reduziert. Der Callback landet erst in Lilliths V.O. (Szene 18) voll.</li>
+          <li><strong>Kessler bekommt Textur.</strong> Ein Riss im Lächeln, ein Tell, dass die Ergebnisse für sein eigenes Überleben zählen — das motiviert, warum er die einzige Person mit Mordbeweisen empowert: Er glaubt, sie sei kontrollierbar. Noras Blick auf seine Hände in Szene 14 deutet einen bereits gefassten Plan an.</li>
+          <li><strong>Die Eva-„Lilith“-Saat ist nach vorn gepflanzt</strong> (Szene 1), sodass sie in Szene 17 nur noch als Echo aufblitzt. Der getippte LILITH-Name ist gestrichen — Nora trägt ihn jetzt, ohne ihn zu tippen (löst den Zählfehler und den Selbstwiderspruch zur v2-Notiz).</li>
+          <li><strong>Das 98,7%-Mädchen wird ausgezahlt.</strong> Ihre Akte taucht in Akt III wieder auf — als Quelle der stabilisierten Gen-4-Daten — und liegt in Szene 18 neben Franks Akte. Das schließt die Kausalschleife zwischen Verbrechen und „Erfolg“.</li>
+          <li><strong>Richards Pakt wird zur Wahl.</strong> Szene 5 bekommt einen Schluss-Beat (er sieht Evas Foto, ruft zurück). Kessler-Exposition von Erklär-Listen auf knappe Stiche gekürzt („Die Kommission gibt Ihnen Protokolle. Ich gebe Ihnen Zeit.“).</li>
+          <li><strong>Montagen kontrastiert statt gedoppelt.</strong> Montage 6 lebt von Nähe (Kopf an Kopf, Sprachnachricht), Montage 15 von Distanz und Leere (Nora allein, Reflexionen im Glas). Der doppelte Monitor-Prozent-Beat ist entschärft. Der Handy-Flip-Beat in 15 ist verlängert (Noras Gesicht, bevor sie es umdreht).</li>
+        </ul>
+
+        <h3>Was bewusst gleich geblieben ist</h3>
+        <ul>
+          <li>Der stille, beobachtende Ton — kein Horror-Zischen, kein Lab-Fight, Eva stirbt an einem unvollendeten Halbsatz.</li>
+          <li>Die vier INFECTED-Hand-off-Props in Szene 18 (Frank-Akte, grünes Serum, OP-Hemd, weißer Van, Containment-Logik).</li>
+          <li>Die saubere Drei-Akt-Struktur und der Spine: Liebe → Korruption → Vererbung.</li>
+          <li>Szene 8 (stille Zeitraffer-Montage) und der „fünf Sekunden zu lang im Auto“-Beat.</li>
+          <li>Die Nora/Richard-Laborkorrektur-Szene (Szene 2) und Evas oblique Küchen-Dialoge (Szene 1).</li>
+          <li>Das Ziel des Bogens: Nora <em>wird</em> Lilith, Containment über Gnade. Nur der Weg dorthin ist jetzt glaubwürdig.</li>
+        </ul>
+
+        <h3>Politur-Durchgang (Fixes nach Verifikation)</h3>
+        <ul>
+          <li><strong>Spritzen-Logik in Szene 10 bereinigt.</strong> Die Spritze ist jetzt zu Beginn <em>gefüllt</em>, Eva willigt ein, Richard führt die Gabe <em>off-cut</em> aus (Kamera bleibt auf ihrem Gesicht), und erst am Ende — und in 11/12 — ist die Spritze <em>leer</em>. Trajektorie: voll → Einwilligung → Gabe → leer. Damit liegt die Einwilligung eindeutig <em>vor</em> der tödlichen Dosis (geteilte tragische Wette statt heimlicher Mord).</li>
+          <li><strong>Der Name „Lilith“ wird jetzt einmal hörbar gesprochen.</strong> Eva sagt ihn in Szene 1 („Lilith. Sie war die Erste …“), und die V.O.-Erinnerung in Szene 17 greift ihn auf. Das Identitäts-Payoff (Nora → Lilith, Sprecher-Label in Szene 18) ist nicht mehr nur erschließbar. Kein getippter Name, kein Zählfehler.</li>
+          <li><strong>Evas tragende Zeile hat jetzt eine Quelle.</strong> Statt ein nie gesprochenes Eva-Zitat zu behaupten, <em>vollendet</em> Nora den abgebrochenen Halbsatz aus Szene 10 („Dass du nicht …“). In Szene 13 spricht sie das aus; in Szene 16 ist das Erinnerungs-Bild explizit Noras Schließen dieses offenen Satzes. Selbst-konsistent mit dem bewussten Cutoff, thematisch reicher.</li>
+          <li><strong>Die Kill-Line ist wieder da.</strong> Szene 13 landet auf „Das war nicht der Krebs. Das warst du.“ — Anklage, kein Thesen-Satz, und Payoff zur kalten Eröffnungszeile „Sie ist nicht an dem Krebs gestorben.“</li>
+          <li><strong>Die Scharnierszene (13A) hat jetzt Noras <em>eigene</em> Logik.</strong> Vor der Injektion ein Beat, der unverkennbar ihrer ist: Sie öffnet den Notizblock, findet Richards alten Fehler (Degradation 0,8 statt 0,6 — dieselbe Korrektur wie im Keller, Szene 2), korrigiert ihn und sieht, <em>was er nicht zu Ende gebracht hat</em>. „Ich erbe seine Besessenheit“ wird zu „Ich sehe, was er nicht konnte“. Die Selbst-Injektion liest sich als wissenschaftliche Hypothese, die sie an sich selbst prüft — kein autoritäres Symbol per Regieanweisung.</li>
+          <li><strong>Literarischer Register entschärft.</strong> Die erzählenden Glossen („Sie hat sich selbst beerdigt — und etwas Neues ist aufgestanden“, „Sie sind kein Veto mehr. Sie sind eine Erlaubnis“) sind durch filmbare Beats ersetzt (ein Nicken, eine bestätigte Hypothese). Die Schluss-V.O. in Szene 18 ist von der Bösewicht-Maxime „Containment vor alles. Keine Zeugen. Keine Ausnahmen.“ auf das knappe „Ich bin bereit.“ reduziert.</li>
+        </ul>
+
+        <h3>Was noch offen ist</h3>
+        <ol>
+          <li><strong>Kessler</strong> ist bewusst nicht im Raum bei Szene 16 (leerer Stuhl, Abwesenheitsnotiz) — er bleibt als möglicher Widersacher einer Fortsetzung erhalten. Offen bleibt, ob Nora ihn später aktiv ausschaltet oder ob das dem Hauptfilm gehört.</li>
+          <li><strong>Länge.</strong> 19 Szenen (eine neu) mit zwei Montagen. Die Scharnierszene (~1,5 Min) ist gegenfinanziert durch Montage-Straffung und Dialog-Kürzungen — filmbare Länge bleibt bei ~14-16 Min.</li>
+          <li><strong>Frank</strong> bleibt als Akte; der Hauptfilm holt ihn auf.</li>
+          <li><strong>Die Selbst-Injektion (13A)</strong> ist jetzt eindeutig beantwortet (ja). Zu prüfen im Schnitt: ob der wachsende Faden zu explizit gerät — er sollte im gedämpften Register bleiben, eine Erkenntnis im Gesicht, kein Body-Horror.</li>
+          <li><strong>Klara</strong> wird nicht erwähnt — sie gehört zum Hauptfilm. Das Prequel endet mit Franks Akte.</li>
+        </ol>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var sidebar = document.getElementById('sidebar');
+  var scrim = document.getElementById('scrim');
+  var nav = document.getElementById('scenenav');
+
+  function closeNav(){
+    sidebar.classList.remove('open');
+    scrim.classList.remove('show');
+  }
+  toggle.addEventListener('click', function(){
+    var open = sidebar.classList.toggle('open');
+    scrim.classList.toggle('show', open);
+  });
+  scrim.addEventListener('click', closeNav);
+
+  // Close mobile nav on link click
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 880){
+      closeNav();
+    }
+  });
+
+  // Scroll-spy
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var map = {};
+  var targets = [];
+  links.forEach(function(a){
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if(el){ map[id] = a; targets.push(el); }
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        links.forEach(function(l){ l.classList.remove('active'); });
+        var active = map[entry.target.id];
+        if(active){
+          active.classList.add('active');
+          // keep active link visible in sidebar
+          var top = active.offsetTop;
+          if(top < sidebar.scrollTop || top > sidebar.scrollTop + sidebar.clientHeight){
+            sidebar.scrollTop = top - sidebar.clientHeight/2;
+          }
+        }
+      }
+    });
+  }, { rootMargin: '0px 0px -70% 0px', threshold: 0 });
+
+  targets.forEach(function(t){ observer.observe(t); });
+})();
+</script>
+
+</body>
+</html>
