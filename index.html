@@ -46,6 +46,20 @@
   .logline{font-size:1.35rem;line-height:1.55}
   .logline em{color:var(--accent);font-style:normal}
 
+  /* Gallery preview */
+  .gallery-link{display:flex;justify-content:space-between;align-items:end;gap:18px;
+    margin-bottom:24px}
+  .gallery-link p{margin:0;color:var(--muted);font-size:.98rem}
+  .gallery-link .mini{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--accent)}
+  .portraits{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .portraits a{display:block;position:relative;overflow:hidden;border:1px solid var(--line);
+    background:var(--bg2);aspect-ratio:4/5}
+  .portraits img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.85) contrast(1.04)}
+  .portraits span{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 10px;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.82));font-family:var(--mono);
+    font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+
   /* Figures */
   .fig{display:grid;grid-template-columns:140px 1fr;gap:6px 22px;padding:14px 0;
     border-top:1px solid var(--line)}
@@ -63,7 +77,8 @@
 
   footer{padding:48px 24px 70px;text-align:center;color:var(--muted);font-size:.85rem}
   footer .meta{font-family:var(--mono);letter-spacing:.1em;font-size:.74rem;margin-top:.6rem}
-  @media(max-width:520px){.fig{grid-template-columns:1fr;gap:2px}.fig dt{padding-top:10px}}
+  @media(max-width:720px){.portraits{grid-template-columns:repeat(2,1fr)}.gallery-link{display:block}.gallery-link .btn{margin-top:16px}}
+  @media(max-width:520px){.fig{grid-template-columns:1fr;gap:2px}.fig dt{padding-top:10px}.portraits span{font-size:.58rem}}
 </style>
 </head>
 <body>
@@ -74,6 +89,7 @@
   <div class="sub">Drehbuch v3 — ein Kurzfilm über Liebe, die zur Korruption wird</div>
   <div class="cta">
     <a class="btn" href="screenplay/infected-origins-v3.html">Drehbuch lesen</a>
+    <a class="btn ghost" href="bilder.html">Bilder</a>
     <a class="btn ghost" href="screenplay/infected-origins-v3.md" download>Markdown</a>
     <a class="btn ghost" href="https://github.com/LoggeL/infected-origins">Repository</a>
   </div>
@@ -84,6 +100,22 @@
   <section>
     <h2>Logline</h2>
     <p class="logline">Ein Arzt überschreitet jede ethische Grenze, um seine sterbende Frau zu retten — und seine Tochter <em>erbt</em> die Besessenheit, die ihn zerstört hat. Die Geburt von Lilith.</p>
+  </section>
+
+  <section>
+    <div class="gallery-link">
+      <div>
+        <h2>Visualisierung</h2>
+        <p>Charakterportraits aus den Projektprompts: Liebe, Korruption, Vererbung.</p>
+      </div>
+      <a class="btn ghost" href="bilder.html">Alle Bilder</a>
+    </div>
+    <div class="portraits">
+      <a href="bilder.html#richard-akt-i"><img src="assets/characters/richard-akt-i.png" alt="Richard im Kellerlabor"><span>Richard I</span></a>
+      <a href="bilder.html#eva"><img src="assets/characters/eva.png" alt="Eva im warmen Zuhause-Licht"><span>Eva</span></a>
+      <a href="bilder.html#nora-akt-i"><img src="assets/characters/nora-akt-i.png" alt="Nora mit regennasser Jacke im Labor"><span>Nora</span></a>
+      <a href="bilder.html#lilith-akt-iii"><img src="assets/characters/lilith-akt-iii.png" alt="Lilith im sterilen Labor"><span>Lilith</span></a>
+    </div>
   </section>
 
   <section>
