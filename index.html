@@ -1,19 +1,117 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>INFECTED ORIGINS — Drehbuch v3</title>
-  <meta http-equiv="refresh" content="0; url=screenplay/infected-origins-v3.html">
-  <link rel="canonical" href="screenplay/infected-origins-v3.html">
-  <style>
-    html,body{margin:0;height:100%;background:#0a0a0b;color:#cfc9c4;
-      font-family:Georgia,"Times New Roman",serif;display:flex;align-items:center;justify-content:center}
-    a{color:#b98a8a}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INFECTED ORIGINS — Drehbuch</title>
+<meta name="description" content="INFECTED ORIGINS — Prequel zum Kurzfilm INFECTED. Drehbuch v3.">
+<style>
+  :root{
+    --bg:#0a0a0b; --bg2:#101014; --ink:#e7e2dc; --muted:#9a938b;
+    --line:#26262c; --accent:#b98a8a; --accent2:#7fae9e;
+    --serif:Georgia,"Times New Roman",serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+
+  /* Hero */
+  header.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;
+    align-items:center;text-align:center;padding:64px 24px;
+    background:radial-gradient(80% 60% at 50% 30%,#15151b 0%,var(--bg) 70%);
+    border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);letter-spacing:.42em;text-transform:uppercase;
+    font-size:.72rem;color:var(--muted);margin-bottom:1.4rem}
+  h1{font-size:clamp(2.6rem,8vw,5rem);margin:0;font-weight:400;letter-spacing:.06em;
+    line-height:1.04}
+  h1 .o{color:var(--accent)}
+  .sub{color:var(--muted);font-style:italic;margin-top:1.1rem;font-size:1.05rem}
+  .cta{margin-top:2.6rem;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .btn{display:inline-block;padding:.85rem 1.7rem;border:1px solid var(--accent);
+    border-radius:2px;color:var(--ink);font-family:var(--mono);font-size:.8rem;
+    letter-spacing:.16em;text-transform:uppercase;transition:.2s}
+  .btn:hover{background:var(--accent);color:#0a0a0b;text-decoration:none}
+  .btn.ghost{border-color:var(--line);color:var(--muted)}
+  .btn.ghost:hover{background:var(--bg2);color:var(--ink);border-color:var(--muted)}
+
+  /* Sections */
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--mono);text-transform:uppercase;letter-spacing:.28em;
+    font-size:.82rem;color:var(--accent2);margin:0 0 1.6rem;font-weight:400}
+  .logline{font-size:1.35rem;line-height:1.55}
+  .logline em{color:var(--accent);font-style:normal}
+
+  /* Figures */
+  .fig{display:grid;grid-template-columns:140px 1fr;gap:6px 22px;padding:14px 0;
+    border-top:1px solid var(--line)}
+  .fig:first-of-type{border-top:none}
+  .fig dt{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
+    font-size:.82rem;color:var(--ink);padding-top:3px}
+  .fig dd{margin:0;color:var(--muted);font-size:.98rem}
+
+  /* Acts */
+  .acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .act{border:1px solid var(--line);border-radius:2px;padding:18px;background:var(--bg2)}
+  .act .n{font-family:var(--mono);color:var(--accent);font-size:.74rem;letter-spacing:.2em}
+  .act h3{margin:.5rem 0 .3rem;font-weight:400;font-size:1.05rem}
+  .act p{margin:0;color:var(--muted);font-size:.9rem}
+
+  footer{padding:48px 24px 70px;text-align:center;color:var(--muted);font-size:.85rem}
+  footer .meta{font-family:var(--mono);letter-spacing:.1em;font-size:.74rem;margin-top:.6rem}
+  @media(max-width:520px){.fig{grid-template-columns:1fr;gap:2px}.fig dt{padding-top:10px}}
+</style>
 </head>
 <body>
-  <p>Weiterleitung zum Drehbuch …
-     <a href="screenplay/infected-origins-v3.html">INFECTED ORIGINS</a></p>
+
+<header class="hero">
+  <div class="kicker">Prequel zum Kurzfilm INFECTED</div>
+  <h1>INFECTED <span class="o">ORIGINS</span></h1>
+  <div class="sub">Drehbuch v3 — ein Kurzfilm über Liebe, die zur Korruption wird</div>
+  <div class="cta">
+    <a class="btn" href="screenplay/infected-origins-v3.html">Drehbuch lesen</a>
+    <a class="btn ghost" href="https://github.com/LoggeL/infected-origins">Repository</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>Logline</h2>
+    <p class="logline">Ein Arzt überschreitet jede ethische Grenze, um seine sterbende Frau zu retten — und seine Tochter <em>erbt</em> die Besessenheit, die ihn zerstört hat. Die Geburt von Lilith.</p>
+  </section>
+
+  <section>
+    <h2>Figuren</h2>
+    <dl class="fig-list">
+      <div class="fig"><dt>Richard</dt><dd>Arzt, Anfang 50. Liebender Vater, der durch Verzweiflung und Stolz zum Antagonisten wird.</dd></div>
+      <div class="fig"><dt>Eva</dt><dd>Seine Frau, sterbenskrank. Moralisch die klarste Person im Film — Mitwisserin ihres eigenen Endes.</dd></div>
+      <div class="fig"><dt>Nora</dt><dd>Tochter, 22. Hilft im Labor. Wird später zu Lilith.</dd></div>
+      <div class="fig"><dt>Kessler</dt><dd>GenetiX, 60. Wirkt wie ein Onkel — ist ein Händler, der weiß, dass er ersetzbar ist.</dd></div>
+      <div class="fig"><dt>Vorstand</dt><dd>Drei Leute in Anzügen. Sie verwalten. Sie rechnen. Sie wollen es nehmen.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Aufbau</h2>
+    <div class="acts">
+      <div class="act"><div class="n">PROLOG</div><h3>Die Kassette</h3><p>Richard, allein im Keller, spricht ins Tagebuch.</p></div>
+      <div class="act"><div class="n">AKT I</div><h3>Liebe</h3><p>Das Zuhause, das Labor, der Pakt mit Kessler.</p></div>
+      <div class="act"><div class="n">AKT II</div><h3>Korruption</h3><p>GenetiX, die erste Linie, der Preis.</p></div>
+      <div class="act"><div class="n">AKT III</div><h3>Vererbung</h3><p>Nora entdeckt die Wahrheit — und wird Lilith.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="btn" href="screenplay/infected-origins-v3.html">→ Zum vollständigen Drehbuch</a>
+  <div class="meta">INFECTED ORIGINS · Drehbuch v3 · 19 Szenen · ~14–16 Min</div>
+</footer>
+
 </body>
 </html>
