@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="INFECTED ORIGINS — Drehbuch v4. Ein vollständig überarbeitetes Prequel zu INFECTED.">
+  <meta name="theme-color" content="#080a0d">
+  <title>INFECTED ORIGINS — Drehbuch v4</title>
+  <link rel="stylesheet" href="../assets/site/origins-v4.css">
+  <script src="../assets/site/origins-v4.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#screenplay-content">Direkt zum Drehbuch</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="../index.html">Infected <span>Origins</span></a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="../index.html">Start</a></li>
+          <li><a href="infected-origins-v4.html" aria-current="page">Drehbuch</a></li>
+          <li><a href="../bilder.html">Bilder</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <progress class="reading-progress" data-reading-progress max="100" value="0"><span class="visually-hidden">Lesefortschritt</span></progress>
+
+  <div class="reader-layout">
+    <aside class="scene-nav" id="scene-navigation" data-scene-nav aria-label="Szenennavigation">
+      <h2 class="scene-nav__title" data-scene-nav-title>Szenen</h2>
+      <ol><li>
+  <a class="act" href="#prolog" data-act-link>Prolog</a>
+  <ol><li><a href="#scene-00" data-scene-link>0. INT. KELLERLABOR — NACHT</a></li></ol>
+</li>
+<li>
+  <a class="act" href="#act-1" data-act-link>I — Liebe</a>
+  <ol><li><a href="#scene-01" data-scene-link>1. INT. HAUS VOSS — KÜCHE — NACHT</a></li>
+<li><a href="#scene-02" data-scene-link>2. INT. KELLERLABOR — SPÄTER</a></li>
+<li><a href="#scene-03" data-scene-link>3. INT. UNIVERSITÄT — KONFERENZRAUM — TAG</a></li>
+<li><a href="#scene-04" data-scene-link>4. INT. HAUS VOSS — SCHLAFZIMMER — NACHT</a></li>
+<li><a href="#scene-05" data-scene-link>5. INT. CAFÉ — TAG</a></li></ol>
+</li>
+<li>
+  <a class="act" href="#act-2" data-act-link>II — Korruption</a>
+  <ol><li><a href="#scene-06" data-scene-link>6. INT. GENETIX / HAUS VOSS — TAGE — MONTAGE</a></li>
+<li><a href="#scene-07" data-scene-link>7. INT. GENETIX — TIERLABOR / AUSWERTUNG — NACHT</a></li>
+<li><a href="#scene-08" data-scene-link>8. INT. KELLERLABOR / GENETIX-BÜRO — NACHT</a></li>
+<li><a href="#scene-09" data-scene-link>9. INT. HAUS VOSS — SCHLAFZIMMER — NACHT</a></li></ol>
+</li>
+<li>
+  <a class="act" href="#act-3" data-act-link>III — Vererbung</a>
+  <ol><li><a href="#scene-10" data-scene-link>10. INT. HAUS VOSS — FLUR / SCHLAFZIMMER — MORGEN</a></li>
+<li><a href="#scene-11" data-scene-link>11. INT. KELLERLABOR — MORGEN</a></li>
+<li><a href="#scene-12" data-scene-link>12. INT. GENETIX-LABOR — TAG</a></li>
+<li><a href="#scene-13" data-scene-link>13. INT. GENETIX-LABOR — SPÄTER</a></li>
+<li><a href="#scene-14" data-scene-link>14. INT. GENETIX — TERMINALRAUM — MORGENGRAUEN</a></li></ol>
+</li>
+<li>
+  <a class="act" href="#epilogue" data-act-link>Epilog — Übergabe an „INFECTED“</a>
+  <ol><li><a href="#scene-15" data-scene-link>15. INT. GENETIX / EXT. KLARAS STRASSE — NÄCHSTE NACHT</a></li></ol>
+</li></ol>
+    </aside>
+    <button class="scene-nav-scrim" data-scene-nav-scrim aria-label="Szenennavigation schließen"></button>
+    <button class="scene-nav-toggle" data-scene-nav-toggle data-label-open="Szenen öffnen" data-label-close="Szenen schließen">Szenen</button>
+
+    <main class="screenplay-main" id="screenplay-content" data-drawer-inert>
+      <div class="screenplay-wrap">
+        <section class="screenplay-cover" aria-labelledby="screenplay-title">
+          <p class="kicker">Prequel zu „INFECTED“</p>
+          <h1 id="screenplay-title">INFECTED ORIGINS</h1>
+          <p class="screenplay-cover__subtitle">Ein Arzt bricht jede Regel, um seine sterbende Frau zu retten. Als seine Tochter den entscheidenden Fehler korrigiert, muss sie wählen, ob die Forschung mit der Familie endet — oder ob ein fremdes Mädchen den Preis bezahlt.</p>
+          <div class="screenplay-meta">
+            <span>Drehbuch v4</span><span>10. Juli 2026</span><span>ca. 15–16 Minuten</span><span>16 Szenen</span>
+          </div>
+          <div class="screenplay-actions">
+            <a class="btn" href="infected-origins-v4.md">Markdown lesen</a>
+            <a class="btn ghost" href="../bilder.html">Bildwelt ansehen</a>
+          </div>
+        </section>
+
+        <details class="dramatis-personae">
+  <summary>Figuren</summary>
+  <ul>
+    <li><strong>DR. RICHARD VOSS</strong> — 52. Arzt und Zellforscher. Liebender Vater, schlechter Ehemann, brillanter Rationalisierer. Seine Verzweiflung öffnet die Tür; sein Stolz hält sie offen.</li>
+<li><strong>DR. NORA VOSS</strong> — 28. Molekularbiologin. Hat ihre Postdoc-Stelle pausiert, um Eva zu pflegen und Richard im Kellerlabor zu helfen. Ihr zweiter Vorname ist Lilith.</li>
+<li><strong>EVA VOSS</strong> — 53. Richards Frau, Noras Mutter. Metastasiertes Pankreaskarzinom. Sie will leben, aber nicht auf Kosten eines fremden Körpers.</li>
+<li><strong>KESSLER</strong> — 61. Bereichsleiter bei GenetiX. Freundlich, präzise, austauschbar. Verkauft Zeit und beschafft Menschen.</li>
+<li><strong>DR. SUSAN</strong> — Klinische Leiterin bei GenetiX. Kittel, Maske, Tablet. Sie folgt Ergebnissen, nicht Grenzen.</li>
+<li><strong>LIA</strong> — Krankenschwester bei GenetiX. Glaubt zunächst, an einer riskanten, aber freiwilligen Krebsstudie mitzuwirken.</li>
+<li><strong>KLARA</strong> — 18. Ein illegal ausgewertetes Genprofil aus einer archivierten Spender-Screeningprobe weist 98,7 Prozent VX-Kompatibilität auf. Ihre Familie hat eine Studienanfrage abgelehnt und weiß nichts von der heimlichen Sequenzierung.</li>
+<li><strong>FRANK</strong> — Erwachsener Teilnehmer einer bezahlten Studie. 94,2 Prozent kompatibel. Als er aussteigen will, lässt GenetiX ihn nicht mehr gehen.</li>
+<li><strong>SICHERHEIT</strong> — schwarze taktische Kleidung, Funk, keine sichtbaren Abzeichen.</li>
+  </ul>
+</details>
+        <details class="dramatis-personae">
+  <summary>Kanonregeln des Compounds</summary>
+  <ol>
+    <li><strong>Compound-VX</strong> ist ein replizierender Genvektor. Er zwingt geschädigte Zellen zur Reparatur und senkt Evas Tumormarker tatsächlich.</li>
+<li><strong>Aktivitätsfaktor A0,8</strong> wirkt innerhalb von Minuten, repliziert aber zu schnell. Die Gefäßreaktion läuft systemisch und ist dosisabhängig tödlich.</li>
+<li><strong>Aktivitätsfaktor A0,6</strong> beginnt nach ungefähr einer Stunde lokal zu integrieren und wird erst über Stunden systemisch. Ein therapeutischer Markerfall zeigt sich nach ungefähr 41 Stunden. Der Wirt bleibt länger stabil; „kontrolliert“ bedeutet ausdrücklich nicht „sicher“.</li>
+<li><strong>Schwarze Fäden</strong> zeigen aktive Integration. Lokal und langsam bedeutet kontrolliert. Schnelles Wandern über Gelenke oder zum Hals bedeutet toxische Überlastung.</li>
+<li>Nach Anpassung an einen lebenden Wirt kann VX über <strong>Blut oder Speichel an Schleimhaut beziehungsweise offene Wunden</strong> übertragen werden. Luft und intakte Haut übertragen nicht.</li>
+<li>Es gibt kein Gegenmittel. Vor systemischer Integration kann nur die weitere Dosierung abgebrochen werden.</li>
+  </ol>
+</details>
+
+        <article class="screenplay" data-screenplay>
+          <section class="act-block" id="prolog" aria-labelledby="prolog-title">
+  <header class="act-divider">
+    <p>Das Geständnis</p>
+    <h2 id="prolog-title">Prolog</h2>
+  </header>
+  <section class="scene" id="scene-00" data-scene data-act="prolog" aria-labelledby="scene-00-title">
+  <h3 class="slug" id="scene-00-title"><span class="scene__number">0.</span> INT. KELLERLABOR — NACHT</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-00-kassette" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-00-kassette.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-00-kassette.png" width="1830" height="766" loading="eager" decoding="async" fetchpriority="high" alt="Richard zeichnet nachts im warmen Kellerlabor sein Geständnis auf; Kassette und zwei Kurven liegen zwischen ihm und der Kamera.">
+    </picture>
+  </a>
+  <figcaption>Eintrag 47: Richard kennt den Unterschied zwischen schneller Wirkung und Kontrolle.</figcaption>
+</figure>
+  <p class="dir em">Nah: eine Kassette. Die Spulen drehen sich. Staub im warmen Licht einer Schreibtischlampe.</p>
+<p class="dir">RICHARD sitzt am Tisch. Anfang fünfzig, übernächtigt, Zigarette in der einen Hand, Mikrofon in der anderen. Hinter ihm: Mikroskop, Zellkulturen, handbeschriftete Röhrchen. Ein Hobbykeller, der bereits kein Hobby mehr ist.</p>
+<p class="dir">Er drückt AUFNAHME.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Tagebuch. Eintrag siebenundvierzig. Reihe vierzehn.</p>
+</div>
+<p class="dir">Er sieht zu zwei Kurven auf dem Monitor.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Der Marker fällt. Danach kippt die Probe. Nicht weil es nicht wirkt. Weil es zu schnell wirkt.</p>
+</div>
+<p class="dir">Er hustet. Raucherhusten.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Acht Zehntel brauchen Minuten. Sechs Zehntel brauchen Tage. Eva hat vielleicht keine Tage mehr.</p>
+</div>
+<p class="dir">Beat.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Irgendwo zwischen Wirkung und Kontrolle liegt eine Zahl, die sie überlebt.</p>
+</div>
+<p class="dir">Er beschriftet die Kassette: <strong>EINTRAG 47 — REIHE 14</strong>. Im Karton daneben: eine ganze Chronik.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Ich finde sie.</p>
+</div>
+<p class="dir">Die Spulen stoppen.</p>
+<p class="dir em">SCHNITT AUF SCHWARZ. Titel: INFECTED ORIGINS.</p>
+</section>
+</section><section class="act-block" id="act-1" aria-labelledby="act-1-title">
+  <header class="act-divider">
+    <p>Eine Grenze wird versprochen</p>
+    <h2 id="act-1-title">I — Liebe</h2>
+  </header>
+  <section class="scene" id="scene-01" data-scene data-act="act-1" aria-labelledby="scene-01-title">
+  <h3 class="slug" id="scene-01-title"><span class="scene__number">1.</span> INT. HAUS VOSS — KÜCHE — NACHT</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-01-grenze" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-01-grenze.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-01-grenze.png" width="1920" height="804" loading="lazy" decoding="async" alt="Eva und Nora sitzen einander in der warmen Küche gegenüber; zwischen ihren Händen liegt das alte Foto vom Meer.">
+    </picture>
+  </a>
+  <figcaption>Evas Grenze ist eindeutig: ihr Körper, kein fremder.</figcaption>
+</figure>
+  <p class="dir">Eine kleine, warme Küche. Alte Heizung. Holztablett mit Tassen. Kühlschrankbrummen. Auf dem Tisch: Medikamente, ein aufgeschlagenes Buch und ein gerahmtes Foto von EVA und NORA am Meer.</p>
+<p class="dir">EVA sitzt im Hausmantel am Tisch. Sehr dünn. Wach, obwohl ihr Körper schlafen will.</p>
+<p class="dir">NORA kommt herein. Regennasse Jacke, Labortasche, eine Mappe der Universität unter dem Arm.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Du solltest in Heidelberg sein.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Mein Postdoc läuft nicht weg.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Menschen schon.</p>
+</div>
+<p class="dir">Nora räumt Einkäufe ein. Eva betrachtet die Universitätsmappe.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Noch ein Brief?</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Eine Fristverlängerung.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Wegen mir.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Wegen uns.</p>
+</div>
+<p class="dir">Eva lässt das gelten. Nora stellt sich hinter sie und legt eine Hand auf ihre Schulter. Eva deckt sie mit ihrer ab.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Wo ist er?</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Keller.</p>
+</div>
+<p class="dir">Beat.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Nora Lilith Voss.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Nur du benutzt den ganzen Namen.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Weil Lilith entschieden hat, wer sie sein will.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Die Geschichte kenne ich.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Dann vergiss den wichtigen Teil nicht.</p>
+</div>
+<p class="dir">Eva dreht sich zu ihr.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Dein Vater darf versuchen, mich zu retten. Ich will, dass er es versucht. Aber niemand darf dafür bezahlen außer mir.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Hat er etwas getan?</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Noch nicht.</p>
+</div>
+<p class="dir">Sie sieht zur Kellertür.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Er braucht eine Grenze, bevor er sie nicht mehr erkennt.</p>
+</div>
+</section>
+<section class="scene" id="scene-02" data-scene data-act="act-1" aria-labelledby="scene-02-title">
+  <h3 class="slug" id="scene-02-title"><span class="scene__number">2.</span> INT. KELLERLABOR — SPÄTER</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-02-zwei-kurven" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-02-zwei-kurven.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-02-zwei-kurven.png" width="1934" height="810" loading="lazy" decoding="async" alt="Richard und Nora betrachten im selben warmen Kellerlabor zwei gegensätzliche Kurven auf einem Monitor: schnell und toxisch, langsam und kontrolliert.">
+    </picture>
+  </a>
+  <figcaption>A0,8 wirkt schnell. A0,6 bleibt länger kontrollierbar.</figcaption>
+</figure>
+  <p class="dir">RICHARD vor dem Monitor. Daneben die Kaffeetasse „Papas Weltbeste Tochter“, ungelenke Kinderhandschrift.</p>
+<p class="dir">Nora stellt einen Teller ab und setzt sich. Auf dem Bildschirm: zwei Kurven.</p>
+<p class="dir em"><strong>A0,8 — MARKERABFALL: 18 MIN — GEFÄSSREAKTION: STEIGEND</strong></p>
+<p class="dir em"><strong>A0,6 — MARKERABFALL: 41 STD — GEFÄSSREAKTION: PLATEAU</strong></p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Du hast acht Zehntel als Zielwert markiert.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Als Arbeitshypothese.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Es repariert schnell und repliziert danach weiter. Sechs Zehntel bleibt unter der Schwelle zur systemischen Überlastung.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Und wirkt frühestens übermorgen.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Übermorgen ist besser als tot.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Nicht, wenn sie morgen stirbt.</p>
+</div>
+<p class="dir">Stille.</p>
+<p class="dir">Nora ändert die Markierung von A0,8 auf A0,6. Die Kurve wird flacher, länger — aber stabil.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Das ist nicht der schwächere Weg. Nur der langsamere.</p>
+</div>
+<p class="dir">Richard betrachtet die Kurve. Dann sie.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Du siehst den Fehler immer vor mir.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Dann hör früher zu.</p>
+</div>
+<p class="dir">Ein müdes, echtes Lächeln zwischen ihnen. Er nimmt den Teller.</p>
+</section>
+<section class="scene" id="scene-03" data-scene data-act="act-1" aria-labelledby="scene-03-title">
+  <h3 class="slug" id="scene-03-title"><span class="scene__number">3.</span> INT. UNIVERSITÄT — KONFERENZRAUM — TAG</h3>
+
+  <p class="dir">Neonlicht. Fünf PRÜFENDE. Richard am Whiteboard. Nora sitzt hinten mit den Unterlagen, nicht als Tochter, sondern als Wissenschaftlerin.</p>
+<div class="dialogue"><p class="cue">PRÜFERIN</p>
+<p class="line">A0,6 erreicht den therapeutischen Schwellenwert nicht reproduzierbar. A0,8 erreicht ihn und tötet anschließend das Modell.</p>
+</div>
+<div class="dialogue"><p class="cue">PRÜFER</p>
+<p class="line">Zusätzlich haben Sie bei A0,8 eine sekundäre Replikation außerhalb des Zielgewebes.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Die lässt sich begrenzen.</p>
+</div>
+<div class="dialogue"><p class="cue">PRÜFERIN</p>
+<p class="line">Dann begrenzen Sie sie. In weiteren Modellen. Nicht in Ihrer Frau.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Bis diese Modelle abgeschlossen sind, ist meine Frau tot.</p>
+</div>
+<div class="dialogue"><p class="cue">PRÜFERIN</p>
+<p class="line">Genau deshalb dürfen Sie diese Entscheidung nicht treffen.</p>
+</div>
+<p class="dir">Sie schließt die Akte.</p>
+<div class="dialogue"><p class="cue">PRÜFERIN</p>
+<p class="line">Der In-vivo-Antrag wird abgelehnt. Die Förderung endet heute.</p>
+</div>
+<p class="dir">Nora sieht Richard an. Er sieht nicht zurück.</p>
+</section>
+<section class="scene" id="scene-04" data-scene data-act="act-1" aria-labelledby="scene-04-title">
+  <h3 class="slug" id="scene-04-title"><span class="scene__number">4.</span> INT. HAUS VOSS — SCHLAFZIMMER — NACHT</h3>
+
+  <p class="dir">Eva im Bett. Richard sitzt angezogen neben ihr.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Sind sie Feiglinge oder haben sie recht?</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Beides kann gleichzeitig wahr sein.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Was kann es?</p>
+</div>
+<p class="dir">Richard zwingt sich zur Präzision.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Es repariert geschädigtes Gewebe. Wirklich. Bei acht Zehnteln zu schnell. Bei sechs vielleicht zu langsam für dich.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Und Menschen?</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Keine.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Dann hör mir zu. Ich will nicht, dass eine Kommission für mich stirbt. Ich will auch nicht, dass jemand anderes für mich stirbt.</p>
+</div>
+<p class="dir">Sie nimmt seine Hand.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Mein Körper. Meine Entscheidung. Kein anderer.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Versprochen.</p>
+</div>
+<p class="dir">Sie weiß, dass er das Versprechen braucht. Noch glaubt sie, es reiche.</p>
+</section>
+<section class="scene" id="scene-05" data-scene data-act="act-1" aria-labelledby="scene-05-title">
+  <h3 class="slug" id="scene-05-title"><span class="scene__number">5.</span> INT. CAFÉ — TAG</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-05-pakt" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-05-pakt.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-05-pakt.png" width="1936" height="810" loading="lazy" decoding="async" alt="Richard und Kessler sitzen sich tagsüber im verregneten Bahnhofscafé gegenüber; Karte, Akte und Evas Meerfoto liegen unberührt auf dem Tisch.">
+    </picture>
+  </a>
+  <figcaption>Kessler verkauft Zeit — und macht aus Richards Ausnahme ein System.</figcaption>
+</figure>
+  <p class="dir">KESSLER sitzt Richard gegenüber. Dunkler Mantel, ruhige Hände, ein Exemplar von Richards ungekürztem Paper.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Einundzwanzig Tage. Labor, Biobank, Personal. Danach brauche ich einen humanen Wirkhinweis.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Keine Menschen ohne Einwilligung.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Sie machen die Medizin. Ich beschaffe Ihnen Zeit.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Was bekommt GenetiX?</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Exklusivität. Schweigen. Ergebnisse.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Und wenn es scheitert?</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Dann scheitert mein Bereich mit Ihnen.</p>
+</div>
+<p class="dir">Kessler schiebt eine Karte über den Tisch.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Die Universität schützt ihr Verfahren. Ich schütze Ihre Frist.</p>
+</div>
+<p class="dir">Richard öffnet auf dem Handy das Meerfoto von Eva und Nora. Er sieht es lange an.</p>
+<p class="dir">Dann nimmt er die Karte.</p>
+</section>
+</section><section class="act-block" id="act-2" aria-labelledby="act-2-title">
+  <header class="act-divider">
+    <p>Aus Hoffnung wird ein Verfahren</p>
+    <h2 id="act-2-title">II — Korruption</h2>
+  </header>
+  <section class="scene" id="scene-06" data-scene data-act="act-2" aria-labelledby="scene-06-title">
+  <h3 class="slug" id="scene-06-title"><span class="scene__number">6.</span> INT. GENETIX / HAUS VOSS — TAGE — MONTAGE</h3>
+
+  <p class="dir">Helles Licht. Noch fühlt es sich wie Rettung an.</p>
+<p class="dir">— Nora erhält einen Ausweis: <strong>DR. N. VOSS — MOLEKULARBIOLOGIE</strong>.</p>
+<p class="dir">— Richard und Nora arbeiten Kopf an Kopf am Mikroskop. A0,6 bleibt in einer Zellkultur lokal.</p>
+<p class="dir">— DR. SUSAN prüft mit Maske und Tablet klinische Abläufe. LIA richtet in weißer Pflegeuniform sterile Tabletts her.</p>
+<p class="dir">— FRANK unterschreibt an einer Rezeption für eine bezahlte Studie. Ein Armband: <strong>F-94,2</strong>. Er erhält einen Umschlag mit Geld.</p>
+<p class="dir">— Eva geht allein von ihrem Bett bis in die Küche. Nur wenige Schritte. Für die Familie ist es ein Wunder.</p>
+<p class="dir">— Eine Nachricht von Eva auf Noras Handy: „Heute allein bis in die Küche geschafft. Dein Vater tut so, als sei das normal.“</p>
+<p class="dir">— A0,8 lässt ein beschädigtes Gewebemodell in Minuten regenerieren. Danach schießen schwarze Verästelungen über das Trägermedium.</p>
+<p class="dir">— Kalenderblätter: <strong>TAG 4. TAG 11. TAG 17 VON 21.</strong></p>
+<p class="dir">— Kessler beobachtet hinter Glas. Kein Lächeln mehr.</p>
+</section>
+<section class="scene" id="scene-07" data-scene data-act="act-2" aria-labelledby="scene-07-title">
+  <h3 class="slug" id="scene-07-title"><span class="scene__number">7.</span> INT. GENETIX — TIERLABOR / AUSWERTUNG — NACHT</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-07-erste-luege" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-07-erste-luege.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-07-erste-luege.png" width="1932" height="808" loading="lazy" decoding="async" alt="Nora sitzt im GenetiX-Tierlabor vor Transferdaten und einer schwarzen Gefäßstruktur; Richard und Kessler beobachten, wie sie den Befund als Ausreißer markiert.">
+    </picture>
+  </a>
+  <figcaption>Noras erste Lüge ist klein genug, um vernünftig zu wirken.</figcaption>
+</figure>
+  <p class="dir">Zwei versiegelte Beobachtungsboxen. Im ersten Modell: Stillstand. Schwarze Gefäße bis zum Hals. Im zweiten, unbehandelten Kontrollmodell: ein dünner schwarzer Faden an einer kleinen Wunde.</p>
+<p class="dir">Auf dem Monitor:</p>
+<p class="dir em"><strong>A14 — A0,8 — TOXISCHE ÜBERLASTUNG</strong></p>
+<p class="dir em"><strong>KONTROLLE B14 — SEKUNDÄRTRANSFER POSITIV</strong></p>
+<p class="dir">Nora starrt auf die zweite Zeile.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Die Kontrolle war nicht exponiert.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Gemeinsames Instrumentarium. Blutkontakt.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Dann reist der Vektor.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Dann stoppen wir A0,8.</p>
+</div>
+<p class="dir">Kessler stellt ein Formular auf ihren Bildschirm.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Morgen läuft Tag achtzehn. Ohne verwertbaren A0,8-Lauf zieht GenetiX die Tranche.</p>
+</div>
+<p class="dir">Auf dem Formular zwei Optionen:</p>
+<p class="dir em"><strong>BIOLOGISCHES VERSAGEN — STUDIE STOPPEN</strong></p>
+<p class="dir em"><strong>TECHNISCHER AUSREISSER — WIEDERHOLEN</strong></p>
+<p class="dir">Noras Handy leuchtet. Eva: ein Foto aus der Küche. Sie steht. Darunter: „Noch ein guter Tag.“</p>
+<p class="dir">Nora bewegt den Cursor.</p>
+<p class="dir">Richard sieht ihre Hand.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Sag ihm die Wahrheit.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Du zuerst.</p>
+</div>
+<p class="dir">Sie klickt <strong>TECHNISCHER AUSREISSER</strong>.</p>
+<p class="dir">Kessler nimmt das Formular an sich.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Einmal.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Einmal.</p>
+</div>
+<p class="dir">Ein Echo, das bleiben wird.</p>
+</section>
+<section class="scene" id="scene-08" data-scene data-act="act-2" aria-labelledby="scene-08-title">
+  <h3 class="slug" id="scene-08-title"><span class="scene__number">8.</span> INT. KELLERLABOR / GENETIX-BÜRO — NACHT</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-08-klara" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-08-klara.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-08-klara.png" width="1938" height="810" loading="lazy" decoding="async" alt="Der infizierte Richard zeigt den schwarzen Faden an seinem Arm, während Kessler Klaras Foto in einer offenen Akte präsentiert.">
+    </picture>
+  </a>
+  <figcaption>Aus einer Prozentzahl wird ein Name: Klara.</figcaption>
+</figure>
+  <p class="dir">Im Keller. Richard allein. Vor ihm eine Mikrodosis, grünlich im Lampenlicht.</p>
+<p class="dir">Er drückt am Rekorder AUFNAHME.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Eintrag zweiundsechzig. Humaner Selbstversuch. VX-4, A0,8. Mikrodosis.</p>
+</div>
+<p class="dir">Er injiziert sich.</p>
+<p class="dir">Uhr: <strong>00:14</strong>.</p>
+<p class="dir">Nach vier Minuten: ein schwarzer Faden am Handgelenk. Er markiert seine Ausbreitung mit Kugelschreiber auf der Haut.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Integration nach vier Minuten. Keine akute Kreislaufreaktion. Gefäßreaktion wandert.</p>
+</div>
+<p class="dir">Er schreibt: <strong>AKUT STABIL — SYSTEMISCH ZUNEHMEND</strong>.</p>
+<p class="dir">Nicht „sicher“.</p>
+<p class="dir">SCHNITT: GenetiX-Büro. Später.</p>
+<p class="dir">Kessler legt Richard eine digitale Akte vor. Foto: KLARA mit ihren Geschwistern. Ein archiviertes Genprofil aus einer Spender-Screeningprobe, ohne Wissen der Familie sequenziert. <strong>98,7 %</strong>.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Achtzehn.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Gesund. Unabhängiger Genpool. Höchste Übereinstimmung in der Biobank.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Kontaktieren Sie die Familie.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Geschehen. Die freiwillige Anfrage wurde abgelehnt.</p>
+</div>
+<p class="dir">Richard schiebt die Akte zurück.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Dann lautet die Antwort nein.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Für eine reguläre Studie.</p>
+</div>
+<p class="dir">Auf dem Bildschirm: <strong>ZIELAUFNAHME VORBEREITEN</strong>.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Was heißt vorbereiten?</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Adresse verifizieren. Team bereithalten. Kein Transport ohne zweite wissenschaftliche Freigabe.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Sie holen sie nicht.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Nicht ohne Projektleitung.</p>
+</div>
+<p class="dir">Kessler hält ihm den Stift hin.</p>
+<p class="dir">Richard denkt an sein Versprechen an Eva. Dann an die Uhr.</p>
+<p class="dir">Er unterschreibt die <strong>VORBEREITUNGSFREIGABE</strong>.</p>
+<p class="dir">Status: <strong>VORBEREITET — NICHT FREIGEGEBEN</strong>.</p>
+</section>
+<section class="scene" id="scene-09" data-scene data-act="act-2" aria-labelledby="scene-09-title">
+  <h3 class="slug" id="scene-09-title"><span class="scene__number">9.</span> INT. HAUS VOSS — SCHLAFZIMMER — NACHT</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-09-evas-wahl" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-09-evas-wahl.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-09-evas-wahl.png" width="1934" height="808" loading="lazy" decoding="async" alt="Eva und Richard halten gemeinsam die Einwilligung; an Richards Hand ist der schwarze Faden sichtbar, eine versiegelte Spritze liegt unbenutzt auf dem Beistelltisch.">
+    </picture>
+  </a>
+  <figcaption>Eva stimmt nur für ihren eigenen Körper zu.</figcaption>
+</figure>
+  <p class="dir">Eva ist bei vollem Bewusstsein. Schwächer als zuvor. Richard sitzt neben ihr. Auf dem Nachttisch: eine volle Spritze.</p>
+<p class="dir">Eva sieht den schwarzen Faden unter seinem Ärmel.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Zeig ihn mir.</p>
+</div>
+<p class="dir">Richard krempelt den Ärmel hoch. Die Markierung hat sich über den Kugelschreiberstrich hinaus bewegt.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Sag nicht, dass es gutgeht. Sag, was passieren kann.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Die kleine Dosis breitet sich in mir aus. Deine volle Dosis kann das Tumorgewebe in Minuten erreichen.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Und danach?</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Kann sie stoppen. Oder weiterlaufen. Wenn sie weiterläuft, stirbst du heute.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Wenn sie systemisch wird, kann ich sie nicht zurückholen. Dein Blut kann den Vektor über offene Wunden weitergeben. Über Luft nicht.</p>
+</div>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Sechs Zehntel?</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Wirkung frühestens in zwei Tagen. Deine Leber gibt uns wahrscheinlich keinen.</p>
+</div>
+<p class="dir">Eva nimmt das Formular. Liest. Unterschreibt: <strong>RISIKEN VERSTANDEN. MEINE ENTSCHEIDUNG.</strong></p>
+<p class="dir">Dann sieht sie Richard direkt an.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Hat jemand anderes dafür bezahlt?</p>
+</div>
+<p class="dir">Ein kaum sichtbarer Beat.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Nein. Nur ich.</p>
+</div>
+<p class="dir">Die Lüge landet leise.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Dann nehme ich acht Zehntel. Mein Körper. Meine Entscheidung.</p>
+</div>
+<p class="dir">Sie reicht ihm das Formular.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Und niemand nach mir.</p>
+</div>
+<p class="dir">Richard nimmt die Spritze.</p>
+<p class="dir">Wir bleiben auf Evas Gesicht. Seine Hand verlässt das Bild.</p>
+<p class="dir">Ein Stich. Ihr Atem. Die Uhr.</p>
+<p class="dir">Die Linie am Monitor steigt kurz. Evas Augen öffnen sich — ein Moment echter Erleichterung.</p>
+<p class="dir">Dann wandern schwarze Fäden an ihrem Hals hoch.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Eva.</p>
+</div>
+<p class="dir">Sie sucht seine Hand.</p>
+<div class="dialogue"><p class="cue">EVA</p>
+<p class="line">Niemand sonst.</p>
+</div>
+<p class="dir">Der Monitor wird zum Ton.</p>
+<p class="dir">Später im Keller. Richard vor dem Rekorder, der schwarze Faden jetzt am Unterarm.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Eva ist tot. Klara ist noch zu Hause. Der Transport ist nicht freigegeben.</p>
+</div>
+<p class="dir">Lange Stille auf dem Band.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Ich kann wenigstens dieses Versprechen halten.</p>
+</div>
+<p class="dir">Er drückt STOP. Lässt die Kassette im Gerät. Geht.</p>
+</section>
+</section><section class="act-block" id="act-3" aria-labelledby="act-3-title">
+  <header class="act-divider">
+    <p>Nora trifft die eigene Entscheidung</p>
+    <h2 id="act-3-title">III — Vererbung</h2>
+  </header>
+  <section class="scene" id="scene-10" data-scene data-act="act-3" aria-labelledby="scene-10-title">
+  <h3 class="slug" id="scene-10-title"><span class="scene__number">10.</span> INT. HAUS VOSS — FLUR / SCHLAFZIMMER — MORGEN</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-10-notruf" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-10-notruf.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-10-notruf.png" width="1930" height="808" loading="lazy" decoding="async" alt="Nora telefoniert neben der verstorbenen Eva mit dem Notruf; Einwilligung und leere Spritze liegen noch auf dem Nachttisch.">
+    </picture>
+  </a>
+  <figcaption>Der Notruf macht aus Richards Entscheidung eine Spur — und aus Nora eine Mitwisserin.</figcaption>
+</figure>
+  <p class="dir">Kaltes Morgenlicht. Kühlschrankbrummen.</p>
+<p class="dir">Nora kommt herein, Tasche noch über der Schulter.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Mama?</p>
+</div>
+<p class="dir">Im Schlafzimmer: Eva. Still. Die unterschriebene Einwilligung und ihre Patientenverfügung auf dem Nachttisch: <strong>KEINE REANIMATION</strong>. Daneben die leere Spritze.</p>
+<p class="dir">Nora liest Evas Handschrift. Sie versteht: Eva hat gewählt.</p>
+<p class="dir">Sie tastet nach dem Puls. Nichts. Evas Hand ist kalt. Totenflecken am Hals — Stunden sind vergangen.</p>
+<p class="dir">Nora wählt <strong>112</strong>.</p>
+<div class="dialogue"><p class="cue">STIMME AM TELEFON</p>
+<p class="line">Notruf. Wo genau ist der Notfallort?</p>
+</div>
+<p class="dir">Nora versucht zu antworten. Erst beim zweiten Versuch kommt ihre Stimme.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Meine Mutter atmet nicht.</p>
+</div>
+<div class="dialogue"><p class="cue">STIMME AM TELEFON</p>
+<p class="line">Ist sie warm? Sehen Sie sichere Todeszeichen?</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Sie ist kalt. Totenflecken. Eine Patientenverfügung liegt hier. Keine Reanimation.</p>
+</div>
+<div class="dialogue"><p class="cue">STIMME AM TELEFON</p>
+<p class="line">Verändern Sie nichts. Hilfe ist unterwegs.</p>
+</div>
+<p class="dir">Nora fotografiert Einwilligung und Spritze. Dann blickt sie zur offenen Schlafzimmertür.</p>
+<p class="dir">Entgegen der Anweisung steckt sie die leere Spritze und Evas Einwilligung ein. Die Patientenverfügung lässt sie sichtbar liegen. Sie weiß, dass sie gerade eine Grenze überschreitet.</p>
+<p class="dir">Dann setzt sie sich neben das Bett, nicht in den Flur. Sie hält Evas andere Hand, bis Hilfe kommt.</p>
+<p class="dir">Der Notarzt sieht die dokumentierte terminale Erkrankung, die sicheren Todeszeichen und die Patientenverfügung. Er bescheinigt einen natürlichen Tod. Ohne die versteckte Spritze gibt es keinen Anlass für eine Obduktion.</p>
+</section>
+<section class="scene" id="scene-11" data-scene data-act="act-3" aria-labelledby="scene-11-title">
+  <h3 class="slug" id="scene-11-title"><span class="scene__number">11.</span> INT. KELLERLABOR — MORGEN</h3>
+
+  <p class="dir">Blaulicht wandert schwach durch das Kellerfenster. Oben schließen sich Türen; Schritte entfernen sich.</p>
+<p class="dir">Nora sitzt an Richards Platz. Vor ihr das alte Notizbuch: frühe Reihen, keine Geständnisse. Die neueren Seiten leer.</p>
+<p class="dir">Im Rekorder steckt die frische Kassette.</p>
+<p class="dir">Sie drückt PLAY.</p>
+<div class="dialogue"><p class="cue">RICHARD (V.O.)</p>
+<p class="line">Eva ist tot. Klara ist noch zu Hause. Der Transport ist nicht freigegeben.</p>
+</div>
+<p class="dir">Nora stoppt. Spult zurück. Hört den Namen erneut.</p>
+<p class="dir">Sie öffnet mit ihrem eigenen GenetiX-Zugang das Audit-Log.</p>
+<p class="dir">— <strong>A14: TECHNISCHER AUSREISSER — FREIGABE N. VOSS.</strong> Ihre eigene Lüge.</p>
+<p class="dir">— <strong>SELBSTVERSUCH R. VOSS — A0,8 — SYSTEMISCHE PROGRESSION.</strong></p>
+<p class="dir">— <strong>KLARA — 98,7 % — VORBEREITUNG R. VOSS — TRANSPORT NICHT FREIGEGEBEN.</strong></p>
+<p class="dir">Nora kopiert die Daten auf einen verschlüsselten Speicherstick. Dann steckt sie die Kassette ein.</p>
+<p class="dir">Keine magische Entdeckung. Eine Spur, an der sie selbst mitgeschrieben hat.</p>
+</section>
+<section class="scene" id="scene-12" data-scene data-act="act-3" aria-labelledby="scene-12-title">
+  <h3 class="slug" id="scene-12-title"><span class="scene__number">12.</span> INT. GENETIX-LABOR — TAG</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-12-zusammenbruch" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-12-zusammenbruch.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-12-zusammenbruch.png" width="1934" height="810" loading="lazy" decoding="async" alt="Richard liegt mit schwarzen Fäden im GenetiX-Flur, während Nora neben ihm kniet und den internen medizinischen Alarm auslöst.">
+    </picture>
+  </a>
+  <figcaption>Richard bricht beim Versuch zusammen, Klara zu stoppen.</figcaption>
+</figure>
+  <p class="dir">Richard arbeitet im Stehen, weil Sitzen schwieriger geworden ist. Der schwarze Faden reicht bis über den Ellbogen. Am Hals ein erster Schatten.</p>
+<p class="dir">Nora kommt herein. Legt Evas Einwilligung, den Speicherstick und Klaras Akte nebeneinander.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Mama wusste, was es sie kosten kann.</p>
+</div>
+<p class="dir">Richard schweigt.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Klara nicht.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Sie ist nicht hier.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Weil die zweite Unterschrift fehlt. Nicht weil du nein gesagt hast.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Ich brauchte einen Vergleich.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Du brauchtest einen Namen, bis er zu einer Prozentzahl wurde.</p>
+</div>
+<p class="dir">Richard sieht die A14-Zeile.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Du hast den Lauf freigegeben.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Ja.</p>
+</div>
+<p class="dir">Die Antwort trifft beide.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Ich habe einmal gelogen, damit Mama noch einen guten Tag hat. Du hast aus dem einen Mal ein Verfahren gemacht.</p>
+</div>
+<p class="dir">Richard greift zum Terminal. <strong>KLARA — TRANSPORTFREIGABE AUSSTEHEND.</strong></p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Dann beenden wir es.</p>
+</div>
+<p class="dir">Seine Hand erreicht das Feld <strong>STORNIEREN</strong> nicht.</p>
+<p class="dir">Sein Körper gibt nach. Nora fängt ihn teilweise auf, bringt ihn auf den Boden.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Papa. Hörst du mich?</p>
+</div>
+<p class="dir">Richard ringt nach Luft. Der schwarze Faden pulsiert am Hals.</p>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Du hattest recht. Sechs Zehntel.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Ich hole Hilfe.</p>
+</div>
+<div class="dialogue"><p class="cue">RICHARD</p>
+<p class="line">Erst Klara. Nicht noch eine.</p>
+</div>
+<p class="dir">Nora schlägt den Wandalarm. Rotes Licht. Schritte im Flur.</p>
+<p class="dir">Sie beginnt Wiederbelebung. Medizinisches Personal kommt herein. Kessler hinter ihnen.</p>
+<p class="dir">Wir bleiben bei Nora, während andere übernehmen.</p>
+<p class="dir">Richards Hand fällt offen auf den Boden. Der Faden bewegt sich nicht mehr.</p>
+<p class="dir">Ein WERKSARZT sieht die schwarzen Gefäße. Kessler spricht leise, aber hörbar.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Interne Pathologie. Kontaminationsprotokoll. Als Ursache dokumentieren Sie Herzversagen.</p>
+</div>
+<p class="dir">Der Werksarzt zögert. Dann deckt er Richards Arm ab.</p>
+</section>
+<section class="scene" id="scene-13" data-scene data-act="act-3" aria-labelledby="scene-13-title">
+  <h3 class="slug" id="scene-13-title"><span class="scene__number">13.</span> INT. GENETIX-LABOR — SPÄTER</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-13-a06" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-13-a06.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-13-a06.png" width="1934" height="808" loading="lazy" decoding="async" alt="Nora untersucht im Morgengrauen einen einzelnen lokalen schwarzen Faden an ihrem Arm und protokolliert getrennte Kontaktproben.">
+    </picture>
+  </a>
+  <figcaption>A0,6 ist kontrolliert — ausdrücklich nicht sicher.</figcaption>
+</figure>
+  <p class="dir">Das Labor ist versiegelt. Richards Arbeitsplatz leer. Seine Leiche ist fort. Ein offizieller Notfall ist dokumentiert; nichts wurde liegen gelassen.</p>
+<p class="dir">Nora steht am Arbeitstisch. Vor ihr: der Speicherstick, ihr Handy, Richards Kassette.</p>
+<p class="dir">Auf dem Handy eine fertige Nachricht an Polizei und Presse. Betreff: <strong>GENETIX — ILLEGALE HUMANSTUDIE</strong>. Anhänge geladen. Der SENDEN-Knopf wartet.</p>
+<p class="dir">Kessler bleibt auf Abstand.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Wenn Sie senden, bleibt Klara zu Hause. GenetiX schließt dieses Labor. Das Compound endet hier.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Das klingt wie die richtige Antwort.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Dann bleibt Klara zu Hause. Aber Ihre sechs Zehntel sterben mit dem Projekt.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Und Ihre Antwort?</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Beweisen Sie sechs. Dann entscheiden Sie, was mit dem Projekt geschieht.</p>
+</div>
+<p class="dir">Er zeigt auf den Terminalstatus.</p>
+<p class="dir em"><strong>KLARA — TRANSPORT VORBEREITET — AUTO-ABBRUCH 06:00</strong></p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Richard ist tot. Ohne neue wissenschaftliche Freigabe fährt das Team heim.</p>
+</div>
+<p class="dir">Kessler öffnet eine zweite Akte: <strong>FRANK — 94,2 % — TEILNAHME WIDERRUFEN — INTERN GEHALTEN.</strong></p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Sie halten Frank hier?</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Er hat bereits unterschrieben. Dann wollte er gehen.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Lassen Sie ihn gehen.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Dann schicken Sie diese Akte mit.</p>
+</div>
+<p class="dir">Er geht. Lässt Nora mit echten Alternativen zurück.</p>
+<p class="dir">Nora legt das Handy nicht weg. Noch nicht.</p>
+<p class="dir">Sie beginnt zu arbeiten.</p>
+<p class="dir">Nicht am Notizbuch — am Compound.</p>
+<p class="dir">— Sie verwirft die A0,8-Charge.</p>
+<p class="dir">— Sie setzt Puffer neu an.</p>
+<p class="dir">— Sie prüft Replikationsrate und Marker-Gate.</p>
+<p class="dir">— Sie versiegelt eine frische Spritze.</p>
+<p class="dir">Etikett: <strong>VX-4 / A0,6 / N. VOSS</strong>.</p>
+<p class="dir">Nora krempelt den Ärmel hoch. Injiziert sich.</p>
+<p class="dir">Uhr: <strong>03:11</strong>.</p>
+<p class="dir">Uhr: <strong>04:02</strong>. Ein dünner schwarzer Faden erscheint lokal.</p>
+<p class="dir">Uhr: <strong>05:37</strong>. Der Faden hat die Markierung vor dem Ellbogen nicht überschritten. Puls stabil.</p>
+<p class="dir">Sie nimmt einen Tropfen Blut.</p>
+<p class="dir">— Auf intakter Hautsimulation: negativ.</p>
+<p class="dir">— Auf verletztem Gewebe: schwarze Verästelung, rasch.</p>
+<p class="dir">— Speichelprobe auf Schleimhautmodell: positiv.</p>
+<p class="dir">— Luftkontrolle: negativ.</p>
+<p class="dir">Nora spricht in Richards Rekorder.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">VX-4, A0,6. Primärintegration langsam. Nach Wirtsanpassung über Blut- und Speichelkontakt beschleunigt. Luft negativ.</p>
+</div>
+<p class="dir">Sie betrachtet ihren Arm.</p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Kontrolliert. Nicht sicher.</p>
+</div>
+<p class="dir">Sie sendet Kessler den stabilen Scan.</p>
+<p class="dir">Die Nachricht an die Polizei bleibt ungesendet.</p>
+</section>
+<section class="scene" id="scene-14" data-scene data-act="act-3" aria-labelledby="scene-14-title">
+  <h3 class="slug" id="scene-14-title"><span class="scene__number">14.</span> INT. GENETIX — TERMINALRAUM — MORGENGRAUEN</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-14-lilith" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-14-lilith.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-14-lilith.png" width="1934" height="808" loading="lazy" decoding="async" alt="Lilith sitzt im weißen Kittel vor Klaras Porträt und klaren Symbolen für Transport stoppen oder freigeben; Meerfoto und Datenträger liegen neben ihrer Hand.">
+    </picture>
+  </a>
+  <figcaption>Nora kennt die Alternative und autorisiert den Transport selbst.</figcaption>
+</figure>
+  <p class="dir">Kessler sitzt Nora gegenüber. Zwischen ihnen keine Akte mehr, sondern zwei Protokolle.</p>
+<p class="dir">Auf dem Terminal: <strong>INTERIM-PROJEKTLEITUNG — DR. NORA VOSS — AKTIVIERT DURCH KESSLER.</strong></p>
+<p class="dir em"><strong>KLARA — VX-4 / A0,8 — RAPID / TOLERANZGRENZE</strong></p>
+<p class="dir em"><strong>FRANK — VX-4 / A0,6 — TRÄGER / KONTAKTSTUDIE</strong></p>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Klara hat die höhere Kompatibilität.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Deshalb soll sie zeigen, ob ein gesunder Körper acht Zehntel hält. Frank zeigt, wie lange sechs Zehntel einen Träger stabil lässt.</p>
+</div>
+<div class="dialogue"><p class="cue">NORA</p>
+<p class="line">Zwei Menschen. Kein Vergleichsmodell.</p>
+</div>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Zwei Antworten. Danach haben Sie eine Therapie — oder nur eine sehr teure Beerdigung.</p>
+</div>
+<p class="dir">Nora sieht Klaras Familienfoto. Dann Franks Widerruf.</p>
+<p class="dir">Auf dem Terminal:</p>
+<p class="dir em"><strong>KLARA STORNIEREN</strong></p>
+<p class="dir em"><strong>TRANSPORT KLARA FREIGEBEN</strong></p>
+<p class="dir">Evas Stimme, Erinnerung aus der Küche:</p>
+<div class="dialogue"><p class="cue">EVA (V.O.)</p>
+<p class="line">Niemand darf dafür bezahlen außer mir.</p>
+</div>
+<p class="dir">Richards letzte Worte:</p>
+<div class="dialogue"><p class="cue">RICHARD (V.O.)</p>
+<p class="line">Erst Klara. Nicht noch eine.</p>
+</div>
+<p class="dir">Nora öffnet die Polizeinachricht. Der SENDEN-Knopf.</p>
+<p class="dir">Dann schließt sie sie.</p>
+<p class="dir">Sie klickt <strong>TRANSPORT KLARA FREIGEBEN</strong>.</p>
+<p class="dir">Das System verlangt eine operative Kennung.</p>
+<p class="dir">Feld: <strong>NAME</strong>.</p>
+<p class="dir">Nora tippt sichtbar:</p>
+<div class="dialogue"><p class="cue">LILITH</p>
+</div>
+<p class="dir">Bestätigung:</p>
+<p class="dir em"><strong>TRANSPORT KLARA FREIGEGEBEN — KENNUNG LILITH</strong></p>
+<p class="dir">Kessler betrachtet den Namen.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Warum nicht Nora?</p>
+</div>
+<div class="dialogue"><p class="cue">LILITH</p>
+<p class="line">Nora kannte die Grenze.</p>
+</div>
+<p class="dir">Sie schließt die Akte.</p>
+</section>
+</section><section class="act-block" id="epilogue" aria-labelledby="epilogue-title">
+  <header class="act-divider">
+    <p>Die Konsequenz erreicht Klara</p>
+    <h2 id="epilogue-title">Epilog — Übergabe an „INFECTED“</h2>
+  </header>
+  <section class="scene" id="scene-15" data-scene data-act="epilogue" aria-labelledby="scene-15-title">
+  <h3 class="slug" id="scene-15-title"><span class="scene__number">15.</span> INT. GENETIX / EXT. KLARAS STRASSE — NÄCHSTE NACHT</h3>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-15-labor" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-15-labor.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-15-labor.png" width="1930" height="808" loading="lazy" decoding="async" alt="Lia und die maskierte Susan stehen im gekachelten Labor an zwei getrennten Sets; Frank wartet sichtbar hinter der Scheibe, Lilith geht.">
+    </picture>
+  </a>
+  <figcaption>Die Übergabe an den Hauptfilm: Susan, Lia und Frank sind bereits an ihren Positionen.</figcaption>
+</figure>
+<figure class="scene-image">
+  <a href="../bilder.html#still-scene-15-van" aria-label="Dieses Bild in der Galerie öffnen">
+    <picture>
+      <source srcset="../assets/v4/stills/scene-15-van.webp" type="image/webp">
+      <img src="../assets/v4/stills/scene-15-van.png" width="1934" height="808" loading="lazy" decoding="async" alt="Zwei männliche Sicherheitskräfte stehen neben einem hellen unmarkierten Van vor Klaras dunklem Haus; Klara beobachtet sie aus dem warmen Fenster.">
+    </picture>
+  </a>
+  <figcaption>Der Van hält vor Klaras Haus — unmittelbar vor „INFECTED“.</figcaption>
+</figure>
+  <p class="dir">Der gekachelte Behandlungsraum aus <strong>INFECTED</strong>. Kaltes blaugrünes Licht. Metallliege.</p>
+<p class="dir">DR. SUSAN steht mit Maske und Tablet am Tisch. LIA legt zwei versiegelte Sets bereit.</p>
+<p class="dir em"><strong>SET 1: KLARA — VX-4 / A0,8 — RAPID</strong></p>
+<p class="dir em"><strong>SET 2: FRANK — VX-4 / A0,6 — TRÄGER</strong></p>
+<p class="dir">Lilith prüft die Etiketten. Derselbe Mensch wie Nora. Haare streng zurück. Weißer Kittel. Unter dem Ärmel der kontrollierte schwarze Faden.</p>
+<div class="dialogue"><p class="cue">LILITH</p>
+<p class="line">Bei Klara eine Dosis. Keine Eskalation ohne meine Freigabe.</p>
+</div>
+<p class="dir">Frank erst nach Klara. A0,6. Bis zur Integration bleibt er isoliert.</p>
+<div class="dialogue"><p class="cue">SUSAN</p>
+<p class="line">Und wenn der Marker nicht reicht?</p>
+</div>
+<div class="dialogue"><p class="cue">LILITH</p>
+<p class="line">Dann dokumentieren Sie, dass er nicht reicht.</p>
+</div>
+<p class="dir">Susan nickt. Nicht überzeugt — nur informiert.</p>
+<p class="dir">Lia erhält einen Schlüsselbund und einen Ausweis. <strong>ONKOLOGISCHE SONDERSTUDIE</strong>.</p>
+<div class="dialogue"><p class="cue">LIA</p>
+<p class="line">Die Einwilligungen kommen mit den Patienten?</p>
+</div>
+<p class="dir">Kessler antwortet, bevor Lilith es muss.</p>
+<div class="dialogue"><p class="cue">KESSLER</p>
+<p class="line">Die Verwaltung kümmert sich darum.</p>
+</div>
+<p class="dir">Hinter einer Sichtscheibe: Frank im OP-Hemd. Wach. Die Tür verriegelt.</p>
+<div class="dialogue"><p class="cue">FRANK</p>
+<p class="line">Ich habe widerrufen.</p>
+</div>
+<p class="dir">Niemand öffnet.</p>
+<p class="dir">Lilith und Kessler gehen. Susan und Lia bleiben mit den Wachen im gekachelten Raum zurück.</p>
+<p class="dir">SCHNITT: Garage.</p>
+<p class="dir">Ein heller, unmarkierter Van aus dem GenetiX-Fuhrpark. Wachen in schwarzer taktischer Kleidung prüfen Funk und Gurte.</p>
+<p class="dir">Lilith spricht zu ihnen.</p>
+<div class="dialogue"><p class="cue">LILITH</p>
+<p class="line">Blut und Speichel gelten als infektiös. Biss-, Kratz- und offene Wunden sofort melden und isolieren. Luft überträgt nicht. Keine improvisierten Schüsse. Kontaktpersonen werden zurückgebracht. Wenn Containment unmöglich ist, bleiben keine Zeugen.</p>
+</div>
+<p class="dir">Eine Wache schließt die Schiebetür.</p>
+<p class="dir">SCHNITT: Klaras Straße. Nacht.</p>
+<p class="dir">Der helle Van rollt ohne Licht aus und hält vor einem Wohnhaus.</p>
+<p class="dir">Im oberen Fenster bewegt sich eine Silhouette.</p>
+<p class="dir">Funk im Ohr von Lilith:</p>
+<div class="dialogue"><p class="cue">FAHRER (V.O.)</p>
+<p class="line">Ziel bestätigt.</p>
+</div>
+<p class="dir">Auf ihrem Tablet:</p>
+<p class="dir em"><strong>KLARA — 98,7 % — TEAM VOR ORT</strong></p>
+<p class="dir">Lilith sieht auf das Familienfoto. Einen langen Moment.</p>
+<div class="dialogue"><p class="cue">LILITH</p>
+<p class="line">Holen Sie sie.</p>
+</div>
+<p class="dir">Die Wachen steigen aus.</p>
+<p class="dir em">HARTER SCHNITT AUF SCHWARZ — unmittelbar vor der ersten Szene von „INFECTED“.</p>
+</section>
+</section>
+
+          <section class="screenplay-end" aria-labelledby="screenplay-end-title">
+            <div>
+              <p class="kicker">Unmittelbar vor der ersten Szene von „INFECTED“</p>
+              <h2 class="screenplay-end__title" id="screenplay-end-title">Ende</h2>
+            </div>
+          </section>
+        </article>
+
+        <details class="dramatis-personae">
+  <summary>Kanonischer Übergabepunkt zum Hauptfilm</summary>
+  <ul>
+    <li>Klara ist zu Hause und wird in diesem Moment entführt.</li>
+<li>Susan und Lia warten im gekachelten Labor; Lilith ist bei der Freigabe, aber nicht bei Klaras Behandlung im Raum.</li>
+<li>Klara erhält zuerst das schnelle A0,8-Protokoll. Susan wird die Dosis entgegen Liliths Anweisung eigenmächtig erhöhen.</li>
+<li>Frank wartet bereits im OP-Hemd. Er erhält danach A0,6, bleibt mobil und wird zum angepassten Kontaktträger.</li>
+<li>Lia besitzt den Schlüsselbund, mit dem sie nach Klaras Tod Franks Flucht ermöglichen kann.</li>
+<li>Die Sicherheitsdoktrin „keine Zeugen“ und die Übertragung durch Blutkontakt sind vor Beginn von „INFECTED“ etabliert.</li>
+  </ul>
+</details>
+
+        <div class="screenplay-actions">
+          <a class="btn" href="../bilder.html#stills">Alle V4-Bilder</a>
+          <a class="btn ghost" href="../index.html">Zur Startseite</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer" data-drawer-inert>
+    <div class="container">INFECTED ORIGINS · Drehbuch v4 · 16 Szenen · Anschlussfassung 2026</div>
+  </footer>
+</body>
+</html>

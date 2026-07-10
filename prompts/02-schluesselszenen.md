@@ -1,256 +1,185 @@
-# INFECTED ORIGINS — Visualisierungs-Prompts
+# INFECTED ORIGINS — V4-Bildbibel: Schlüsselszenen
 
-## Teil 2 — Schlüsselszenen: Film-Stills
+Stand: 10. Juli 2026. Diese Datei ersetzt alle V3-Szenenprompts.
 
-> Prompts auf Englisch für maximale Modell-Kompatibilität (Midjourney / Flux / SDXL / DALL·E).
-> Jeder Prompt ist **eigenständig** und direkt kopierbar; Stil-Anker ist eingebaut.
-> Selber Ton wie [`01-figuren.md`](01-figuren.md): nüchterner Near-Future-Medical-Horror —
-> entsättigt, körnig, intim. Hier breiter/cinematischer gerahmt (Environmental Storytelling).
+## Globaler Szenenanker
 
----
-
-### Globaler Stil-Anker (Szenen)
-
-```
-cinematic film still, photorealistic, grounded near-future medical-horror,
-2.39:1 anamorphic widescreen, considered composition, environmental storytelling,
-low-key lighting, muted desaturated color grade, deep crushed shadows,
-fine 35mm film grain, subtle halation and gate weave, realistic textures,
-restricted palette: cold clinical white, sickly fluorescent green, charcoal black,
-single warm tungsten accent. quiet dread, no glamour, no stylization, no text, no logo.
+```text
+Photorealistic live-action cinematic still from a grounded contemporary German medical
+thriller, true 2.39:1 anamorphic panorama, natural lens behavior and unretouched skin,
+practical lighting, muted amber/cyan progression, restrained fine 35mm grain, plausible
+human-scale locations and props. Keep all essential story information inside the wide
+central band. No readable AI text, logos, watermark, futuristic holograms or stylized
+illustration. Preserve every referenced character identity exactly and never blend them.
 ```
 
-**Bogen der Bildsprache:** Akt I warm & intim (Zuhause) → Akt II kühlt klinisch aus → Akt III kalt, steril, leer. **Motive:** schwarze verzweigte Adern · grünes Serum · die versiegelte Kammer · analoge Kassette.
+`scene-00-kassette.png` ist nach der Erzeugung die zusätzliche Stilreferenz für Korn, Kontrast, Optik und Produktionswelt — niemals für fremde Gesichter.
 
----
+## Finale Still-Prompts
 
-### 1 · PROLOG — Die Kassette *(Szene 0)*
-**Beat:** Richard, allein, spricht ins Tagebuch. Cold Open.
-**Emotion:** einsame Besessenheit, verstaubte Wärme, der letzte Moment vor dem Fall.
+### Szene 0 — Die Kassette
 
-```
-Cinematic film still, photorealistic. A cluttered basement hobby-lab at night, half in
-darkness. A German man in his early 50s sits alone at a worn desk, three-day stubble,
-bloodshot tired eyes, a lit cigarette in one hand, the microphone of a vintage cassette
-recorder in the other; the analog reels caught mid-turn in sharp foreground focus, warm
-dust floating in a single desk-lamp beam. Behind him the lab dissolves into shadow —
-microscope, handwritten labels, a box of labelled cassettes. Wardrobe: rumpled shirt,
-sleeves rolled, old cardigan. Mood: solitary obsession and tender exhaustion, the last
-quiet moment before everything corrupts. Lighting: warm tungsten pool against deep black,
-faint cold rim from an offscreen monitor. 2.39:1 anamorphic, shallow depth of field,
-muted warm-amber grade, heavy 35mm film grain, subtle halation. No text, no logo.
+**Ausgabe:** `scene-00-kassette.png`
+**Figurenreferenz:** `richard.png`
+
+```text
+Warm cramped residential basement at night. Richard records a private confession into
+a portable cassette recorder at a scarred workbench; cassette and tense hand dominate
+the foreground, two simple unlabeled curves glow on an old monitor. 40mm eye-level,
+Richard on right third, tungsten desk lamp, deep natural shadows, guilty and resolved.
 ```
 
----
+### Szene 1 — Die Grenze
 
-### 2 · Der warme Tisch *(Szene 1)*
-**Beat:** Eva und Nora in der Küche; Eva erzählt die Lilith-Geschichte.
-**Emotion:** das einzige wirklich warme Bild — Zärtlichkeit mit einem Faden Kälte am Rand.
+**Ausgabe:** `scene-01-grenze.png`
+**Figurenreferenzen:** `eva.png`, `nora.png`
 
-```
-Cinematic film still, photorealistic. A modest, warm working-class kitchen at night, old
-radiator, cups on a wooden tray, the hum of an unseen fridge. A gaunt, terminally ill
-woman in her early 50s sits at the table in a thin housecoat, a book in her lap, eyes
-luminous and calm; her 22-year-old daughter, dark hair still damp from rain, stands behind
-her with a hand on her shoulder, the mother's hand laid over it. Intimate two-shot. Mood:
-tenderness and quiet grief — the warmest, most human image of the film, yet a thread of
-cold blue creeps in from the window. Lighting: soft warm tungsten key, gentle shadow,
-lived-in. 2.39:1 anamorphic, shallow depth of field, muted grade with faint warm cast,
-fine 35mm film grain. Unbearable tenderness. No text, no logo.
+```text
+Eva and Nora face each other at a modest warm kitchen table. A worn North Sea photo and
+closed university folder lie between them; Eva touches the photo, Nora's hand stops just
+short of hers. Intimate 40mm two-shot, warm tungsten plus rainy blue window spill, love
+and an unmistakable boundary, no melodramatic embrace.
 ```
 
----
+### Szene 2 — Zwei Kurven
 
-### 3 · Vater & Tochter am Bildschirm *(Szene 2)*
-**Beat:** Nora findet den Fehler in Reihe 14; die Kurve springt nach oben.
-**Emotion:** geteilte Erschöpfung und ein echtes, müdes Lächeln — die Wurzel von allem.
+**Ausgabe:** `scene-02-zwei-kurven.png`
+**Figurenreferenzen:** `richard.png`, `nora.png`
 
-```
-Cinematic film still, photorealistic. The basement lab at night. A tired German man in his
-early 50s and his 22-year-old daughter sit close together before a glowing monitor, faces
-lit cold-blue from the screen, a curve on the display spiking upward. A coffee mug reading
-a child's hand-painted slogan sits beside the keyboard; a half-eaten plate of food.
-Their heads almost touching, a faint exhausted shared smile passing between them. Mood:
-collaboration, fragile hope, the tender root from which the tragedy will grow. Lighting:
-cold monitor glow on their faces against the warm tungsten of a single desk lamp, deep
-shadow around them. 2.39:1 anamorphic, shallow depth of field, muted desaturated grade,
-fine 35mm film grain, realistic tired skin. Intimacy laced with foreboding. No text, no logo.
+```text
+Later that night in the exact same cramped residential Kellerlabor as Scene 0. Richard
+and Nora stand at one battered monitor showing two unlabeled curves: one rises steeply
+and crashes, one rises slowly and remains controlled. Intimate side/rear two-shot with
+both profiles visible, concrete walls, cassette boxes, old microscope, jars and the same
+tungsten desk lamp; no university or corporate glass laboratory.
 ```
 
----
+### Szene 5 — Der Pakt
 
-### 4 · Der Pakt *(Szene 5)*
-**Beat:** Kessler legt Richard im Café das alte Paper hin — und eine Karte.
-**Emotion:** ruhige Versuchung; ein verzweifelter Mann, der schon zugehört hat.
+**Ausgabe:** `scene-05-pakt.png`
+**Figurenreferenzen:** `richard.png`, `kessler.png`
 
-```
-Cinematic film still, photorealistic. A small quiet café in flat daylight. Two men at a
-table: one about 60, avuncular, dark overcoat, reading glasses, a calm half-smile that
-doesn't reach his eyes, sliding a manila folder and a single plain card across the table;
-the other in his early 50s, gaunt with sleeplessness, stubble, staring at the card he has
-not yet picked up, jaw tight. Over-the-shoulder framing, the card sharp between them.
-Mood: a transaction disguised as kindness — temptation that has already half-won. Lighting:
-soft neutral daylight, deceptively gentle, a cold edge from the window. 2.39:1 anamorphic,
-modest depth of field, muted desaturated grade, fine 35mm film grain. Calm dread. No text,
-no logo.
+```text
+Nearly empty old railway-station café on a dark overcast rainy day. Richard and Kessler sit opposite
+each other; an unbranded access card, closed dossier and Eva's sea photograph form a
+triangle neither man touches. Symmetrical 50mm two-shot, grey daytime platform through
+rain, cool natural daylight mixed with weak warm pendants, controlled moral pressure.
 ```
 
----
+### Szene 7 — Die erste Lüge
 
-### 5 · Die Linie *(Szene 9)*
-**Beat:** Ein totes Versuchssubjekt am Monitor; Kessler legt die Akte des Mädchens (98,7 %) hin.
-**Emotion:** der Punkt, an dem Forschung zum Verbrechen wird.
+**Ausgabe:** `scene-07-erste-luege.png`
+**Figurenreferenzen:** `nora.png`, `richard.png`
 
-```
-Cinematic film still, photorealistic. A cold sterile GenetiX laboratory at night, bluish
-fluorescent wash. On a wall monitor: an anonymous patient on a gurney, black veins crawling
-up one arm, a status line implying death. In the foreground, on a steel table, a manila file
-lies open — a photograph of a young girl clipped beside a column of marker values. A man of
-60 in a dark coat stands calm at the edge of frame; a gaunt, deteriorating man in a stained
-white lab coat stares down at the file, one sleeve hinting at a black thread over his wrist.
-Mood: the precise moment research curdles into crime — quiet, bureaucratic horror.
-Lighting: cold clinical green-blue, hard shadow, the monitor the brightest thing in the room.
-2.39:1 anamorphic, shallow depth of field, heavily desaturated sickly grade, fine 35mm
-film grain. Moral vertigo. No text, no logo.
+```text
+Deep night in a modest clean GenetiX animal-lab evaluation room. Nora clicks an abstract
+exclusion control; one monitor shows a thin black clinical pattern, another the transfer
+result. Richard watches immediately behind her and Kessler observes both from the cool
+corridor; stainless observation cages remain softly out of focus behind glass.
 ```
 
----
+### Szene 8 — Klara
 
-### 6 · Evas Tod *(Szene 10)*
-**Beat:** Eva willigt ein, Richard gibt die Dosis off-cut; der Monitor wird zum Dauerton.
-**Emotion:** geteilte tragische Wette; eine Liebe, die zur Tat wird, die niemand verzeiht.
+**Ausgabe:** `scene-08-klara.png`
+**Figurenreferenzen:** `richard-infected.png`, `kessler.png`, `klara.png` nur als Aktenfoto
 
-```
-Cinematic film still, photorealistic. A dim bedroom at night. A terminally ill woman in
-her early 50s lies very still in bed, eyes closing, her face calm and luminous in soft
-light — the frame holds on her face, not on what is happening at the edge. Beside the bed
-a man in a stained white lab coat holds her hand, his own forearm marked with a black
-branching thread under the cuff; on the nightstand a syringe, faint green. A bedside
-monitor glows, its line beginning to flatten. Mood: a shared tragic wager — tenderness
-and irreversible act fused; we are spared the deed and left with the cost. Lighting: low
-warm key on her face dying into cold shadow, the green syringe a single sickly accent.
-2.39:1 anamorphic, shallow depth of field, muted grade cooling from warm to cold, fine
-35mm film grain. Quiet devastation. No text, no logo.
+```text
+Locked GenetiX office at night. Pale sweating Richard pulls back a cuff to reveal a thin
+black branching network crossing wrist and forearm; Kessler opens a paper dossier whose
+first page contains Klara's recognizable text-free photo. 50mm desk two-shot, wrist and
+portrait central, cold fluorescents with a small warm file lamp, no gore.
 ```
 
----
+### Szene 9 — Evas Wahl
 
-### 7 · Der Flur *(Szene 11)*
-**Beat:** Nora findet die Mutter tot; setzt sich auf den Flurboden, statt einzutreten.
-**Emotion:** Trauer, die das Bild nicht betritt — Stille, Morgenlicht, ein einziges Kühlschrankbrummen.
+**Ausgabe:** `scene-09-evas-wahl.png`
+**Figurenreferenzen:** `eva.png`, `richard.png`
 
-```
-Cinematic film still, photorealistic. A narrow domestic hallway in pale dusty morning
-light slanting low across the floor. A 22-year-old woman sits on the floorboards, back
-against the wall, knees drawn to her chest, backpack still on one shoulder, face hollowed
-and blank — she has not gone into the open bedroom doorway beside her, where a still
-form and a flatlined monitor are softly out of focus. On a side table, a half-full cold
-coffee cup. Mood: grief that refuses to enter the room; suspended stillness, the loudest
-silence. Lighting: cold pale morning light, long shadows, the bedroom a soft bright void
-she won't look at. 2.39:1 anamorphic, shallow depth of field, desaturated cool grade,
-fine 35mm film grain. Hollow, suspended dread. No text, no logo.
+```text
+Eva's modest bedroom before any procedure. Lucid Eva and Richard hold opposite edges of
+a signed consent clipboard at eye level; one capped syringe rests unused on a distant
+bedside tray and an early thin A0.8 thread is visible at Richard's exposed wrist. Intimate
+50mm two-shot, warm lamp and rainy blue spill, autonomous fear, no injection or blood.
 ```
 
----
+### Szene 10 — Der Notruf
 
-### 8 · Der Zusammenbruch *(Szene 13)*
-**Beat:** Nora konfrontiert Richard; sein Körper gibt nach, er sinkt an die Laborwand.
-**Emotion:** kein Streit — ein Mann, der unter dem Gewicht der Wahrheit erlischt.
+**Ausgabe:** `scene-10-notruf.png`
+**Figurenreferenzen:** `nora.png`, `eva.png`
 
-```
-Cinematic film still, photorealistic. A cold lab at night. A gaunt, sweat-sheened man in
-his early 50s has slid down to sit against a laboratory wall, a stained lab coat hanging
-open, black branching threads visible at his wrist and crawling up his neck, his eyes
-half-closed, breath shallow. A 22-year-old woman kneels close beside him, an old notebook
-fallen near her hand, her face caught between fury and breaking grief. No violence — a
-collapse. Mood: the quiet, terrible deflation of a man emptied by what he has done;
-inheritance passing in a single look. Lighting: cold blue-green clinical wash, hard rim
-light, deep shadow pooling around them. 2.39:1 anamorphic, shallow depth of field, heavily
-desaturated sickly grade, fine 35mm film grain. Devastation without melodrama. No text,
-no logo.
+```text
+Cold blue dawn in Eva's bedroom. Eva lies lifeless and covered; Nora stands one step
+away speaking to emergency services on exactly one phone. Empty syringe and consent
+remain on the bedside table. Restrained 40mm two-shot, no CPR or gore, distance between
+mother and daughter as the central fact.
 ```
 
----
+### Szene 12 — Nicht noch eine
 
-### 9 · DIE SCHARNIERSZENE — Selbst-Injektion *(Szene 13A)* ⟵ Herzstück
-**Beat:** Nora allein, zwischen Telefon und Streichhölzern; sie hört die Kassette, korrigiert
-Reihe 14 (0,8 → 0,6), injiziert sich selbst — der erste schwarze Faden blüht unter ihrem Arm.
-**Emotion:** keine Trauer mehr, sondern eine bestätigte Hypothese; die kalte, aktive Wahl.
+**Ausgabe:** `scene-12-zusammenbruch.png`
+**Figurenreferenzen:** `richard-infected.png`, `nora.png`
 
-```
-Cinematic film still, photorealistic. A sterile lab late at night. In the soft background,
-a man's body lies covered with his own white lab coat. In the foreground a 22-year-old
-woman stands at a steel workbench, hair pulled back, sleeve rolled to her forearm,
-pressing an empty-then-used syringe to her own skin — and the very first thin black thread
-is just beginning to bloom and branch under the skin of her forearm. Around her, the
-rejected alternatives are deliberately staged: a telephone set down untouched, a canister
-of cleaning alcohol and matches pushed aside, an old cassette recorder, an open notebook
-where a value is struck through and rewritten by hand. A sealed container of faintly
-green-glowing compound glows on the bench. Her face: no tears — a single small nod, a
-confirmed hypothesis, the cold clarity of someone choosing the work over mercy. Mood: the
-dramatized point of no return; obsession becoming literal contagion. Lighting: cold
-clinical white and sickly green, the green compound and her forearm the focal glows in a
-sea of shadow. 2.39:1 anamorphic, shallow depth of field, heavily desaturated cold grade,
-fine 35mm film grain. Controlled, irreversible dread. No text, no logo.
+```text
+Cold GenetiX corridor. Richard has collapsed with thin subdermal black branches visible;
+Nora kneels beside him beginning aid while striking the red internal medical-response
+button. Low 35mm floor angle, closed dossier beyond his hand, hard cyan fluorescents,
+urgent rescue rather than horror tableau, no blood.
 ```
 
----
+### Szene 13 — A0,6
 
-### 10 · Der versiegelte Raum *(Szene 16)*
-**Beat:** Im Vorstandsraum löst Nora das Aerosol aus; schwarze Adern, Panik — sie hält Containment geschlossen.
-**Emotion:** gletscherkalte Ruhe gegen ersticktes Entsetzen hinter Glas.
+**Ausgabe:** `scene-13-a06.png`
+**Figurenreferenz:** `nora.png`
 
-```
-Cinematic film still, photorealistic. A glass-walled corporate presentation room at evening,
-dark wood and cold glass. A fine pale mist drifts down from ceiling vents. Three figures in
-dark suits are in dawning panic — one staring at black veins surfacing on the back of his
-hand, another at the sealed door. In the foreground, calm and still, a 22-year-old woman in
-a crisp white lab coat stands at a control panel, hand resting near a switch she will not
-throw, lit cold from a presentation screen. Composition divides her stillness from their
-terror through a pane of glass. Mood: glacial control against suffocating dread; mercy
-withheld. Lighting: cold under-lit screen glow, sterile fluorescent, the mist catching faint
-green. 2.39:1 anamorphic, modest depth of field, heavily desaturated cold grade, fine 35mm
-film grain. Airless horror. No text, no logo.
+```text
+Several hours into a solitary controlled self-test before dawn. Nora in a plain white
+coat studies exactly one hair-thin local black line below a small elbow dressing and
+records it in a paper notebook. One capped syringe, one capped vial and separated unlabeled observation
+setups sit on the bench. Cold cyan bench light plus weak amber dawn; no active injection.
 ```
 
----
+### Szene 14 — Freigabe Lilith
 
-### 11 · Licht für Licht *(Szene 17)*
-**Beat:** Nora wird Lilith — am Terminal, das Labor hinter ihr erlischt Reihe für Reihe.
-**Emotion:** Übernahme, einsame Souveränität; ein Name, der nicht getippt werden muss.
+**Ausgabe:** `scene-14-lilith.png`
+**Figurenreferenzen:** `lilith.png`, `klara.png` nur als Bildschirmfoto
 
-```
-Cinematic film still, photorealistic. A vast dark laboratory at night. A 22-year-old woman
-in a white lab coat stands alone at a terminal, faint cold screen light on her composed,
-mask-like face; behind her the lab extinguishes row by row, banks of lights going dark in
-receding ranks, swallowing the space in black. A single thin black thread visible at her
-forearm. Hard negative space, isolation, scale. Mood: cold ascension and lonely command —
-the daughter become something else; a name carried, not spoken. Lighting: a single cold
-terminal glow against deep encroaching darkness, sterile and absolute. 2.39:1 anamorphic,
-shallow depth of field, heavily desaturated cold grade, fine 35mm film grain. Final,
-sovereign dread. No text, no logo.
+```text
+Pre-dawn GenetiX operations room. Lilith sits before Klara's portrait and two text-free
+decision symbols: a red cancelled van and a blue arrow toward a van; one hand is poised
+over confirmation. A sea photo and unsent evidence drive lie beside the keyboard, one
+thin local line below her elbow. Terminal cyan and weak amber blinds, informed choice.
 ```
 
----
+### Szene 15A — Das Hauptfilm-Labor
 
-### 12 · Der Übergabe-Tisch *(Szene 18)*
-**Beat:** Schlussmontage — weißer Van, Franks Akte, OP-Hemd, grünes Serum, der OP-Tisch. Brücke zu INFECTED.
-**Emotion:** kalte Routine; der Kreislauf beginnt von vorn.
+**Ausgabe:** `scene-15-labor.png`
+**Figurenreferenzen:** `lilith.png`, `susan.png`, `lia.png`, `frank.png`
+**Raumreferenz:** `susan-lab.png`
 
-```
-Cinematic film still, photorealistic. A series-final tableau, clinical and quiet. A bright
-metal tray holds syringes of green serum; nearby a manila file labelled with a man's name
-marked "active" beside a second closed file marked "complete"; a surgical gown hangs on a
-hook; a white van waits, half-loaded, beyond an open door. A woman in a white lab coat —
-now fully composed, a black thread at her forearm — walks a corridor that looks like the
-lab from the main film, toward a room with an operating table. Mood: cold procedural calm,
-a machine resuming; the loop closing and reopening. Lighting: flat cold fluorescent, sterile
-white and sickly green, no warmth left anywhere. 2.39:1 anamorphic, modest depth of field,
-heavily desaturated cold grade, fine 35mm film grain. Inevitability. No text, no logo.
+```text
+Exact modest grey-tiled main-film holding room. Lia left in white/purple uniform and key
+ring, masked Susan right with tablet, two separate unlabeled capped sets on a steel
+trolley, Frank awake behind the observation window in a hospital gown, Lilith exiting
+in the deep background. Exactly four people, harsh practical cyan, no treatment yet.
 ```
 
----
+### Szene 15B — Der Van vor Klara
 
-*Tipp: Für eine konsistente Figur über mehrere Szenen die Gesichts-Beschreibung aus
-[`01-figuren.md`](01-figuren.md) in den jeweiligen Szenen-Prompt einsetzen (bzw. bei
-Midjourney `--cref` / bei Flux/SDXL eine Referenz oder denselben Seed nutzen).*
+**Ausgabe:** `scene-15-van.png`
+**Referenzen:** `security.png`, `white-van.png`, `klara.png`
+
+```text
+Wet residential street beside a dark forest, next night. The light silver-grey unmarked
+MPV waits without headlights outside Klara's modest house. The same two adult male black-clad guards stand
+beside the open side door with radio and downward flashlight. Klara's partial face is
+visible behind one warm upstairs curtain. 35mm view across rain-slick street, no entry yet.
+```
+
+## Produktions-QA
+
+- alle PNG-Master sind real auf 2,39:1 beschnitten; HTML nutzt `height:auto`
+- WebP-Derivate dienen nur der leichten Auslieferung, PNG bleibt Master
+- Nora und Lilith müssen ohne Beschriftung als dieselbe Person lesbar sein
+- Klara ist 18; Susan und Lia dürfen nie verwechselt oder gemischt werden
+- Szene 15 nutzt graue Fliesen, praktische Beleuchtung und den hellen MPV des Hauptfilms
+- kein Vorstand, kein versiegelter Vorstandsraum, kein Aerosol, kein Gegenmittel
