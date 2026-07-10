@@ -1,401 +1,225 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>INFECTED ORIGINS — Bilder</title>
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta name="description" content="INFECTED ORIGINS — Visualisierte Figuren und Subtext zum Drehbuch.">
-<style>
-  :root{
-    --bg:#08090b; --panel:#0f1115; --ink:#e7e2dc; --muted:#9a938b;
-    --faint:#6f6a60; --line:#252831; --accent:#7fae9e; --warm:#b98a8a;
-    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
-    --serif:Georgia,"Times New Roman",serif;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:linear-gradient(180deg,#0d0f13 0%,var(--bg) 40%);
-    color:var(--ink);font-family:var(--serif);line-height:1.62;-webkit-font-smoothing:antialiased}
-  a{color:var(--warm);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-  header{min-height:52vh;display:grid;align-content:end;padding:64px 24px 46px;
-    border-bottom:1px solid var(--line);background:radial-gradient(900px 460px at 70% 0%,#18201f 0%,rgba(24,32,31,0) 65%)}
-  .kicker,.meta,.back{font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em}
-  .kicker{font-size:.72rem;color:var(--accent);margin-bottom:18px}
-  h1{font-size:clamp(2.4rem,7vw,5.6rem);font-weight:400;line-height:.98;letter-spacing:.05em;margin:0}
-  .intro{max-width:690px;color:var(--muted);font-size:1.12rem;margin:22px 0 0}
-  .nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
-  .nav a,.back{border:1px solid var(--line);padding:.65rem .9rem;font-size:.7rem;color:var(--muted)}
-  .nav a:hover,.back:hover{border-color:var(--accent);color:var(--ink);text-decoration:none}
-  main{padding:42px 0 74px}
-  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-  .card{background:var(--panel);border:1px solid var(--line)}
-  .card img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;background:#050607}
-  .card.wide img{aspect-ratio:3/4}
-  .copy{padding:22px}
-  .meta{font-size:.68rem;color:var(--accent);margin-bottom:8px}
-  h2{font-family:var(--mono);font-size:1rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
-  p{margin:.7rem 0;color:var(--muted)}
-  .subtext{color:var(--ink);font-style:italic}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin:54px 0 22px;border-top:1px solid var(--line);padding-top:36px}
-  .section-head p{max-width:520px;margin:0}
-  .kicker.inline{margin:0 0 10px}
-  .scenes .card img,.scene-card img{aspect-ratio:3/2;object-fit:cover}
-  footer{padding:40px 24px 64px;text-align:center;color:var(--faint);border-top:1px solid var(--line)}
-  @media(max-width:760px){header{min-height:46vh}.grid{grid-template-columns:1fr}.copy{padding:18px}.nav a{font-size:.64rem}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Die vollständig neu generierte V4-Bildwelt von INFECTED ORIGINS: 11 konsistente Figurenanker und 13 Schlüsselszenen im Kinoformat.">
+  <meta name="theme-color" content="#080a0d">
+  <title>INFECTED ORIGINS — V4-Bildwelt</title>
+  <link rel="stylesheet" href="assets/site/origins-v4.css">
+  <script src="assets/site/origins-v4.js" defer></script>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <a class="back" href="index.html">Zurück</a>
-    <div class="kicker">Visualisierte Figuren</div>
-    <h1>INFECTED ORIGINS</h1>
-    <p class="intro">Eine Bildstrecke aus den Projektprompts: nicht als Casting-Set, sondern als visuelle Subtext-Linie des Stücks. Wärme kippt in Laborlicht. Liebe wird Methode. Methode wird Vererbung.</p>
-    <nav class="nav" aria-label="Bilder">
-      <a href="#richard-akt-i">Richard I</a>
-      <a href="#richard-infiziert">Richard infiziert</a>
-      <a href="#eva">Eva</a>
-      <a href="#nora-akt-i">Nora</a>
-      <a href="#lilith-akt-iii">Lilith</a>
-      <a href="#kessler">Kessler</a>
-      <a href="#vorstand">Vorstand</a>
-      <a href="#screenplay-stills">Filmstills</a>
-    </nav>
-  </div>
-</header>
+  <a class="skip-link" href="#main-content">Direkt zu den Bildern</a>
 
-<main class="wrap">
-  <section class="grid">
-    <article class="card" id="richard-akt-i">
-      <img src="assets/characters/richard-akt-i.png" alt="Richard, Akt I, im Kellerlabor mit Zigarette">
-      <div class="copy">
-        <div class="meta">Akt I · Der liebende Forscher</div>
-        <h2>Richard</h2>
-        <p class="subtext">Besessene Hoffnung unter bleierner Erschöpfung.</p>
-        <p>Er ist noch Vater und Ehemann, noch nicht Monster. Der Keller wirkt warm genug, um Liebe zu behaupten, und eng genug, um sie in Besessenheit zu verwandeln.</p>
-      </div>
-    </article>
-
-    <article class="card" id="richard-infiziert">
-      <img src="assets/characters/richard-infiziert.png" alt="Richard infiziert im kalten Labor">
-      <div class="copy">
-        <div class="meta">Akt II/III · Der Infizierte</div>
-        <h2>Richard</h2>
-        <p class="subtext">Ausgehöhlt, totäugig, gebrochene Entschlossenheit.</p>
-        <p>Der Forscher ist selbst Beweisstück geworden. Die schwarzen Fäden machen sichtbar, dass seine Methode längst durch ihn hindurcharbeitet.</p>
-      </div>
-    </article>
-
-    <article class="card" id="eva">
-      <img src="assets/characters/eva.png" alt="Eva im warmen Zuhause-Licht">
-      <div class="copy">
-        <div class="meta">Zuhause · Die sterbende Klarsicht</div>
-        <h2>Eva</h2>
-        <p class="subtext">Ruhige Klarheit, unbeirrte Zärtlichkeit.</p>
-        <p>Sie ist nicht das Opferbild des Films, sondern sein moralischer Fixpunkt. Ihr warmes Licht ist das, was die Laborszenen später verlieren.</p>
-      </div>
-    </article>
-
-    <article class="card" id="nora-akt-i">
-      <img src="assets/characters/nora-akt-i.png" alt="Nora, Akt I, mit regennasser Jacke im Labor">
-      <div class="copy">
-        <div class="meta">Akt I · Die Tochter</div>
-        <h2>Nora</h2>
-        <p class="subtext">Wache Kompetenz und leise Sorge.</p>
-        <p>Sie sieht klarer als Richard, aber sie liebt ihn noch. Ihr Blick trägt bereits die Rechnung, deren Ergebnis sie später nicht mehr zurückweist.</p>
-      </div>
-    </article>
-
-    <article class="card" id="lilith-akt-iii">
-      <img src="assets/characters/lilith-akt-iii.png" alt="Lilith, Akt III, im sterilen Labor">
-      <div class="copy">
-        <div class="meta">Akt III · Die Erbin</div>
-        <h2>Nora → Lilith</h2>
-        <p class="subtext">Gletscherkalte Ruhe, eine perfekt sitzende Maske.</p>
-        <p>Die Trauer verschwindet nicht. Sie wird versiegelt, sterilisiert und als Kontrolle wieder ausgegeben. Der schwarze Faden gehört jetzt ihr.</p>
-      </div>
-    </article>
-
-    <article class="card" id="kessler">
-      <img src="assets/characters/kessler.png" alt="Kessler mit Akte im Café">
-      <div class="copy">
-        <div class="meta">GenetiX · Der Händler</div>
-        <h2>Kessler</h2>
-        <p class="subtext">Geduldig, beruhigend, transaktional.</p>
-        <p>Er wirkt wie Sicherheit und verkauft Zeit. Sein sanftes Gesicht ist die Form, in der das System Richard die Erlaubnis gibt.</p>
-      </div>
-    </article>
-
-    <article class="card wide" id="vorstand">
-      <img src="assets/characters/vorstand.png" alt="Drei Vorstände im kalten Präsentationsraum">
-      <div class="copy">
-        <div class="meta">GenetiX · Die Verwalter</div>
-        <h2>Vorstand</h2>
-        <p class="subtext">Bürokratische Distanz, Kalkül, milde Verachtung.</p>
-        <p>Keine Schurkenpose. Nur Verwaltung. Sie behandeln Leben als Bilanzposten, bis der Raum selbst zur Bilanz wird.</p>
-      </div>
-    </article>
-  </section>
-
-  <section class="scene-section" id="screenplay-stills">
-    <div class="section-head">
-      <div>
-        <div class="kicker inline">Filmstills</div>
-        <h2>Schlüsselszenen</h2>
-      </div>
-      <p>Generierte Film-Stills zu den zwölf Schlüsselszenen des Drehbuchs.</p>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="index.html">Infected <span>Origins</span></a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="screenplay/infected-origins-v4.html">Drehbuch</a></li>
+          <li><a href="bilder.html" aria-current="page">Bilder</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="grid scenes">
-    <article class="card scene-card" id="still-01">
-      <img src="assets/generated/screenplay/screenplay-scene-01-prolog.png" alt="Prolog — Richard spricht nachts im Kellerlabor in ein Kassettengerät">
-      <div class="copy">
-        <div class="meta">Prolog</div>
-        <h2>Die Kassette</h2>
-        <p class="subtext">Richard, allein, spricht ins Tagebuch. Cold Open.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-02">
-      <img src="assets/generated/screenplay/screenplay-scene-02-warmer-tisch.png" alt="Eva und Nora in der warmen Küche bei Nacht">
-      <div class="copy">
-        <div class="meta">Szene 1</div>
-        <h2>Der warme Tisch</h2>
-        <p class="subtext">Eva und Nora in der Küche; Eva erzählt die Lilith-Geschichte.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-03">
-      <img src="assets/generated/screenplay/screenplay-scene-03-bildschirm.png" alt="Richard und Nora sehen im Kellerlabor eine Kurve auf dem Monitor">
-      <div class="copy">
-        <div class="meta">Szene 2</div>
-        <h2>Vater & Tochter am Bildschirm</h2>
-        <p class="subtext">Nora findet den Fehler in Reihe 14; die Kurve springt nach oben.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-04">
-      <img src="assets/generated/screenplay/screenplay-scene-04-pakt.png" alt="Kessler schiebt Richard im Café eine Akte und eine Karte zu">
-      <div class="copy">
-        <div class="meta">Szene 5</div>
-        <h2>Der Pakt</h2>
-        <p class="subtext">Kessler legt Richard im Café das alte Paper hin — und eine Karte.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-05">
-      <img src="assets/generated/screenplay/screenplay-scene-05-linie.png" alt="Im sterilen GenetiX-Labor liegt die Akte eines Mädchens vor Richard und Kessler">
-      <div class="copy">
-        <div class="meta">Szene 9</div>
-        <h2>Die Linie</h2>
-        <p class="subtext">Ein totes Versuchssubjekt am Monitor; Kessler legt die Akte des Mädchens (98,7%) hin.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-06">
-      <img src="assets/generated/screenplay/screenplay-scene-06-evas-tod.png" alt="Eva liegt im Schlafzimmer, Richard hält ihre Hand">
-      <div class="copy">
-        <div class="meta">Szene 10</div>
-        <h2>Evas Tod</h2>
-        <p class="subtext">Eva willigt ein, Richard gibt die Dosis off-cut; der Monitor wird zum Dauerton.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-07">
-      <img src="assets/generated/screenplay/screenplay-scene-07-flur.png" alt="Nora sitzt im kalten Morgenlicht auf dem Flurboden">
-      <div class="copy">
-        <div class="meta">Szene 11</div>
-        <h2>Der Flur</h2>
-        <p class="subtext">Nora findet die Mutter tot; setzt sich auf den Flurboden, statt einzutreten.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-08">
-      <img src="assets/generated/screenplay/screenplay-scene-08-zusammenbruch.png" alt="Richard bricht im Labor zusammen, Nora kniet neben ihm">
-      <div class="copy">
-        <div class="meta">Szene 13</div>
-        <h2>Der Zusammenbruch</h2>
-        <p class="subtext">Nora konfrontiert Richard; sein Körper gibt nach, er sinkt an die Laborwand.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-09">
-      <img src="assets/generated/screenplay/screenplay-scene-09-selbst-injektion.png" alt="Nora injiziert sich im Labor">
-      <div class="copy">
-        <div class="meta">Szene 13A</div>
-        <h2>Selbst-Injektion</h2>
-        <p class="subtext">Die Scharnierszene — Nora wählt die Besessenheit. Der erste schwarze Faden blüht.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-10">
-      <img src="assets/generated/screenplay/screenplay-scene-10-versiegelter-raum.png" alt="Nora hält im Glasraum das Containment geschlossen">
-      <div class="copy">
-        <div class="meta">Szene 16</div>
-        <h2>Der versiegelte Raum</h2>
-        <p class="subtext">Nora löst das Aerosol aus; schwarze Adern, Panik — sie hält Containment geschlossen.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-11">
-      <img src="assets/generated/screenplay/screenplay-scene-11-licht-fuer-licht.png" alt="Nora steht allein am Terminal, das Labor erlischt hinter ihr">
-      <div class="copy">
-        <div class="meta">Szene 17</div>
-        <h2>Licht für Licht</h2>
-        <p class="subtext">Nora wird Lilith — am Terminal, das Labor hinter ihr erlischt Reihe für Reihe.</p>
-      </div>
-    </article>
-    <article class="card scene-card" id="still-12">
-      <img src="assets/generated/screenplay/screenplay-scene-12-uebergabe.png" alt="Grünes Serum, Akten, OP-Hemd und weißer Van">
-      <div class="copy">
-        <div class="meta">Szene 18</div>
-        <h2>Der Übergabe-Tisch</h2>
-        <p class="subtext">Schlussmontage — weißer Van, Franks Akte, OP-Hemd, grünes Serum. Brücke zu INFECTED.</p>
-      </div>
-    </article>
-    </div>
-  </section>
+  </header>
 
-</main>
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="gallery-title">
+      <div class="page-hero__inner flow">
+        <p class="kicker">V4 · vollständig neu generiert</p>
+        <h1 id="gallery-title">EINE BILDWELT. DIESELBEN FIGUREN.</h1>
+        <p class="page-hero__lede">Alle öffentlich verwendeten Portraits und Szenenbilder wurden neu aufgebaut. Hauptfilm-Frames verankern Gesichter, Kostüme, den gekachelten Raum, die Sicherheitskräfte und den hellen Van; Wärme, Labor und Epilog teilen jetzt eine Kamera- und Farbdramaturgie.</p>
+        <nav aria-label="Sprungnavigation">
+          <ul class="visual-nav">
+            <li><a href="#figuren">11 Figurenanker</a></li>
+            <li><a href="#stills">13 Schlüsselszenen</a></li>
+            <li><a href="#anschluss">Anschluss an INFECTED</a></li>
+          </ul>
+        </nav>
+        <figure class="scene-image">
+          <picture>
+            <source srcset="assets/v4/stills/scene-00-kassette.webp" type="image/webp">
+            <img src="assets/v4/stills/scene-00-kassette.png" width="1830" height="766" decoding="async" fetchpriority="high" alt="Richard reicht im warmen Kellerlabor zur Kassette; hinter ihm zeigen zwei Kurven die Wahl zwischen Tempo und Kontrolle.">
+          </picture>
+          <figcaption>Der gemeinsame Stilanker der V4-Serie: natürliche Optik, praktische Lichtquellen, zurückhaltendes 35-mm-Korn und echtes 2,39:1.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-<footer>
-  <a href="screenplay/infected-origins-v3.html">Drehbuch lesen</a> · <a href="prompts/01-figuren.md">Prompts ansehen</a>
-</footer>
+    <section class="content-section" id="figuren" aria-labelledby="characters-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <p class="eyebrow">4:5 · Identitätsanker</p>
+            <h2 id="characters-title">Figuren</h2>
+          </div>
+          <p>Nora und Lilith sind sichtbar dieselbe Person. Richard bleibt vor und nach der Infektion identisch. Die Hauptfilmfiguren behalten Gesicht, Alter, Kostüm und Funktion.</p>
+        </header>
+
+        <div class="character-grid">
+          <article class="character-card" id="figur-richard">
+            <picture><source srcset="assets/v4/characters/richard.webp" type="image/webp"><img src="assets/v4/characters/richard.png" width="971" height="1212" loading="lazy" decoding="async" alt="Dr. Richard Voss, 52, übernächtigt im warmen Kellerlabor."></picture>
+            <div class="character-card__body"><h3>Richard · Akt I</h3><p>Arzt, Zellforscher, Vater. Noch ohne sichtbare Integration.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-richard-infiziert">
+            <picture><source srcset="assets/v4/characters/richard-infected.webp" type="image/webp"><img src="assets/v4/characters/richard-infected.png" width="971" height="1212" loading="lazy" decoding="async" alt="Derselbe Richard im weißen Kittel mit schnell wandernden schwarzen Fäden an Arm und Hals."></picture>
+            <div class="character-card__body"><h3>Richard · A0,8</h3><p>Unveränderte Identität, aber systemische toxische Überlastung.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-eva">
+            <picture><source srcset="assets/v4/characters/eva.webp" type="image/webp"><img src="assets/v4/characters/eva.png" width="1003" height="1252" loading="lazy" decoding="async" alt="Eva Voss, körperlich geschwächt, aber aufmerksam in ihrer warmen Küche."></picture>
+            <div class="character-card__body"><h3>Eva Voss</h3><p>Die moralische Grenze der Handlung, nicht ihr passiver Vorwand.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-nora">
+            <picture><source srcset="assets/v4/characters/nora.webp" type="image/webp"><img src="assets/v4/characters/nora.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Dr. Nora Voss, 28, in dunkler Regenjacke vor ihrer Verwandlung zu Lilith."></picture>
+            <div class="character-card__body"><h3>Nora Voss</h3><p>Molekularbiologin, Tochter, Mitautorin der ersten Lüge.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-lilith">
+            <picture><source srcset="assets/v4/characters/lilith.webp" type="image/webp"><img src="assets/v4/characters/lilith.png" width="1003" height="1252" loading="lazy" decoding="async" alt="Dieselbe Nora als Lilith mit streng gebundenem Haar, weißem Kittel und lokalem schwarzen Faden."></picture>
+            <div class="character-card__body"><h3>Lilith</h3><p>Keine neue Person: Noras operative Identität nach der bewussten Freigabe.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-kessler">
+            <picture><source srcset="assets/v4/characters/kessler.webp" type="image/webp"><img src="assets/v4/characters/kessler.png" width="1003" height="1252" loading="lazy" decoding="async" alt="Kessler im dunklen Mantel im nahezu leeren Café."></picture>
+            <div class="character-card__body"><h3>Kessler</h3><p>Freundlich, präzise, austauschbar. Er verkauft Infrastruktur und Menschen.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-klara">
+            <picture><source srcset="assets/v4/characters/klara.webp" type="image/webp"><img src="assets/v4/characters/klara.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Die 18-jährige Klara mit braunem Haar und Perlenkette zu Hause."></picture>
+            <div class="character-card__body"><h3>Klara</h3><p>Hauptfilmidentität, 18 Jahre alt, bis zu Noras Klick zu Hause.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-susan">
+            <picture><source srcset="assets/v4/characters/susan.webp" type="image/webp"><img src="assets/v4/characters/susan.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Susan mit kurzer dunkler Frisur, Maske, weißem Kittel und Tablet im gekachelten Labor."></picture>
+            <div class="character-card__body"><h3>Dr. Susan</h3><p>Maske, Kittel, Tablet — exakt die klinische Funktion aus dem Hauptfilm.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-lia">
+            <picture><source srcset="assets/v4/characters/lia.webp" type="image/webp"><img src="assets/v4/characters/lia.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Lia in weißer Pflegeuniform mit violettem Besatz und Schlüsselring."></picture>
+            <div class="character-card__body"><h3>Lia</h3><p>Die Pflegeuniform und der Schlüsselbund verbinden ihre Prequel-Funktion mit Franks Flucht.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-frank">
+            <picture><source srcset="assets/v4/characters/frank.webp" type="image/webp"><img src="assets/v4/characters/frank.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Frank im hellen OP-Hemd im kalten GenetiX-Halteraum."></picture>
+            <div class="character-card__body"><h3>Frank</h3><p>Erwachsener Studienteilnehmer, bereits widerrufen und trotzdem eingeschlossen.</p></div>
+          </article>
+
+          <article class="character-card" id="figur-sicherheit">
+            <picture><source srcset="assets/v4/characters/security.webp" type="image/webp"><img src="assets/v4/characters/security.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Zwei Sicherheitskräfte in schwarzer taktischer Kleidung neben einem hellen unmarkierten Van."></picture>
+            <div class="character-card__body"><h3>Sicherheit</h3><p>Schwarze praktische Kleidung, Funk, keine Logos, keine Sci-Fi-Rüstung.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="stills" aria-labelledby="stills-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <p class="eyebrow">2,39:1 · Drehbuchreihenfolge</p>
+            <h2 id="stills-title">Schlüsselszenen</h2>
+          </div>
+          <p>Kein Bild wird auf 3:2 beschnitten. Jedes Still besitzt sein echtes Kinoformat und führt zur entsprechenden Szene in der neuen V4-HTML.</p>
+        </header>
+
+        <div class="still-grid">
+          <article class="still-card" id="still-scene-00-kassette">
+            <picture><source srcset="assets/v4/stills/scene-00-kassette.webp" type="image/webp"><img src="assets/v4/stills/scene-00-kassette.png" width="1830" height="766" loading="lazy" decoding="async" alt="Richard zeichnet im warmen Kellerlabor Eintrag 47 auf."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 0 · Prolog</p><h3><a href="screenplay/infected-origins-v4.html#scene-00">Die Kassette</a></h3><p>Richard kennt die zwei Kurven und entscheidet sich trotzdem für Geschwindigkeit.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-01-grenze">
+            <picture><source srcset="assets/v4/stills/scene-01-grenze.webp" type="image/webp"><img src="assets/v4/stills/scene-01-grenze.png" width="1920" height="804" loading="lazy" decoding="async" alt="Eva und Nora sitzen einander in der warmen Küche gegenüber, das Meerfoto zwischen ihren Händen."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 1 · Liebe</p><h3><a href="screenplay/infected-origins-v4.html#scene-01">Die Grenze</a></h3><p>Eva formuliert den Satz, an dem alle späteren Entscheidungen gemessen werden.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-02-zwei-kurven">
+            <picture><source srcset="assets/v4/stills/scene-02-zwei-kurven.webp" type="image/webp"><img src="assets/v4/stills/scene-02-zwei-kurven.png" width="1934" height="810" loading="lazy" decoding="async" alt="Richard und Nora betrachten im Kellerlabor eine steile und eine langsame Kurve."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 2 · Liebe</p><h3><a href="screenplay/infected-origins-v4.html#scene-02">Zwei Kurven</a></h3><p>A0,8 ist schnell und toxisch; A0,6 langsam, lokal und nur kontrollierbarer.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-05-pakt">
+            <picture><source srcset="assets/v4/stills/scene-05-pakt.webp" type="image/webp"><img src="assets/v4/stills/scene-05-pakt.png" width="1936" height="810" loading="lazy" decoding="async" alt="Richard und Kessler sitzen tagsüber mit Karte, Dossier und Meerfoto im verregneten Bahnhofscafé."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 5 · Liebe</p><h3><a href="screenplay/infected-origins-v4.html#scene-05">Der Pakt</a></h3><p>Kessler bietet keine Heilung, sondern Zeit, Infrastruktur und eine Schuld.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-07-erste-luege">
+            <picture><source srcset="assets/v4/stills/scene-07-erste-luege.webp" type="image/webp"><img src="assets/v4/stills/scene-07-erste-luege.png" width="1932" height="808" loading="lazy" decoding="async" alt="Nora sitzt im GenetiX-Tierlabor vor den Transferdaten, während Richard und Kessler ihre Entscheidung beobachten."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 7 · Korruption</p><h3><a href="screenplay/infected-origins-v4.html#scene-07">Die erste Lüge</a></h3><p>Nora macht aus biologischem Versagen einen technischen Ausreißer.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-08-klara">
+            <picture><source srcset="assets/v4/stills/scene-08-klara.webp" type="image/webp"><img src="assets/v4/stills/scene-08-klara.png" width="1938" height="810" loading="lazy" decoding="async" alt="Richard zeigt einen einzelnen schnell wandernden schwarzen Faden am Arm, Kessler hält Klaras Foto in einer offenen Akte."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 8 · Korruption</p><h3><a href="screenplay/infected-origins-v4.html#scene-08">Klara</a></h3><p>Das Profil stammt aus einer illegal sequenzierten Spender-Screeningprobe — nicht aus einem Routineblutbild.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-09-evas-wahl">
+            <picture><source srcset="assets/v4/stills/scene-09-evas-wahl.webp" type="image/webp"><img src="assets/v4/stills/scene-09-evas-wahl.png" width="1934" height="808" loading="lazy" decoding="async" alt="Eva und Richard halten die Einwilligung; an Richards Hand ist der schwarze Faden sichtbar, eine versiegelte Spritze liegt auf dem Beistelltisch."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 9 · Korruption</p><h3><a href="screenplay/infected-origins-v4.html#scene-09">Evas Wahl</a></h3><p>Eva erfährt die tödlichen und übertragbaren Risiken. Ihre Zustimmung gilt ausschließlich ihrem Körper.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-10-notruf">
+            <picture><source srcset="assets/v4/stills/scene-10-notruf.webp" type="image/webp"><img src="assets/v4/stills/scene-10-notruf.png" width="1930" height="808" loading="lazy" decoding="async" alt="Nora telefoniert neben der verstorbenen Eva mit dem Notruf."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 10 · Vererbung</p><h3><a href="screenplay/infected-origins-v4.html#scene-10">Der Notruf</a></h3><p>DNR, sichere Todeszeichen und Noras bewusste Beweisentscheidung schließen die alte Logiklücke.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-12-zusammenbruch">
+            <picture><source srcset="assets/v4/stills/scene-12-zusammenbruch.webp" type="image/webp"><img src="assets/v4/stills/scene-12-zusammenbruch.png" width="1934" height="810" loading="lazy" decoding="async" alt="Der infizierte Richard liegt im GenetiX-Flur, Nora löst den internen medizinischen Alarm aus."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 12 · Vererbung</p><h3><a href="screenplay/infected-origins-v4.html#scene-12">Nicht noch eine</a></h3><p>Richard kollabiert beim Stornieren. Kesslers Werksarzt macht daraus später Herzversagen.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-13-a06">
+            <picture><source srcset="assets/v4/stills/scene-13-a06.webp" type="image/webp"><img src="assets/v4/stills/scene-13-a06.png" width="1934" height="808" loading="lazy" decoding="async" alt="Nora untersucht einen einzelnen lokalen schwarzen Faden und protokolliert getrennte Kontaktproben."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 13 · Vererbung</p><h3><a href="screenplay/infected-origins-v4.html#scene-13">A0,6</a></h3><p>Eine frisch hergestellte Charge, langsame Integration und getrennte Blut-, Speichel-, Haut- und Luftbefunde.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-14-lilith">
+            <picture><source srcset="assets/v4/stills/scene-14-lilith.webp" type="image/webp"><img src="assets/v4/stills/scene-14-lilith.png" width="1934" height="808" loading="lazy" decoding="async" alt="Lilith sitzt vor Klaras Porträt und klaren Symbolen für Transport stoppen oder freigeben, Meerfoto und Datenträger neben sich."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 14 · Vererbung</p><h3><a href="screenplay/infected-origins-v4.html#scene-14">Freigabe Lilith</a></h3><p>Kesslers Alternative ist real. Nora entscheidet sich dennoch gegen Klara.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-15-labor">
+            <picture><source srcset="assets/v4/stills/scene-15-labor.webp" type="image/webp"><img src="assets/v4/stills/scene-15-labor.png" width="1930" height="808" loading="lazy" decoding="async" alt="Lia und Susan stehen im gekachelten Raum an zwei getrennten Sets, Frank wartet hinter der Sichtscheibe, Lilith verlässt den Raum."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 15 · Epilog</p><h3><a href="screenplay/infected-origins-v4.html#scene-15">Das Hauptfilm-Labor</a></h3><p>Susan, Lia und Frank sind exakt dort, wo „INFECTED“ sie benötigt; Lilith ist bei der späteren Behandlung nicht im Raum.</p></div>
+          </article>
+
+          <article class="still-card" id="still-scene-15-van">
+            <picture><source srcset="assets/v4/stills/scene-15-van.webp" type="image/webp"><img src="assets/v4/stills/scene-15-van.png" width="1934" height="808" loading="lazy" decoding="async" alt="Zwei männliche Sicherheitskräfte stehen neben einem hellen unmarkierten Van vor Klaras Haus, Klara sieht aus dem Fenster."></picture>
+            <div class="still-card__body"><p class="meta-label">Szene 15 · Letzter Schnitt</p><h3><a href="screenplay/infected-origins-v4.html#scene-15">Der Van vor Klara</a></h3><p>Keine abstrakte Drohung: Noras Freigabe erreicht das Wohnhaus unmittelbar.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="anschluss" aria-labelledby="handoff-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <p class="eyebrow">Anschluss an den Hauptfilm</p>
+            <h2 id="handoff-title">Kontinuität statt Ähnlichkeit</h2>
+          </div>
+          <p>Der letzte Raum, Susans Maske und Tablet, Lias violett besetzte Uniform und Schlüsselbund, Franks OP-Hemd, die schwarzen Wachen und der silbergraue unmarkierte Van folgen konkreten Hauptfilm-Frames.</p>
+        </header>
+        <div class="act-grid">
+          <article class="act-card"><p class="meta-label">Identität</p><h3>Nora = Lilith</h3><p>Gesicht, Haaransatz, Ohren und Proportionen bleiben über Kleidung und Licht hinweg dieselben.</p></article>
+          <article class="act-card"><p class="meta-label">Compound</p><h3>Eine Regel, zwei Tempi</h3><p>A0,8 wandert schnell und systemisch. A0,6 beginnt lokal und langsam; kontrolliert bedeutet nie sicher.</p></article>
+          <article class="act-card"><p class="meta-label">Übergabe</p><h3>Klara zuerst, Frank danach</h3><p>Lilith ordnet die Reihenfolge an. Susan wird Klaras Dosis im Hauptfilm eigenmächtig erhöhen.</p></article>
+        </div>
+        <div class="button-group" style="margin-top: 1.5rem">
+          <a class="btn" href="screenplay/infected-origins-v4.html#epilogue">Epilog im Drehbuch</a>
+          <a class="btn ghost" href="index.html">Zur Startseite</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">INFECTED ORIGINS · V4-Bildwelt · PNG-Master + WebP-Auslieferung · 4:5 und 2,39:1</div>
+  </footer>
 </body>
 </html>

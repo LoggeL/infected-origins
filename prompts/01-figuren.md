@@ -1,171 +1,166 @@
-# INFECTED ORIGINS — Visualisierungs-Prompts
+# INFECTED ORIGINS — V4-Bildbibel: Figuren
 
-## Teil 1 — Figuren: Charakterportraits (Outfit · Emotion)
+Stand: 10. Juli 2026. Diese Datei ersetzt die V3-Prompts vollständig.
 
-> Prompts auf Englisch für maximale Modell-Kompatibilität (Midjourney / Flux / SDXL / DALL·E).
-> Jeder Prompt ist **eigenständig** (Stil-Anker ist eingebaut) und direkt kopierbar.
-> Ton durchgehend: nüchterner Near-Future-Medical-Horror — entsättigt, körnig, intim, moralisch erschöpft.
+## Verbindlicher Look
 
----
+- photorealistischer Live-Action-Film, zeitgenössisches Deutschland
+- geerdeter Medical-Thriller, keine futuristische Glaskathedrale
+- natürliche, unretuschierte Haut; reale Stoffe und Gebrauchsgegenstände
+- zurückhaltendes 35-mm-Korn, praktische Lichtquellen, gedämpfte Cyan-/Amber-Palette
+- Figurenmaster exakt **4:5**
+- keine Schrift, Logos, Wasserzeichen, Beauty-Retusche oder Identitätsmischung
+- schwarze Fäden sind dünn und subdermal; A0,6 bleibt lokal, A0,8 wandert systemisch
 
-### Globaler Stil-Anker
+## Referenzhierarchie
 
-*Ist in jeden Figuren-Prompt eingewoben. Hier zur Referenz / zum Feintuning:*
+1. Hauptfilm-Frames sperren Identität, Kostüm, Raum und Props.
+2. Ein akzeptierter V4-Master sperrt jede spätere Zustandsvariante.
+3. Stilreferenzen dürfen niemals Gesicht oder Körperform überschreiben.
 
-```
-cinematic character portrait, photorealistic, grounded near-future medical-horror tone,
-shot on 85mm lens, shallow depth of field, soft falloff, eye-level, 4:5 portrait,
-low-key lighting, muted desaturated color grade, deep crushed shadows,
-fine 35mm film grain, subtle halation, realistic skin texture with pores and fatigue,
-restricted palette: cold clinical white, sickly fluorescent green, charcoal black,
-single warm tungsten accent. quiet dread, no glamour, no stylization, no text, no logo.
-```
+Hauptfilm-Frames liegen unter `assets/references/main-film/`. Sie sind Referenzmaterial, keine öffentlichen Galerie-Assets.
 
-**Wiederkehrende Motive (Continuity):** krankhaft fluoreszierendes Labor-Grün · schwarze, verzweigte Adern/Fäden unter der Haut · steriles Weiß gegen warmes Zuhause-Licht · analoge, verstaubte Texturen.
+## Finale Figurenprompts
 
----
+### Richard Voss — vor der Infektion
 
-### RICHARD — Akt I · der liebende Forscher
-**Outfit:** zerknittertes Hemd, hochgekrempelte Ärmel, abgetragener Cardigan, Lesebrille hochgeschoben.
-**Emotion:** besessene Hoffnung unter bleierner Erschöpfung — fragile Überzeugung in übernächtigten Augen.
+**Ausgabe:** `assets/v4/characters/richard.png`
+**Referenz:** `assets/characters/richard-akt-i.png`
 
-```
-Cinematic character portrait, photorealistic. A German man in his early 50s, lean
-weathered face, receding salt-and-pepper hair, three-day grey stubble, deep bruised
-shadows under bloodshot smoker's eyes, nicotine-stained fingertips. He holds a lit
-cigarette, a thin ribbon of smoke crossing his face. Wardrobe: rumpled button-down
-shirt, sleeves rolled to the forearm, open collar, a worn cardigan, reading glasses
-pushed up onto his forehead. Expression: obsessive hope worn thin by exhaustion — a man
-who has not slept in days, eyes lit with fragile conviction and grief he refuses to name.
-Setting: a dim basement hobby-lab, single desk lamp, blurred microscope and cassette
-recorder in the background. Lighting: warm tungsten desk glow fighting the cold blue
-spill of a monitor on one cheek. Shot on 85mm, shallow depth of field, 4:5 portrait,
-muted desaturated grade, fine 35mm film grain, subtle halation, realistic tired skin.
-Quiet dread. No glamour, no text, no logo.
+```text
+Identity-preserving 4:5 portrait of Dr. Richard Voss, 52, same face, hairline,
+glasses and build as the supplied reference. Warm cramped basement lab, rumpled shirt
+and worn cardigan, exhausted but still hopeful. Photorealistic live-action German
+medical thriller, natural skin, practical tungsten light, restrained 35mm grain;
+no infection, text, logo, watermark, glamour or redesign.
 ```
 
----
+### Richard Voss — A0,8
 
-### RICHARD — Akt II/III · der Infizierte
-**Outfit:** weißer Laborkittel, Kragen fleckig; Ärmel leicht zurückgeschoben.
-**Emotion:** ausgehöhlt, totäugig, gebrochene Entschlossenheit — ein Mann, leergeräumt von dem, was er getan hat.
+**Ausgabe:** `assets/v4/characters/richard-infected.png`
+**Referenz:** `assets/v4/characters/richard.png`
 
-```
-Cinematic character portrait, photorealistic. The same German man, early 50s, now
-visibly deteriorated: hollow cheeks, grey ashen pallor, a sheen of cold sweat, faint
-tremor, lips dry and cracked. Wardrobe: a once-white laboratory coat, collar smudged,
-worn over the rumpled shirt; one sleeve pushed back to reveal black, branching
-vein-like threads creeping across his wrist and tendoning up toward his throat — as if
-ink were spreading under the skin. Expression: dead-eyed, emptied out, the broken calm
-of a man who has crossed a line he can't return from; conviction curdled into ruin.
-Setting: a cold clinical lab at night, blue-green fluorescent wash, harsh shadow, sterile
-surfaces and monitor glow behind him. Lighting: low-key, cold, unflattering, light raking
-across his gaunt face. Shot on 85mm, shallow depth of field, 4:5 portrait, heavily muted
-sickly-green desaturated grade, fine 35mm film grain, realistic clammy skin texture.
-Dread and decay. No glamour, no text, no logo.
+```text
+Preserve Richard's identity exactly. Same man in a plain white lab coat under cold
+institutional light; pale, sweating, with thin black subdermal threads moving from
+wrist over elbow toward neck. 4:5 live-action portrait, controlled body horror,
+no gore, tentacles, facial redesign, text, logo or watermark.
 ```
 
----
+### Eva Voss
 
-### EVA — die sterbende Klarsicht
-**Outfit:** dünner, abgetragener Hausmantel über Nachthemd, Lesebrille auf einem Buch.
-**Emotion:** ruhige Klarheit, unbeirrte Zärtlichkeit — das moralische Zentrum, leuchtend statt bemitleidenswert.
+**Ausgabe:** `assets/v4/characters/eva.png`
+**Referenz:** `assets/characters/eva.png`
 
-```
-Cinematic character portrait, photorealistic. A German woman in her early 50s in the
-late stage of terminal illness: gaunt, translucent pale skin, thinning fine hair,
-sharp collarbones, chapped lips — yet her eyes are luminous, clear and unafraid.
-A faint tremor in the hand resting near her face. Wardrobe: a thin, worn housecoat or
-soft cardigan over a plain nightgown, a small book in her lap, reading glasses set on it.
-Expression: serene clarity and unflinching tenderness — a woman who knows exactly how
-this ends and meets it without flinching; the moral center of the story, fragile but
-radiant. Setting: a warm modest kitchen or bedside at night, soft diffuse window light,
-old radiator, the only genuinely warm image of the set — yet a thread of cold creeps in
-at the edges. Lighting: gentle warm tungsten key, soft shadow, intimate. Shot on 85mm,
-shallow depth of field, 4:5 portrait, muted grade with a faint warm cast, fine 35mm film
-grain, delicate realistic skin. Tender, unbearable calm. No glamour, no text, no logo.
+```text
+Identity-preserving 4:5 portrait of Eva Voss, 53, terminally ill but lucid and
+autonomous, in her modest warm kitchen. Preserve her exact face and age; frail body,
+soft cardigan, direct attentive gaze. Natural tungsten and rainy window light,
+photorealistic 35mm drama; no hospital glamour, text, logo or watermark.
 ```
 
----
+### Nora Voss
 
-### NORA — Akt I · die Tochter
-**Outfit:** regennasse Jacke, Rucksackgurt, schlichtes Shirt/Hoodie — praktisch, ungeschminkt.
-**Emotion:** wache Kompetenz und leise Sorge, Liebe — ein Mädchen, das zu viel trägt und schärfer sieht als ihr Vater.
+**Ausgabe:** `assets/v4/characters/nora.png`
+**Referenzen:** `lilith-face.png`, `lilith-field.png`
 
-```
-Cinematic character portrait, photorealistic. A young German woman, 22, dark hair damp
-from rain falling loose around a bare, unmade-up face, intelligent watchful eyes, a faint
-worried set to her mouth. Wardrobe: a rain-dampened jacket over a plain shirt or hoodie,
-one backpack strap on her shoulder, practical and unglamorous. Expression: quiet competence
-and tender worry — a daughter carrying more than she should, gentle but sharp, the only
-person in the room who already sees where the math goes wrong. Setting: a warm domestic
-kitchen or the basement lab, microscope and handwritten labels softly blurred behind her.
-Lighting: warm-to-neutral, soft key, gentle shadow, lived-in. Shot on 85mm, shallow depth
-of field, 4:5 portrait, muted desaturated grade, fine 35mm film grain, realistic skin with
-faint fatigue. Intimacy and unease. No glamour, no text, no logo.
+```text
+Strict identity reconstruction from the supplied Lilith film frames: Dr. Nora Voss,
+28, before becoming Lilith. Same face, ears, hairline and proportions, dark hair tied
+back, ordinary rain jacket, warm domestic threshold, alert molecular-biologist gaze.
+4:5 photorealistic live-action portrait, natural skin and fine grain; no white coat,
+infection, text, logo, watermark or redesign.
 ```
 
----
+### Lilith
 
-### NORA → LILITH — Akt III · die Erbin
-**Outfit:** makelloser weißer Laborkittel, geschlossen, klare Linien; ein Ärmel rollbar.
-**Emotion:** gletscherkalte Ruhe — eine perfekt sitzende Maske, unter der die Trauer versiegelt liegt.
+**Ausgabe:** `assets/v4/characters/lilith.png`
+**Referenzen:** `assets/v4/characters/nora.png`, `lilith-face.png`, `lilith-field.png`
 
-```
-Cinematic character portrait, photorealistic. The same young woman, 22, the same face —
-but transformed: hair pulled back severe and clean, all warmth drained from her features,
-composed into a flawless still mask. Wardrobe: a crisp buttoned white laboratory coat,
-sharp clean lines; one sleeve rolled back just enough to reveal a single thin, controlled
-black thread tracing under the skin of her forearm — deliberate, owned, not spreading.
-Expression: glacial calm and total control, a perfect professional mask with something
-grieving sealed far beneath it; not a villain's sneer — the stillness of someone who has
-buried herself and kept working. Setting: a cold sterile lab, glass partitions catching
-faint reflections of her, hard negative space and isolation around her. Lighting: cold
-clinical white and sickly-green fluorescent, flat and unflinching, thin specular highlights
-in glass. Shot on 85mm, shallow depth of field, 4:5 portrait, heavily desaturated cold
-grade, fine 35mm film grain, realistic skin. Controlled dread, inheritance. No glamour,
-no text, no logo.
+```text
+Identity-preserving transformation of Nora into Lilith: unquestionably the same
+woman, same facial geometry and age. Low bun, plain white main-film coat, cool tiled
+lab light, one thin local black line below the elbow only. 4:5 photorealistic portrait,
+restrained 35mm grain; no full-body infection, new face, text, logo or watermark.
 ```
 
----
+### Kessler
 
-### KESSLER — der Händler
-**Outfit:** dunkler Mantel über schlichtem Anzug, eine Akte in der Hand — unauffällig, kontrolliert.
-**Emotion:** geduldig, beruhigend, transaktional — der Versucher, der wie ein emeritierter Professor wirkt.
+**Ausgabe:** `assets/v4/characters/kessler.png`
+**Referenz:** `assets/characters/kessler.png`
 
-```
-Cinematic character portrait, photorealistic. A man of about 60, soft avuncular features,
-kindly grandfatherly face, neat thinning grey hair, reading glasses, a calm half-smile
-that never quite reaches the eyes. Wardrobe: a dark wool overcoat over a quiet, unremarkable
-suit, no flash, holding a closed manila file/folder. Expression: patient, reassuring,
-transactional — a tempter who looks exactly like a retired professor, radiating safe
-paternal warmth with a cold transaction running underneath. He is always, quietly, the
-one in control. Setting: a small calm café or the shadowed edge of a lab, neutral warm
-light, blurred everyday background. Lighting: soft, even, deceptively gentle, faint cold
-edge from one side. Shot on 85mm, shallow depth of field, 4:5 portrait, muted desaturated
-grade, fine 35mm film grain, realistic skin. Comfort with a blade under it. No glamour,
-no text, no logo.
+```text
+Identity-preserving 4:5 portrait of Kessler, 61, in a dark overcoat at an almost empty
+railway-station café. Friendly, precise, unreadable; ordinary contemporary wardrobe,
+rain and practical fluorescent/tungsten mix. Photorealistic 35mm thriller; no villain
+caricature, corporate logo, text or watermark.
 ```
 
----
+### Klara
 
-### VORSTAND — die Verwalter
-**Outfit:** drei dunkle, austauschbare Anzüge; keine Insignien.
-**Emotion:** bürokratische Distanz, Kalkül, milde Verachtung — sie verbuchen Leben als Bilanzposten.
+**Ausgabe:** `assets/v4/characters/klara.png`
+**Referenzen:** `klara-face.png`, `klara-lab.png`
 
-```
-Cinematic group portrait, photorealistic. Three anonymous corporate figures in their
-40s–60s in dark, interchangeable tailored suits, seated along a glass conference table,
-faces partially lit cold and bluish from below by the glow of a presentation screen.
-No insignia, no individuality — deliberately faceless administrators. Expression:
-bureaucratic detachment and quiet calculation, a flicker of contempt — people who treat
-human lives as line items on a balance sheet. Setting: a glass-walled presentation room
-with dark wood, cold evening light beyond the panes, a sealed, airless quality to the
-space. Lighting: cold under-lit screen glow, hard shadow, sterile and corporate. Shot on
-35mm wider portrait, modest depth of field, muted desaturated grade, fine film grain,
-realistic skin. Institutional menace. No glamour, no text, no logo.
+```text
+Strict identity-preserving 4:5 portrait of the 18-year-old Klara from the supplied
+film frames. Same brown hair, face, earrings and pearl necklace, at home before the
+abduction, awake neutral expression, warm window light. She is a young adult, never a
+child. Photorealistic live action; no hospital gown, infection, text or watermark.
 ```
 
----
+### Dr. Susan
 
-*Nächster Teil (folgt): `02-schluesselszenen.md` — Prompts für die Schlüsselszenen (Prolog-Kassette, Evas Tod, Scharnierszene 13A / Selbst-Injektion, der versiegelte Vorstandsraum, der Lilith-Moment).*
+**Ausgabe:** `assets/v4/characters/susan.png`
+**Referenz:** `susan-lab.png` — ausschließlich die maskierte Person rechts mit Tablet
+
+```text
+Strict costume- and identity-preserving 4:5 portrait of Susan, the masked clinician on
+the RIGHT of the reference. Preserve visible eyes, brow, short dark hair, white coat,
+pale surgical mask and tablet; modest grey-tiled holding room and cold practical light.
+Ignore Lia on the left. No unmasking, identity blend, text, logo or watermark.
+```
+
+### Lia
+
+**Ausgabe:** `assets/v4/characters/lia.png`
+**Referenzen:** `lia-face.png`, `lia-credit.png`, `susan-lab.png` für die Uniform links
+
+```text
+Strict identity-preserving 4:5 portrait of Lia from the supplied face frames. Neutral
+attentive expression, dark hair pulled back, exact white short-sleeved nursing tunic
+with purple trim and a small practical key ring. Grey tiled room, natural skin, muted
+cyan grade. Do not borrow Susan's face, coat, mask or tablet; no text or watermark.
+```
+
+### Frank
+
+**Ausgabe:** `assets/v4/characters/frank.png`
+**Referenzen:** `frank-face.png`, `frank-field.png`
+
+```text
+Identity-preserving 4:5 portrait of adult Frank from the supplied main-film frames.
+Same lean build, very short hair and face, awake in a plain hospital gown inside the
+modest cold holding room, frightened but not yet infected. Photorealistic 35mm realism;
+no restraints emphasized, no black veins, text, logo or watermark.
+```
+
+### Sicherheit
+
+**Ausgabe:** `assets/v4/characters/security.png`
+**Referenzen:** `guards-field.png`, `white-van.png`
+
+```text
+4:5 ensemble portrait of exactly the two adult male GenetiX guards from the main-film
+reference: preserve the smaller man on the left and the taller broad-built man on the
+right, understated black tactical clothing, radios and practical flashlights, beside a
+light silver-grey unmarked MPV on a wet forest road. Contemporary and plausible, not
+military spectacle; no women, logos, badges, sci-fi armor, text or watermark.
+```
+
+## Ausschlüsse aus V3
+
+- kein Vorstand und kein Vorstandsportrait
+- keine 22-jährige Nora; sie ist 28
+- keine kindliche Klara; sie ist 18 und die Hauptfilmfigur
+- kein weißer Cargo-Transporter; der Film-Prop ist ein heller silbergrauer MPV
+- kein generisches grünes Sci-Fi-Labor

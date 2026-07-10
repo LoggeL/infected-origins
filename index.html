@@ -1,152 +1,176 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>INFECTED ORIGINS — Drehbuch</title>
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta name="description" content="INFECTED ORIGINS — Prequel zum Kurzfilm INFECTED.">
-<style>
-  :root{
-    --bg:#0a0a0b; --bg2:#101014; --ink:#e7e2dc; --muted:#9a938b;
-    --line:#26262c; --accent:#b98a8a; --accent2:#7fae9e;
-    --serif:Georgia,"Times New Roman",serif;
-    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
-    line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
-
-  /* Hero */
-  header.hero{min-height:78vh;display:flex;flex-direction:column;justify-content:center;
-    align-items:center;text-align:center;padding:64px 24px;
-    background:radial-gradient(80% 60% at 50% 30%,#15151b 0%,var(--bg) 70%);
-    border-bottom:1px solid var(--line)}
-  .kicker{font-family:var(--mono);letter-spacing:.42em;text-transform:uppercase;
-    font-size:.72rem;color:var(--muted);margin-bottom:1.4rem}
-  h1{font-size:clamp(2.6rem,8vw,5rem);margin:0;font-weight:400;letter-spacing:.06em;
-    line-height:1.04}
-  h1 .o{color:var(--accent)}
-  .sub{color:var(--muted);font-style:italic;margin-top:1.1rem;font-size:1.05rem}
-  .cta{margin-top:2.6rem;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-  .btn{display:inline-block;padding:.85rem 1.7rem;border:1px solid var(--accent);
-    border-radius:2px;color:var(--ink);font-family:var(--mono);font-size:.8rem;
-    letter-spacing:.16em;text-transform:uppercase;transition:.2s}
-  .btn:hover{background:var(--accent);color:#0a0a0b;text-decoration:none}
-  .btn.ghost{border-color:var(--line);color:var(--muted)}
-  .btn.ghost:hover{background:var(--bg2);color:var(--ink);border-color:var(--muted)}
-
-  /* Sections */
-  section{padding:64px 0;border-bottom:1px solid var(--line)}
-  h2{font-family:var(--mono);text-transform:uppercase;letter-spacing:.28em;
-    font-size:.82rem;color:var(--accent2);margin:0 0 1.6rem;font-weight:400}
-  .logline{font-size:1.35rem;line-height:1.55}
-  .logline em{color:var(--accent);font-style:normal}
-
-  /* Gallery preview */
-  .gallery-link{display:flex;justify-content:space-between;align-items:end;gap:18px;
-    margin-bottom:24px}
-  .gallery-link p{margin:0;color:var(--muted);font-size:.98rem}
-  .gallery-link .mini{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--accent)}
-  .portraits{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .portraits a{display:block;position:relative;overflow:hidden;border:1px solid var(--line);
-    background:var(--bg2);aspect-ratio:4/5}
-  .portraits img{width:100%;height:100%;display:block;object-fit:cover;filter:saturate(.85) contrast(1.04)}
-  .portraits span{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 10px;
-    background:linear-gradient(180deg,transparent,rgba(0,0,0,.82));font-family:var(--mono);
-    font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
-
-  /* Figures */
-  .fig{display:grid;grid-template-columns:140px 1fr;gap:6px 22px;padding:14px 0;
-    border-top:1px solid var(--line)}
-  .fig:first-of-type{border-top:none}
-  .fig dt{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
-    font-size:.82rem;color:var(--ink);padding-top:3px}
-  .fig dd{margin:0;color:var(--muted);font-size:.98rem}
-
-  /* Acts */
-  .acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
-  .act{border:1px solid var(--line);border-radius:2px;padding:18px;background:var(--bg2)}
-  .act .n{font-family:var(--mono);color:var(--accent);font-size:.74rem;letter-spacing:.2em}
-  .act h3{margin:.5rem 0 .3rem;font-weight:400;font-size:1.05rem}
-  .act p{margin:0;color:var(--muted);font-size:.9rem}
-
-  footer{padding:48px 24px 70px;text-align:center;color:var(--muted);font-size:.85rem}
-  footer .meta{font-family:var(--mono);letter-spacing:.1em;font-size:.74rem;margin-top:.6rem}
-  @media(max-width:720px){.portraits{grid-template-columns:repeat(2,1fr)}.gallery-link{display:block}.gallery-link .btn{margin-top:16px}}
-  @media(max-width:520px){.fig{grid-template-columns:1fr;gap:2px}.fig dt{padding-top:10px}.portraits span{font-size:.58rem}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="INFECTED ORIGINS — das neu erzählte Prequel zu INFECTED. Drehbuch v4 mit konsistenter Bildwelt und direktem Anschluss an den Hauptfilm.">
+  <meta name="theme-color" content="#080a0d">
+  <title>INFECTED ORIGINS — Prequel zu INFECTED</title>
+  <link rel="stylesheet" href="assets/site/origins-v4.css">
+  <script src="assets/site/origins-v4.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Direkt zum Inhalt</a>
 
-<header class="hero">
-  <div class="kicker">Prequel zum Kurzfilm INFECTED</div>
-  <h1>INFECTED <span class="o">ORIGINS</span></h1>
-  <div class="sub">Ein Kurzfilm über Liebe, die zur Korruption wird</div>
-  <div class="cta">
-    <a class="btn" href="screenplay/infected-origins-v3.html">Drehbuch lesen</a>
-    <a class="btn ghost" href="bilder.html">Bilder</a>
-    <a class="btn ghost" href="screenplay/infected-origins-v3.md" download>Markdown</a>
-    <a class="btn ghost" href="https://github.com/LoggeL/infected-origins">Repository</a>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="index.html">Infected <span>Origins</span></a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Start</a></li>
+          <li><a href="screenplay/infected-origins-v4.html">Drehbuch</a></li>
+          <li><a href="bilder.html">Bilder</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main class="wrap">
-
-  <section>
-    <h2>Logline</h2>
-    <p class="logline">Ein Arzt überschreitet jede ethische Grenze, um seine sterbende Frau zu retten — und seine Tochter <em>erbt</em> die Besessenheit, die ihn zerstört hat. Die Geburt von Lilith.</p>
-  </section>
-
-  <section>
-    <div class="gallery-link">
-      <div>
-        <h2>Visualisierung</h2>
-        <p>Charakterportraits aus den Projektprompts: Liebe, Korruption, Vererbung.</p>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner flow">
+        <p class="kicker">Prequel · Drehbuch v4 · ca. 15–16 Minuten</p>
+        <h1 id="hero-title">INFECTED ORIGINS</h1>
+        <p class="hero__lede">Ein Arzt bricht jede Regel, um seine sterbende Frau zu retten. Als seine Tochter den entscheidenden Fehler korrigiert, muss sie wählen, ob die Forschung mit der Familie endet — oder ob ein fremdes Mädchen den Preis bezahlt.</p>
+        <div class="hero__actions">
+          <a class="btn" href="screenplay/infected-origins-v4.html">Drehbuch lesen</a>
+          <a class="btn ghost" href="bilder.html">Neue Bildwelt</a>
+          <a class="btn ghost" href="screenplay/infected-origins-v4.md">Markdown v4</a>
+        </div>
+        <figure class="scene-image">
+          <picture>
+            <source srcset="assets/v4/stills/scene-14-lilith.webp" type="image/webp">
+            <img src="assets/v4/stills/scene-14-lilith.png" width="1934" height="808" decoding="async" fetchpriority="high" alt="Lilith sitzt im weißen Kittel vor Klaras Porträt; Meerfoto und Datenträger liegen neben ihrer Hand.">
+          </picture>
+          <figcaption>Die eigentliche Origin: Nora wird nicht durch Gedächtnisverlust zu Lilith, sondern durch eine bewusste Entscheidung.</figcaption>
+        </figure>
       </div>
-      <a class="btn ghost" href="bilder.html">Alle Bilder</a>
-    </div>
-    <div class="portraits">
-      <a href="bilder.html#richard-akt-i"><img src="assets/characters/richard-akt-i.png" alt="Richard im Kellerlabor"><span>Richard I</span></a>
-      <a href="bilder.html#eva"><img src="assets/characters/eva.png" alt="Eva im warmen Zuhause-Licht"><span>Eva</span></a>
-      <a href="bilder.html#nora-akt-i"><img src="assets/characters/nora-akt-i.png" alt="Nora mit regennasser Jacke im Labor"><span>Nora</span></a>
-      <a href="bilder.html#lilith-akt-iii"><img src="assets/characters/lilith-akt-iii.png" alt="Lilith im sterilen Labor"><span>Lilith</span></a>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>Figuren</h2>
-    <dl class="fig-list">
-      <div class="fig"><dt>Richard</dt><dd>Arzt, Anfang 50. Liebender Vater, der durch Verzweiflung und Stolz zum Antagonisten wird.</dd></div>
-      <div class="fig"><dt>Eva</dt><dd>Seine Frau, sterbenskrank. Moralisch die klarste Person im Film — Mitwisserin ihres eigenen Endes.</dd></div>
-      <div class="fig"><dt>Nora</dt><dd>Tochter, 22. Hilft im Labor. Wird später zu Lilith.</dd></div>
-      <div class="fig"><dt>Kessler</dt><dd>GenetiX, 60. Wirkt wie ein Onkel — ist ein Händler, der weiß, dass er ersetzbar ist.</dd></div>
-      <div class="fig"><dt>Vorstand</dt><dd>Drei Leute in Anzügen. Sie verwalten. Sie rechnen. Sie wollen es nehmen.</dd></div>
-    </dl>
-  </section>
+    <section class="content-section" aria-labelledby="story-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <p class="eyebrow">Die neue Kausalität</p>
+            <h2 id="story-title">Liebe → Lüge → Vererbung</h2>
+          </div>
+          <p>V4 schließt die alten Sprünge: Eva entscheidet informiert nur für sich, Klara bleibt bis zu Noras Freigabe zu Hause, und der letzte Schnitt führt ohne Zeitsprung in den Hauptfilm.</p>
+        </header>
+        <div class="act-grid">
+          <article class="act-card">
+            <p class="meta-label">Akt I · Liebe</p>
+            <h3>Eine klare Grenze</h3>
+            <p>Eva will leben, aber nicht durch einen fremden Körper. Richard verspricht es — und akzeptiert Kesslers Infrastruktur trotzdem.</p>
+            <p><a href="screenplay/infected-origins-v4.html#act-1">Akt I lesen</a></p>
+          </article>
+          <article class="act-card">
+            <p class="meta-label">Akt II · Korruption</p>
+            <h3>Die erste kleine Lüge</h3>
+            <p>Nora markiert einen tödlichen Transferbefund als technischen Ausreißer. Damit wird aus Richards Ausnahme ein reproduzierbares Verfahren.</p>
+            <p><a href="screenplay/infected-origins-v4.html#act-2">Akt II lesen</a></p>
+          </article>
+          <article class="act-card">
+            <p class="meta-label">Akt III · Vererbung</p>
+            <h3>Eine echte Alternative</h3>
+            <p>Nora kann Klara retten und alles beenden. Sie stabilisiert A0,6, übernimmt die Leitung und autorisiert den Transport selbst.</p>
+            <p><a href="screenplay/infected-origins-v4.html#act-3">Akt III lesen</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Aufbau</h2>
-    <div class="acts">
-      <div class="act"><div class="n">PROLOG</div><h3>Die Kassette</h3><p>Richard, allein im Keller, spricht ins Tagebuch.</p></div>
-      <div class="act"><div class="n">AKT I</div><h3>Liebe</h3><p>Das Zuhause, das Labor, der Pakt mit Kessler.</p></div>
-      <div class="act"><div class="n">AKT II</div><h3>Korruption</h3><p>GenetiX, die erste Linie, der Preis.</p></div>
-      <div class="act"><div class="n">AKT III</div><h3>Vererbung</h3><p>Nora entdeckt die Wahrheit — und wird Lilith.</p></div>
-    </div>
-  </section>
+    <section class="content-section" aria-labelledby="cast-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <p class="eyebrow">Figuren</p>
+            <h2 id="cast-title">Ein Film, dieselben Menschen</h2>
+          </div>
+          <p>Nora/Lilith, Klara, Frank, Susan, Lia und die Sicherheitskräfte wurden aus Hauptfilm-Frames als Identitäts-, Kostüm- und Weltanker neu aufgebaut.</p>
+        </header>
+        <div class="cast-preview">
+          <article class="character-card">
+            <picture><source srcset="assets/v4/characters/richard.webp" type="image/webp"><img src="assets/v4/characters/richard.png" width="971" height="1212" loading="lazy" decoding="async" alt="Dr. Richard Voss im warmen Kellerlabor."></picture>
+            <div class="character-card__body"><h3>Richard Voss</h3><p>Liebe als Rechtfertigung. Er öffnet die Tür und erkennt zu spät, wer hindurchgeht.</p></div>
+          </article>
+          <article class="character-card">
+            <picture><source srcset="assets/v4/characters/eva.webp" type="image/webp"><img src="assets/v4/characters/eva.png" width="1003" height="1252" loading="lazy" decoding="async" alt="Eva Voss in ihrer warmen Küche."></picture>
+            <div class="character-card__body"><h3>Eva Voss</h3><p>Keine passive Motivation, sondern die moralische Grenze der Geschichte.</p></div>
+          </article>
+          <article class="character-card">
+            <picture><source srcset="assets/v4/characters/nora.webp" type="image/webp"><img src="assets/v4/characters/nora.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Dr. Nora Voss vor ihrer Entscheidung."></picture>
+            <div class="character-card__body"><h3>Nora Voss</h3><p>28, Molekularbiologin. Sie versteht die Daten — und jede Konsequenz.</p></div>
+          </article>
+          <article class="character-card">
+            <picture><source srcset="assets/v4/characters/lilith.webp" type="image/webp"><img src="assets/v4/characters/lilith.png" width="1003" height="1252" loading="lazy" decoding="async" alt="Dieselbe Frau als Lilith im weißen Kittel, mit lokalem schwarzem Faden."></picture>
+            <div class="character-card__body"><h3>Lilith</h3><p>Dieselbe Person, kein Ersatzgesicht: Noras operative Identität nach der Freigabe.</p></div>
+          </article>
+          <article class="character-card">
+            <picture><source srcset="assets/v4/characters/klara.webp" type="image/webp"><img src="assets/v4/characters/klara.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Die 18-jährige Klara zu Hause, noch vor dem Transport."></picture>
+            <div class="character-card__body"><h3>Klara</h3><p>18, 98,7 Prozent kompatibel — und bis zu Noras Klick sicher zu Hause.</p></div>
+          </article>
+          <article class="character-card">
+            <picture><source srcset="assets/v4/characters/frank.webp" type="image/webp"><img src="assets/v4/characters/frank.png" width="1122" height="1402" loading="lazy" decoding="async" alt="Frank im OP-Hemd im gekachelten GenetiX-Halteraum."></picture>
+            <div class="character-card__body"><h3>Frank</h3><p>Er hat widerrufen. GenetiX hält ihn trotzdem als A0,6-Träger bereit.</p></div>
+          </article>
+        </div>
+        <div class="button-group" style="margin-top: 1.5rem">
+          <a class="btn ghost" href="bilder.html#figuren">Alle Figuren</a>
+        </div>
+      </div>
+    </section>
 
-</main>
+    <section class="content-section" aria-labelledby="visual-arc-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <p class="eyebrow">Visueller Bogen</p>
+            <h2 id="visual-arc-title">Wärme → Labor → Lilith</h2>
+          </div>
+          <p>Eine einzige Kamera- und Kornlogik verbindet den warmen Familienraum mit dem blaugrünen Hauptfilm-Labor. Die Farbe verändert sich, nicht die Gesichter.</p>
+        </header>
+        <div class="still-grid visual-grid--compact">
+          <article class="still-card">
+            <picture><source srcset="assets/v4/stills/scene-01-grenze.webp" type="image/webp"><img class="cinema-still" src="assets/v4/stills/scene-01-grenze.png" width="1920" height="804" loading="lazy" decoding="async" alt="Eva und Nora in der warmen Küche, getrennt durch das Meerfoto."></picture>
+            <div class="still-card__body"><h3>Wärme</h3><p>Familie, Berührung, Regen und eine Grenze, die ausgesprochen wird.</p></div>
+          </article>
+          <article class="still-card">
+            <picture><source srcset="assets/v4/stills/scene-07-erste-luege.webp" type="image/webp"><img class="cinema-still" src="assets/v4/stills/scene-07-erste-luege.png" width="1932" height="808" loading="lazy" decoding="async" alt="Nora markiert im kalten Labor einen Transferbefund als Ausreißer, Richard und Kessler beobachten sie."></picture>
+            <div class="still-card__body"><h3>Labor</h3><p>Die erste Lüge steht sichtbar zwischen Nora und Richard.</p></div>
+          </article>
+          <article class="still-card">
+            <picture><source srcset="assets/v4/stills/scene-15-labor.webp" type="image/webp"><img class="cinema-still" src="assets/v4/stills/scene-15-labor.png" width="1930" height="808" loading="lazy" decoding="async" alt="Lia und Susan stehen vor zwei Sets, Frank wartet hinter der Sichtscheibe und Lilith geht."></picture>
+            <div class="still-card__body"><h3>Übergabe</h3><p>Raum, Kostüme und Figurenpositionen schließen direkt an „INFECTED“ an.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <a class="btn" href="screenplay/infected-origins-v3.html">→ Zum vollständigen Drehbuch</a>
-  <div class="meta">INFECTED ORIGINS · 19 Szenen · ~14–16 Min</div>
-  <div class="meta"><a href="screenplay/infected-origins-v3.html">HTML lesen</a> · <a href="screenplay/infected-origins-v3.md" download>Markdown herunterladen</a></div>
-</footer>
+    <section class="content-section" aria-labelledby="handoff-title">
+      <div class="container">
+        <header class="section-header">
+          <div>
+            <p class="eyebrow">Letzter Schnitt</p>
+            <h2 id="handoff-title">Klara ist noch zu Hause</h2>
+          </div>
+          <p>Das Prequel endet nicht mit einem abstrakten Plan. Es endet mit dem hellen unmarkierten Van vor Klaras Fenster — genau dort, wo der Hauptfilm einsetzen kann.</p>
+        </header>
+        <figure class="scene-image">
+          <picture>
+            <source srcset="assets/v4/stills/scene-15-van.webp" type="image/webp">
+            <img src="assets/v4/stills/scene-15-van.png" width="1934" height="808" loading="lazy" decoding="async" alt="Zwei Sicherheitskräfte und ein heller unmarkierter Van warten nachts vor Klaras Haus; Klara sieht aus dem Fenster.">
+          </picture>
+          <figcaption>Nora gibt den Transport frei. Lilith sagt: „Holen Sie sie.“</figcaption>
+        </figure>
+        <div class="button-group" style="margin-top: 1.5rem">
+          <a class="btn" href="screenplay/infected-origins-v4.html#scene-15">Epilog lesen</a>
+          <a class="btn ghost" href="bilder.html#stills">Alle 13 Stills</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container">INFECTED ORIGINS · Drehbuch v4 · 16 Szenen · 11 Figurenanker · 13 neue Stills</div>
+  </footer>
 </body>
 </html>
